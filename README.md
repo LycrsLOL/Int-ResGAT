@@ -1,6 +1,6 @@
-# Int_ResGAT
+# Int-ResGAT
 
-**Int_ResGAT** 是一个基于图神经网络 (GNN) 的酶功能注释（多标签 EC 编号分类）模型。该项目通过整合 EvolutionaryScale 的 ESM3 序列嵌入与蛋白质 3D 空间结构图，实现对蛋白质酶功能的高精度预测。
+**Int-ResGAT** 是一个基于图神经网络 (GNN) 的酶功能注释（多标签 EC 编号分类）模型。该项目通过整合 EvolutionaryScale 的 ESM3 序列嵌入与蛋白质 3D 空间结构图，实现对蛋白质酶功能的高精度预测。
 
 ## 核心特性
 
