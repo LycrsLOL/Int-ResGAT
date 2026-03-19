@@ -180,7 +180,7 @@ def complete_structures(df: pd.DataFrame, args):
     logging.info(f"   >>> Completion Finished. New Processed: {sum(results)}")
 
 # =============================================================================
-# [Step 3] Extract Embeddings (完全参照提供的逻辑)
+# [Step 3] Extract Embeddings
 # =============================================================================
 def extract_embedding(model, pdb_ids_ls, uniprot_ids_ls, args):
     complete_dir = os.path.join(args.save_dir, "complete")
@@ -203,7 +203,6 @@ def extract_embedding(model, pdb_ids_ls, uniprot_ids_ls, args):
             base_name = f"{uniprot_id}_{pdb_id}" if has_pdb else uniprot_id
             save_path = os.path.join(embedding_dir, f"{base_name}.pt")
             
-            # [Added] Skip if exists and valid
             if os.path.exists(save_path):
                 try:
                     emb = torch.load(save_path, map_location='cpu')
@@ -253,42 +252,33 @@ def extract_embedding(model, pdb_ids_ls, uniprot_ids_ls, args):
                 output = model.forward_and_sample(protein_tensor, config)
                 embeddings = output.per_residue_embedding
                 
-                # [Debug] Check raw embeddings from model
                 if (embeddings == 0).all():
                     logging.warning(f"   [Warning] {uniprot_id}: Raw embeddings (before norm) are ALL ZEROS!")
 
-                # [Fix] ESM3 returns unnormalized embeddings (pre-LayerNorm) which can be extremely large (e.g. 1e35).
-                # We manually apply the final LayerNorm to get the normalized representation.
-                # However, float32 LayerNorm overflows when variance is too large (Inf), resulting in Zero output.
-                # We MUST use float64 (double) for LayerNorm calculation.
                 if hasattr(model, 'transformer') and hasattr(model.transformer, 'norm'):
-                    embeddings_raw = embeddings # Keep a reference for debugging
+                    embeddings_raw = embeddings 
                     
-                    # Convert to double for precision
                     embeddings_double = embeddings.double()
                     norm_layer = model.transformer.norm
                     
-                    # Manual LayerNorm: (x - mean) / sqrt(var + eps) * weight + bias
                     mean = embeddings_double.mean(dim=-1, keepdim=True)
                     var = embeddings_double.var(dim=-1, keepdim=True, unbiased=False)
-                    eps = 1e-5 # Standard eps
+                    eps = 1e-5
                     
                     x_norm = (embeddings_double - mean) / torch.sqrt(var + eps)
                     
-                    # Apply weight and bias (cast to double)
                     if norm_layer.weight is not None:
                         x_norm = x_norm * norm_layer.weight.double()
                     if norm_layer.bias is not None:
                         x_norm = x_norm + norm_layer.bias.double()
                         
-                    embeddings = x_norm.float() # Cast back to float32
+                    embeddings = x_norm.float()
                     
                     if (embeddings == 0).all():
                         logging.warning(f"   [Warning] {uniprot_id}: Embeddings became ALL ZEROS even after float64 LayerNorm!")
                 
                 embeddings = embeddings.cpu()
 
-                # Error Detection: Print stats only if embeddings are invalid (NaN/Inf) or extremely large or ALL ZEROS
                 is_nan = torch.isnan(embeddings).any()
                 is_inf = torch.isinf(embeddings).any()
                 max_abs = embeddings.abs().max().item()
@@ -321,7 +311,7 @@ def extract_embedding(model, pdb_ids_ls, uniprot_ids_ls, args):
     logging.info(f"   >>> Extraction Finished. Processed: {count_processed} | Total: {total_tasks}")
 
 # =============================================================================
-# [Step 3.5] Verify Embeddings (完全参照提供的逻辑)
+# [Step 3.5] Verify Embeddings
 # =============================================================================
 def verify_embeddings(pdb_ids_ls, uniprot_ids_ls, args):
     logging.info("========== [Step 3.5] Verify Embeddings ==========")
@@ -453,7 +443,6 @@ def _single_graph(task):
         parser = pdb_parser if struct_path.endswith('.pdb') else cif_parser
         residues = sum([list(pp) for pp in ppb.build_peptides(parser.get_structure(u_id, struct_path))], [])
         
-        # 强制特征限定在 CPU
         emb = torch.load(emb_path, map_location='cpu', weights_only=True)
         if isinstance(emb, np.ndarray): emb = torch.from_numpy(emb)
         
@@ -467,7 +456,6 @@ def _single_graph(task):
             node_ids.append(f"{res.get_parent().id}_{res.id[1]}")
             coords.append(res['CA'].get_coord() if 'CA' in res else np.array([a.get_coord() for a in res]).mean(axis=0) if len(res)>0 else np.array([0.,0.,0.]))
         
-        # 构图全程挂载 CPU
         pos = torch.tensor(np.array(coords), dtype=torch.float, device='cpu')
         dist_matrix = torch.cdist(pos, pos).fill_diagonal_(float('inf'))
         mask = dist_matrix <= max_edge_distance
