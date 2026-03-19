@@ -1,0 +1,443 @@
+2026-03-19 00:15:04 [INFO] ==============================================
+2026-03-19 00:15:04 [INFO]       Starting Engine in Mode: [TRAIN]
+2026-03-19 00:15:04 [INFO] ==============================================
+2026-03-19 00:15:05 [INFO] ========== Training Configuration ==========
+2026-03-19 00:15:05 [INFO]   learning_rate: 0.001
+2026-03-19 00:15:05 [INFO]   batch_size: 64
+2026-03-19 00:15:05 [INFO]   epochs: 300
+2026-03-19 00:15:05 [INFO]   min_epochs: 100
+2026-03-19 00:15:05 [INFO]   test_size: 0.3
+2026-03-19 00:15:05 [INFO]   focal_loss_alpha: auto
+2026-03-19 00:15:05 [INFO]   focal_loss_gamma: 2.0
+2026-03-19 00:15:05 [INFO]   random_state: 42
+2026-03-19 00:15:05 [INFO]   input_dim: 1536
+2026-03-19 00:15:05 [INFO]   hidden_dim: 1024
+2026-03-19 00:15:05 [INFO]   num_layers: 4
+2026-03-19 00:15:05 [INFO]   heads: 8
+2026-03-19 00:15:05 [INFO]   dropout: 0.5
+2026-03-19 00:15:05 [INFO]   weight_decay: 0.0005
+2026-03-19 00:15:05 [INFO]   lr_patience: 10
+2026-03-19 00:15:05 [INFO]   early_stopping_patience: 20
+2026-03-19 00:15:05 [INFO] ============================================
+2026-03-19 00:15:05 [INFO] Using device: cuda:0 (Distributed: True)
+2026-03-19 00:15:05 [INFO] Loading data...
+2026-03-19 00:15:12 [INFO] Total samples after filtering: 103015
+2026-03-19 00:15:12 [INFO] Total classes: 1765
+2026-03-19 00:15:12 [INFO] Class Weights Range: [0.0128, 58.3654]
+2026-03-19 00:15:12 [WARNING] Stratified split failed (likely due to classes with < 2 samples). Falling back to random split.
+2026-03-19 00:15:12 [INFO] Using graph_dir: /data/lihb/enzyme_functional_annotation/optimal_radius/graph
+2026-03-19 00:15:12 [INFO] Initializing dataset with 72110 entries from graph_dir=/data/lihb/enzyme_functional_annotation/optimal_radius/graph ...
+2026-03-19 00:15:15 [INFO] Found samples with pdb_id: 2794
+2026-03-19 00:15:15 [INFO] Found samples without pdb_id: 69316
+2026-03-19 00:15:15 [INFO] Dataset initialized with 72110 valid samples.
+2026-03-19 00:15:15 [INFO] Initializing dataset with 30905 entries from graph_dir=/data/lihb/enzyme_functional_annotation/optimal_radius/graph ...
+2026-03-19 00:15:16 [INFO] Found samples with pdb_id: 1302
+2026-03-19 00:15:16 [INFO] Found samples without pdb_id: 29603
+2026-03-19 00:15:16 [INFO] Dataset initialized with 30905 valid samples.
+2026-03-19 00:15:16 [INFO] Data loaded. Train steps per epoch (optimizer updates): 564 | Expected: 564 | Train samples: 72110 | Batch/GPU: 64 | World Size: 2 | Global Batch: 128
+2026-03-19 00:15:16 [INFO] Data loaded. Test steps per epoch: 242 | Expected: 242 | Test samples: 30905
+2026-03-19 00:15:17 [INFO] Using Automatic Class Weights for Focal Loss. Range: [0.0128, 58.3654]
+2026-03-19 00:15:17 [INFO] Start training...
+2026-03-19 00:15:34 [INFO] Epoch: [1] Step : [1/564] Loss: 7.7910
+2026-03-19 00:16:35 [INFO] Epoch: [1] Step : [100/564] Loss: 12.2083
+2026-03-19 00:17:34 [INFO] Epoch: [1] Step : [200/564] Loss: 9.1461
+2026-03-19 00:18:33 [INFO] Epoch: [1] Step : [300/564] Loss: 2.9285
+2026-03-19 00:19:31 [INFO] Epoch: [1] Step : [400/564] Loss: 8.2552
+2026-03-19 00:20:29 [INFO] Epoch: [1] Step : [500/564] Loss: 5.6553
+2026-03-19 00:21:06 [INFO] Epoch: [1] Step : [564/564] Loss: 2.5505
+2026-03-19 00:22:59 [INFO] Epoch 1/300 | Train Loss: 3.4210 | Test Loss: 7.2640 | Acc: 0.0058 | Top-5: 0.0215 | F1(M): 0.0015 | Prec(M): 0.0019 | Rec(M): 0.0044 | Prec(W): 0.0036
+2026-03-19 00:22:59 [INFO] --> Best model saved with F1: 0.0015 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260319_0015.pth
+2026-03-19 00:23:15 [INFO] Epoch: [2] Step : [1/564] Loss: 6.6338
+2026-03-19 00:24:13 [INFO] Epoch: [2] Step : [100/564] Loss: 8.0702
+2026-03-19 00:25:11 [INFO] Epoch: [2] Step : [200/564] Loss: 2.9906
+2026-03-19 00:26:11 [INFO] Epoch: [2] Step : [300/564] Loss: 4.2892
+2026-03-19 00:27:09 [INFO] Epoch: [2] Step : [400/564] Loss: 5.9716
+2026-03-19 00:28:08 [INFO] Epoch: [2] Step : [500/564] Loss: 1.7750
+2026-03-19 00:28:46 [INFO] Epoch: [2] Step : [564/564] Loss: 6.0009
+2026-03-19 00:30:42 [INFO] Epoch 2/300 | Train Loss: 2.7486 | Test Loss: 6.3062 | Acc: 0.0468 | Top-5: 0.1659 | F1(M): 0.0065 | Prec(M): 0.0064 | Rec(M): 0.0220 | Prec(W): 0.0173
+2026-03-19 00:30:42 [INFO] --> Best model saved with F1: 0.0065 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260319_0015.pth
+2026-03-19 00:30:59 [INFO] Epoch: [3] Step : [1/564] Loss: 4.4618
+2026-03-19 00:31:56 [INFO] Epoch: [3] Step : [100/564] Loss: 2.8466
+2026-03-19 00:32:55 [INFO] Epoch: [3] Step : [200/564] Loss: 5.2397
+2026-03-19 00:33:54 [INFO] Epoch: [3] Step : [300/564] Loss: 3.8484
+2026-03-19 00:34:53 [INFO] Epoch: [3] Step : [400/564] Loss: 4.1409
+2026-03-19 00:35:52 [INFO] Epoch: [3] Step : [500/564] Loss: 6.3665
+2026-03-19 00:36:29 [INFO] Epoch: [3] Step : [564/564] Loss: 2.3553
+2026-03-19 00:38:22 [INFO] Epoch 3/300 | Train Loss: 2.2260 | Test Loss: 5.5664 | Acc: 0.1040 | Top-5: 0.3091 | F1(M): 0.0223 | Prec(M): 0.0262 | Rec(M): 0.0473 | Prec(W): 0.0976
+2026-03-19 00:38:22 [INFO] --> Best model saved with F1: 0.0223 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260319_0015.pth
+2026-03-19 00:38:38 [INFO] Epoch: [4] Step : [1/564] Loss: 1.5999
+2026-03-19 00:39:36 [INFO] Epoch: [4] Step : [100/564] Loss: 1.7443
+2026-03-19 00:40:34 [INFO] Epoch: [4] Step : [200/564] Loss: 1.9583
+2026-03-19 00:41:33 [INFO] Epoch: [4] Step : [300/564] Loss: 1.4744
+2026-03-19 00:42:31 [INFO] Epoch: [4] Step : [400/564] Loss: 1.7884
+2026-03-19 00:43:29 [INFO] Epoch: [4] Step : [500/564] Loss: 1.2943
+2026-03-19 00:44:07 [INFO] Epoch: [4] Step : [564/564] Loss: 0.7189
+2026-03-19 00:46:03 [INFO] Epoch 4/300 | Train Loss: 1.8795 | Test Loss: 4.7861 | Acc: 0.3175 | Top-5: 0.5881 | F1(M): 0.1051 | Prec(M): 0.1186 | Rec(M): 0.1524 | Prec(W): 0.3244
+2026-03-19 00:46:04 [INFO] --> Best model saved with F1: 0.1051 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260319_0015.pth
+2026-03-19 00:46:20 [INFO] Epoch: [5] Step : [1/564] Loss: 2.7992
+2026-03-19 00:47:17 [INFO] Epoch: [5] Step : [100/564] Loss: 5.0855
+2026-03-19 00:48:17 [INFO] Epoch: [5] Step : [200/564] Loss: 2.8541
+2026-03-19 00:49:16 [INFO] Epoch: [5] Step : [300/564] Loss: 4.1511
+2026-03-19 00:50:14 [INFO] Epoch: [5] Step : [400/564] Loss: 2.1623
+2026-03-19 00:51:14 [INFO] Epoch: [5] Step : [500/564] Loss: 8.4330
+2026-03-19 00:51:52 [INFO] Epoch: [5] Step : [564/564] Loss: 4.2053
+2026-03-19 00:53:47 [INFO] Epoch 5/300 | Train Loss: 1.6425 | Test Loss: 4.5287 | Acc: 0.2446 | Top-5: 0.5620 | F1(M): 0.1049 | Prec(M): 0.1279 | Rec(M): 0.1602 | Prec(W): 0.3317
+2026-03-19 00:54:05 [INFO] Epoch: [6] Step : [1/564] Loss: 1.9104
+2026-03-19 00:55:05 [INFO] Epoch: [6] Step : [100/564] Loss: 1.5536
+2026-03-19 00:56:07 [INFO] Epoch: [6] Step : [200/564] Loss: 1.4516
+2026-03-19 00:57:08 [INFO] Epoch: [6] Step : [300/564] Loss: 2.0072
+2026-03-19 00:58:10 [INFO] Epoch: [6] Step : [400/564] Loss: 3.4914
+2026-03-19 00:59:12 [INFO] Epoch: [6] Step : [500/564] Loss: 3.9304
+2026-03-19 00:59:50 [INFO] Epoch: [6] Step : [564/564] Loss: 0.8412
+2026-03-19 01:01:47 [INFO] Epoch 6/300 | Train Loss: 1.4845 | Test Loss: 4.2625 | Acc: 0.2808 | Top-5: 0.5659 | F1(M): 0.1224 | Prec(M): 0.1425 | Rec(M): 0.1908 | Prec(W): 0.3550
+2026-03-19 01:01:47 [INFO] --> Best model saved with F1: 0.1224 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260319_0015.pth
+2026-03-19 01:02:05 [INFO] Epoch: [7] Step : [1/564] Loss: 4.8892
+2026-03-19 01:03:05 [INFO] Epoch: [7] Step : [100/564] Loss: 1.9894
+2026-03-19 01:04:06 [INFO] Epoch: [7] Step : [200/564] Loss: 1.5933
+2026-03-19 01:05:05 [INFO] Epoch: [7] Step : [300/564] Loss: 2.4609
+2026-03-19 01:06:04 [INFO] Epoch: [7] Step : [400/564] Loss: 8.6202
+2026-03-19 01:07:03 [INFO] Epoch: [7] Step : [500/564] Loss: 1.4839
+2026-03-19 01:07:40 [INFO] Epoch: [7] Step : [564/564] Loss: 2.1272
+2026-03-19 01:09:41 [INFO] Epoch 7/300 | Train Loss: 1.4151 | Test Loss: 3.9857 | Acc: 0.3908 | Top-5: 0.6731 | F1(M): 0.1723 | Prec(M): 0.1974 | Rec(M): 0.2395 | Prec(W): 0.4838
+2026-03-19 01:09:41 [INFO] --> Best model saved with F1: 0.1723 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260319_0015.pth
+2026-03-19 01:09:58 [INFO] Epoch: [8] Step : [1/564] Loss: 1.9718
+2026-03-19 01:10:56 [INFO] Epoch: [8] Step : [100/564] Loss: 2.0263
+2026-03-19 01:11:57 [INFO] Epoch: [8] Step : [200/564] Loss: 1.5630
+2026-03-19 01:12:57 [INFO] Epoch: [8] Step : [300/564] Loss: 2.5921
+2026-03-19 01:13:56 [INFO] Epoch: [8] Step : [400/564] Loss: 6.9465
+2026-03-19 01:14:55 [INFO] Epoch: [8] Step : [500/564] Loss: 2.2465
+2026-03-19 01:15:33 [INFO] Epoch: [8] Step : [564/564] Loss: 0.9504
+2026-03-19 01:17:26 [INFO] Epoch 8/300 | Train Loss: 1.3381 | Test Loss: 3.8348 | Acc: 0.4332 | Top-5: 0.7136 | F1(M): 0.1920 | Prec(M): 0.2147 | Rec(M): 0.2619 | Prec(W): 0.5357
+2026-03-19 01:17:26 [INFO] --> Best model saved with F1: 0.1920 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260319_0015.pth
+2026-03-19 01:17:44 [INFO] Epoch: [9] Step : [1/564] Loss: 4.6725
+2026-03-19 01:18:43 [INFO] Epoch: [9] Step : [100/564] Loss: 2.3012
+2026-03-19 01:19:42 [INFO] Epoch: [9] Step : [200/564] Loss: 3.6662
+2026-03-19 01:20:42 [INFO] Epoch: [9] Step : [300/564] Loss: 1.2426
+2026-03-19 01:21:41 [INFO] Epoch: [9] Step : [400/564] Loss: 1.0499
+2026-03-19 01:22:40 [INFO] Epoch: [9] Step : [500/564] Loss: 1.3504
+2026-03-19 01:23:17 [INFO] Epoch: [9] Step : [564/564] Loss: 3.1454
+2026-03-19 01:25:12 [INFO] Epoch 9/300 | Train Loss: 1.2863 | Test Loss: 3.3902 | Acc: 0.5892 | Top-5: 0.7968 | F1(M): 0.2752 | Prec(M): 0.2910 | Rec(M): 0.3640 | Prec(W): 0.6703
+2026-03-19 01:25:12 [INFO] --> Best model saved with F1: 0.2752 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260319_0015.pth
+2026-03-19 01:25:28 [INFO] Epoch: [10] Step : [1/564] Loss: 2.6190
+2026-03-19 01:26:25 [INFO] Epoch: [10] Step : [100/564] Loss: 1.5456
+2026-03-19 01:27:24 [INFO] Epoch: [10] Step : [200/564] Loss: 0.8035
+2026-03-19 01:28:21 [INFO] Epoch: [10] Step : [300/564] Loss: 1.5831
+2026-03-19 01:29:21 [INFO] Epoch: [10] Step : [400/564] Loss: 2.1693
+2026-03-19 01:30:20 [INFO] Epoch: [10] Step : [500/564] Loss: 1.0458
+2026-03-19 01:30:59 [INFO] Epoch: [10] Step : [564/564] Loss: 2.0783
+2026-03-19 01:32:50 [INFO] Epoch 10/300 | Train Loss: 1.2355 | Test Loss: 3.2173 | Acc: 0.6137 | Top-5: 0.8146 | F1(M): 0.3176 | Prec(M): 0.3351 | Rec(M): 0.3944 | Prec(W): 0.6973
+2026-03-19 01:32:50 [INFO] --> Best model saved with F1: 0.3176 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260319_0015.pth
+2026-03-19 01:33:07 [INFO] Epoch: [11] Step : [1/564] Loss: 0.9049
+2026-03-19 01:34:06 [INFO] Epoch: [11] Step : [100/564] Loss: 0.9955
+2026-03-19 01:35:05 [INFO] Epoch: [11] Step : [200/564] Loss: 3.8908
+2026-03-19 01:36:03 [INFO] Epoch: [11] Step : [300/564] Loss: 1.9402
+2026-03-19 01:37:01 [INFO] Epoch: [11] Step : [400/564] Loss: 1.4448
+2026-03-19 01:37:58 [INFO] Epoch: [11] Step : [500/564] Loss: 2.0399
+2026-03-19 01:38:34 [INFO] Epoch: [11] Step : [564/564] Loss: 1.8419
+2026-03-19 01:40:25 [INFO] Epoch 11/300 | Train Loss: 1.2122 | Test Loss: 3.2881 | Acc: 0.5801 | Top-5: 0.8049 | F1(M): 0.3141 | Prec(M): 0.3266 | Rec(M): 0.3970 | Prec(W): 0.7096
+2026-03-19 01:40:40 [INFO] Epoch: [12] Step : [1/564] Loss: 2.3195
+2026-03-19 01:41:38 [INFO] Epoch: [12] Step : [100/564] Loss: 2.6665
+2026-03-19 01:42:37 [INFO] Epoch: [12] Step : [200/564] Loss: 1.3366
+2026-03-19 01:43:35 [INFO] Epoch: [12] Step : [300/564] Loss: 1.0120
+2026-03-19 01:44:33 [INFO] Epoch: [12] Step : [400/564] Loss: 1.6282
+2026-03-19 01:45:31 [INFO] Epoch: [12] Step : [500/564] Loss: 1.8818
+2026-03-19 01:46:07 [INFO] Epoch: [12] Step : [564/564] Loss: 4.1396
+2026-03-19 01:47:59 [INFO] Epoch 12/300 | Train Loss: 1.2084 | Test Loss: 3.2380 | Acc: 0.6352 | Top-5: 0.8333 | F1(M): 0.3072 | Prec(M): 0.3222 | Rec(M): 0.3869 | Prec(W): 0.7362
+2026-03-19 01:48:20 [INFO] Epoch: [13] Step : [1/564] Loss: 1.0346
+2026-03-19 01:49:17 [INFO] Epoch: [13] Step : [100/564] Loss: 0.8926
+2026-03-19 01:50:15 [INFO] Epoch: [13] Step : [200/564] Loss: 2.0571
+2026-03-19 01:51:13 [INFO] Epoch: [13] Step : [300/564] Loss: 4.3383
+2026-03-19 01:52:11 [INFO] Epoch: [13] Step : [400/564] Loss: 1.2843
+2026-03-19 01:53:08 [INFO] Epoch: [13] Step : [500/564] Loss: 2.9653
+2026-03-19 01:53:45 [INFO] Epoch: [13] Step : [564/564] Loss: 0.9560
+2026-03-19 01:55:37 [INFO] Epoch 13/300 | Train Loss: 1.1545 | Test Loss: 3.0881 | Acc: 0.6644 | Top-5: 0.8428 | F1(M): 0.3465 | Prec(M): 0.3624 | Rec(M): 0.4277 | Prec(W): 0.7879
+2026-03-19 01:55:37 [INFO] --> Best model saved with F1: 0.3465 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260319_0015.pth
+2026-03-19 01:55:53 [INFO] Epoch: [14] Step : [1/564] Loss: 1.4822
+2026-03-19 01:56:51 [INFO] Epoch: [14] Step : [100/564] Loss: 1.5610
+2026-03-19 01:57:49 [INFO] Epoch: [14] Step : [200/564] Loss: 2.5284
+2026-03-19 01:58:48 [INFO] Epoch: [14] Step : [300/564] Loss: 1.4803
+2026-03-19 01:59:46 [INFO] Epoch: [14] Step : [400/564] Loss: 1.9571
+2026-03-19 02:00:46 [INFO] Epoch: [14] Step : [500/564] Loss: 2.0354
+2026-03-19 02:01:22 [INFO] Epoch: [14] Step : [564/564] Loss: 0.4292
+2026-03-19 02:03:14 [INFO] Epoch 14/300 | Train Loss: 1.1299 | Test Loss: 2.9700 | Acc: 0.6562 | Top-5: 0.8416 | F1(M): 0.3487 | Prec(M): 0.3669 | Rec(M): 0.4283 | Prec(W): 0.7881
+2026-03-19 02:03:14 [INFO] --> Best model saved with F1: 0.3487 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260319_0015.pth
+2026-03-19 02:03:30 [INFO] Epoch: [15] Step : [1/564] Loss: 3.2950
+2026-03-19 02:04:27 [INFO] Epoch: [15] Step : [100/564] Loss: 1.7761
+2026-03-19 02:05:26 [INFO] Epoch: [15] Step : [200/564] Loss: 1.3392
+2026-03-19 02:06:24 [INFO] Epoch: [15] Step : [300/564] Loss: 0.6342
+2026-03-19 02:07:21 [INFO] Epoch: [15] Step : [400/564] Loss: 3.2417
+2026-03-19 02:08:21 [INFO] Epoch: [15] Step : [500/564] Loss: 1.3066
+2026-03-19 02:08:57 [INFO] Epoch: [15] Step : [564/564] Loss: 0.9158
+2026-03-19 02:10:50 [INFO] Epoch 15/300 | Train Loss: 1.0771 | Test Loss: 2.8531 | Acc: 0.6915 | Top-5: 0.8798 | F1(M): 0.3786 | Prec(M): 0.3885 | Rec(M): 0.4671 | Prec(W): 0.8246
+2026-03-19 02:10:50 [INFO] --> Best model saved with F1: 0.3786 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260319_0015.pth
+2026-03-19 02:11:06 [INFO] Epoch: [16] Step : [1/564] Loss: 1.7906
+2026-03-19 02:12:04 [INFO] Epoch: [16] Step : [100/564] Loss: 1.1382
+2026-03-19 02:13:02 [INFO] Epoch: [16] Step : [200/564] Loss: 0.9629
+2026-03-19 02:14:00 [INFO] Epoch: [16] Step : [300/564] Loss: 1.7487
+2026-03-19 02:14:58 [INFO] Epoch: [16] Step : [400/564] Loss: 1.3642
+2026-03-19 02:15:58 [INFO] Epoch: [16] Step : [500/564] Loss: 0.5365
+2026-03-19 02:16:35 [INFO] Epoch: [16] Step : [564/564] Loss: 1.7541
+2026-03-19 02:18:27 [INFO] Epoch 16/300 | Train Loss: 1.0690 | Test Loss: 2.7028 | Acc: 0.7171 | Top-5: 0.8864 | F1(M): 0.3995 | Prec(M): 0.4105 | Rec(M): 0.4833 | Prec(W): 0.8297
+2026-03-19 02:18:28 [INFO] --> Best model saved with F1: 0.3995 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260319_0015.pth
+2026-03-19 02:18:44 [INFO] Epoch: [17] Step : [1/564] Loss: 2.0481
+2026-03-19 02:19:42 [INFO] Epoch: [17] Step : [100/564] Loss: 0.8722
+2026-03-19 02:20:40 [INFO] Epoch: [17] Step : [200/564] Loss: 1.0279
+2026-03-19 02:21:38 [INFO] Epoch: [17] Step : [300/564] Loss: 4.0528
+2026-03-19 02:22:36 [INFO] Epoch: [17] Step : [400/564] Loss: 0.8143
+2026-03-19 02:23:35 [INFO] Epoch: [17] Step : [500/564] Loss: 2.7678
+2026-03-19 02:24:12 [INFO] Epoch: [17] Step : [564/564] Loss: 1.1060
+2026-03-19 02:26:05 [INFO] Epoch 17/300 | Train Loss: 1.0577 | Test Loss: 2.7444 | Acc: 0.7098 | Top-5: 0.8754 | F1(M): 0.4019 | Prec(M): 0.4127 | Rec(M): 0.4807 | Prec(W): 0.8221
+2026-03-19 02:26:05 [INFO] --> Best model saved with F1: 0.4019 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260319_0015.pth
+2026-03-19 02:26:20 [INFO] Epoch: [18] Step : [1/564] Loss: 1.1793
+2026-03-19 02:27:18 [INFO] Epoch: [18] Step : [100/564] Loss: 0.9861
+2026-03-19 02:28:17 [INFO] Epoch: [18] Step : [200/564] Loss: 0.9451
+2026-03-19 02:29:15 [INFO] Epoch: [18] Step : [300/564] Loss: 0.7027
+2026-03-19 02:30:13 [INFO] Epoch: [18] Step : [400/564] Loss: 1.0422
+2026-03-19 02:31:11 [INFO] Epoch: [18] Step : [500/564] Loss: 0.4634
+2026-03-19 02:31:48 [INFO] Epoch: [18] Step : [564/564] Loss: 1.8996
+2026-03-19 02:33:43 [INFO] Epoch 18/300 | Train Loss: 1.0259 | Test Loss: 2.6028 | Acc: 0.7079 | Top-5: 0.8735 | F1(M): 0.4107 | Prec(M): 0.4168 | Rec(M): 0.5007 | Prec(W): 0.8313
+2026-03-19 02:33:43 [INFO] --> Best model saved with F1: 0.4107 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260319_0015.pth
+2026-03-19 02:33:59 [INFO] Epoch: [19] Step : [1/564] Loss: 0.4696
+2026-03-19 02:34:56 [INFO] Epoch: [19] Step : [100/564] Loss: 0.6028
+2026-03-19 02:35:54 [INFO] Epoch: [19] Step : [200/564] Loss: 0.8050
+2026-03-19 02:36:52 [INFO] Epoch: [19] Step : [300/564] Loss: 0.9099
+2026-03-19 02:37:50 [INFO] Epoch: [19] Step : [400/564] Loss: 2.1341
+2026-03-19 02:38:49 [INFO] Epoch: [19] Step : [500/564] Loss: 0.9601
+2026-03-19 02:39:26 [INFO] Epoch: [19] Step : [564/564] Loss: 2.1005
+2026-03-19 02:41:18 [INFO] Epoch 19/300 | Train Loss: 1.0151 | Test Loss: 2.6812 | Acc: 0.7147 | Top-5: 0.8597 | F1(M): 0.4064 | Prec(M): 0.4135 | Rec(M): 0.4896 | Prec(W): 0.8246
+2026-03-19 02:41:35 [INFO] Epoch: [20] Step : [1/564] Loss: 0.5386
+2026-03-19 02:42:33 [INFO] Epoch: [20] Step : [100/564] Loss: 0.7418
+2026-03-19 02:43:31 [INFO] Epoch: [20] Step : [200/564] Loss: 2.3919
+2026-03-19 02:44:29 [INFO] Epoch: [20] Step : [300/564] Loss: 0.6168
+2026-03-19 02:45:26 [INFO] Epoch: [20] Step : [400/564] Loss: 1.9269
+2026-03-19 02:46:25 [INFO] Epoch: [20] Step : [500/564] Loss: 1.2993
+2026-03-19 02:47:02 [INFO] Epoch: [20] Step : [564/564] Loss: 0.7468
+2026-03-19 02:48:54 [INFO] Epoch 20/300 | Train Loss: 1.0104 | Test Loss: 2.5549 | Acc: 0.7536 | Top-5: 0.9178 | F1(M): 0.4189 | Prec(M): 0.4276 | Rec(M): 0.5033 | Prec(W): 0.8524
+2026-03-19 02:48:54 [INFO] --> Best model saved with F1: 0.4189 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260319_0015.pth
+2026-03-19 02:49:10 [INFO] Epoch: [21] Step : [1/564] Loss: 1.6230
+2026-03-19 02:50:08 [INFO] Epoch: [21] Step : [100/564] Loss: 1.6501
+2026-03-19 02:51:07 [INFO] Epoch: [21] Step : [200/564] Loss: 1.6383
+2026-03-19 02:52:05 [INFO] Epoch: [21] Step : [300/564] Loss: 2.3374
+2026-03-19 02:53:25 [INFO] Epoch: [21] Step : [400/564] Loss: 2.1460
+2026-03-19 02:55:00 [INFO] Epoch: [21] Step : [500/564] Loss: 2.7745
+2026-03-19 02:56:01 [INFO] Epoch: [21] Step : [564/564] Loss: 3.0037
+2026-03-19 02:58:08 [INFO] Epoch 21/300 | Train Loss: 1.0022 | Test Loss: 2.5910 | Acc: 0.7143 | Top-5: 0.8604 | F1(M): 0.4277 | Prec(M): 0.4424 | Rec(M): 0.5104 | Prec(W): 0.7971
+2026-03-19 02:58:08 [INFO] --> Best model saved with F1: 0.4277 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260319_0015.pth
+2026-03-19 02:58:25 [INFO] Epoch: [22] Step : [1/564] Loss: 2.3003
+2026-03-19 03:00:03 [INFO] Epoch: [22] Step : [100/564] Loss: 0.3359
+2026-03-19 03:01:41 [INFO] Epoch: [22] Step : [200/564] Loss: 2.5897
+2026-03-19 03:02:44 [INFO] Epoch: [22] Step : [300/564] Loss: 6.2719
+2026-03-19 03:03:42 [INFO] Epoch: [22] Step : [400/564] Loss: 1.8359
+2026-03-19 03:04:40 [INFO] Epoch: [22] Step : [500/564] Loss: 4.9192
+2026-03-19 03:05:17 [INFO] Epoch: [22] Step : [564/564] Loss: 5.5988
+2026-03-19 03:07:09 [INFO] Epoch 22/300 | Train Loss: 0.9862 | Test Loss: 2.6146 | Acc: 0.7349 | Top-5: 0.8900 | F1(M): 0.4376 | Prec(M): 0.4444 | Rec(M): 0.5250 | Prec(W): 0.8472
+2026-03-19 03:07:09 [INFO] --> Best model saved with F1: 0.4376 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260319_0015.pth
+2026-03-19 03:07:26 [INFO] Epoch: [23] Step : [1/564] Loss: 0.9413
+2026-03-19 03:08:23 [INFO] Epoch: [23] Step : [100/564] Loss: 1.3736
+2026-03-19 03:09:21 [INFO] Epoch: [23] Step : [200/564] Loss: 0.3903
+2026-03-19 03:10:19 [INFO] Epoch: [23] Step : [300/564] Loss: 5.9534
+2026-03-19 03:11:17 [INFO] Epoch: [23] Step : [400/564] Loss: 2.1147
+2026-03-19 03:12:16 [INFO] Epoch: [23] Step : [500/564] Loss: 5.9589
+2026-03-19 03:12:53 [INFO] Epoch: [23] Step : [564/564] Loss: 0.3609
+2026-03-19 03:14:46 [INFO] Epoch 23/300 | Train Loss: 0.9919 | Test Loss: 2.5285 | Acc: 0.7135 | Top-5: 0.8745 | F1(M): 0.4334 | Prec(M): 0.4406 | Rec(M): 0.5314 | Prec(W): 0.8482
+2026-03-19 03:15:03 [INFO] Epoch: [24] Step : [1/564] Loss: 1.4949
+2026-03-19 03:16:00 [INFO] Epoch: [24] Step : [100/564] Loss: 1.3486
+2026-03-19 03:16:58 [INFO] Epoch: [24] Step : [200/564] Loss: 1.0780
+2026-03-19 03:17:56 [INFO] Epoch: [24] Step : [300/564] Loss: 0.3431
+2026-03-19 03:18:55 [INFO] Epoch: [24] Step : [400/564] Loss: 2.1320
+2026-03-19 03:19:52 [INFO] Epoch: [24] Step : [500/564] Loss: 0.7227
+2026-03-19 03:20:29 [INFO] Epoch: [24] Step : [564/564] Loss: 0.8794
+2026-03-19 03:22:27 [INFO] Epoch 24/300 | Train Loss: 0.9655 | Test Loss: 2.5286 | Acc: 0.7750 | Top-5: 0.9128 | F1(M): 0.4406 | Prec(M): 0.4444 | Rec(M): 0.5339 | Prec(W): 0.8537
+2026-03-19 03:22:27 [INFO] --> Best model saved with F1: 0.4406 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260319_0015.pth
+2026-03-19 03:22:45 [INFO] Epoch: [25] Step : [1/564] Loss: 1.7775
+2026-03-19 03:24:22 [INFO] Epoch: [25] Step : [100/564] Loss: 0.9528
+2026-03-19 03:25:58 [INFO] Epoch: [25] Step : [200/564] Loss: 1.8556
+2026-03-19 03:27:20 [INFO] Epoch: [25] Step : [300/564] Loss: 1.0757
+2026-03-19 03:28:58 [INFO] Epoch: [25] Step : [400/564] Loss: 2.5890
+2026-03-19 03:30:36 [INFO] Epoch: [25] Step : [500/564] Loss: 8.2988
+2026-03-19 03:31:13 [INFO] Epoch: [25] Step : [564/564] Loss: 4.2608
+2026-03-19 03:33:07 [INFO] Epoch 25/300 | Train Loss: 0.9519 | Test Loss: 2.4588 | Acc: 0.7352 | Top-5: 0.8941 | F1(M): 0.4496 | Prec(M): 0.4549 | Rec(M): 0.5389 | Prec(W): 0.8149
+2026-03-19 03:33:07 [INFO] --> Best model saved with F1: 0.4496 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260319_0015.pth
+2026-03-19 03:33:23 [INFO] Epoch: [26] Step : [1/564] Loss: 0.9344
+2026-03-19 03:34:20 [INFO] Epoch: [26] Step : [100/564] Loss: 0.9732
+2026-03-19 03:35:19 [INFO] Epoch: [26] Step : [200/564] Loss: 1.0565
+2026-03-19 03:36:18 [INFO] Epoch: [26] Step : [300/564] Loss: 0.7923
+2026-03-19 03:37:17 [INFO] Epoch: [26] Step : [400/564] Loss: 2.4309
+2026-03-19 03:38:15 [INFO] Epoch: [26] Step : [500/564] Loss: 2.4363
+2026-03-19 03:38:52 [INFO] Epoch: [26] Step : [564/564] Loss: 6.1419
+2026-03-19 03:40:48 [INFO] Epoch 26/300 | Train Loss: 0.9567 | Test Loss: 2.5874 | Acc: 0.7438 | Top-5: 0.8899 | F1(M): 0.4297 | Prec(M): 0.4380 | Rec(M): 0.5176 | Prec(W): 0.8456
+2026-03-19 03:41:04 [INFO] Epoch: [27] Step : [1/564] Loss: 2.7532
+2026-03-19 03:42:01 [INFO] Epoch: [27] Step : [100/564] Loss: 1.7548
+2026-03-19 03:43:00 [INFO] Epoch: [27] Step : [200/564] Loss: 2.7424
+2026-03-19 03:43:58 [INFO] Epoch: [27] Step : [300/564] Loss: 4.6679
+2026-03-19 03:44:55 [INFO] Epoch: [27] Step : [400/564] Loss: 1.3221
+2026-03-19 03:45:54 [INFO] Epoch: [27] Step : [500/564] Loss: 1.0907
+2026-03-19 03:46:32 [INFO] Epoch: [27] Step : [564/564] Loss: 3.0654
+2026-03-19 03:49:10 [INFO] Epoch 27/300 | Train Loss: 0.9483 | Test Loss: 2.5538 | Acc: 0.7545 | Top-5: 0.8797 | F1(M): 0.4441 | Prec(M): 0.4500 | Rec(M): 0.5225 | Prec(W): 0.8237
+2026-03-19 03:49:31 [INFO] Epoch: [28] Step : [1/564] Loss: 2.5008
+2026-03-19 03:50:49 [INFO] Epoch: [28] Step : [100/564] Loss: 3.3644
+2026-03-19 03:52:13 [INFO] Epoch: [28] Step : [200/564] Loss: 2.0118
+2026-03-19 03:53:50 [INFO] Epoch: [28] Step : [300/564] Loss: 0.9953
+2026-03-19 03:55:26 [INFO] Epoch: [28] Step : [400/564] Loss: 2.6396
+2026-03-19 03:56:27 [INFO] Epoch: [28] Step : [500/564] Loss: 1.1440
+2026-03-19 03:57:03 [INFO] Epoch: [28] Step : [564/564] Loss: 1.0277
+2026-03-19 03:58:57 [INFO] Epoch 28/300 | Train Loss: 0.9293 | Test Loss: 2.5624 | Acc: 0.7443 | Top-5: 0.9065 | F1(M): 0.4451 | Prec(M): 0.4595 | Rec(M): 0.5274 | Prec(W): 0.8494
+2026-03-19 03:59:14 [INFO] Epoch: [29] Step : [1/564] Loss: 2.6520
+2026-03-19 04:00:13 [INFO] Epoch: [29] Step : [100/564] Loss: 1.9808
+2026-03-19 04:01:11 [INFO] Epoch: [29] Step : [200/564] Loss: 1.2245
+2026-03-19 04:02:09 [INFO] Epoch: [29] Step : [300/564] Loss: 1.3139
+2026-03-19 04:03:07 [INFO] Epoch: [29] Step : [400/564] Loss: 0.8353
+2026-03-19 04:04:06 [INFO] Epoch: [29] Step : [500/564] Loss: 1.1125
+2026-03-19 04:04:43 [INFO] Epoch: [29] Step : [564/564] Loss: 2.6312
+2026-03-19 04:06:35 [INFO] Epoch 29/300 | Train Loss: 0.9293 | Test Loss: 2.5584 | Acc: 0.7295 | Top-5: 0.8594 | F1(M): 0.4433 | Prec(M): 0.4525 | Rec(M): 0.5347 | Prec(W): 0.7937
+2026-03-19 04:06:51 [INFO] Epoch: [30] Step : [1/564] Loss: 0.4564
+2026-03-19 04:07:49 [INFO] Epoch: [30] Step : [100/564] Loss: 1.3504
+2026-03-19 04:08:47 [INFO] Epoch: [30] Step : [200/564] Loss: 2.9170
+2026-03-19 04:09:46 [INFO] Epoch: [30] Step : [300/564] Loss: 2.5563
+2026-03-19 04:10:53 [INFO] Epoch: [30] Step : [400/564] Loss: 0.8732
+2026-03-19 04:12:02 [INFO] Epoch: [30] Step : [500/564] Loss: 0.9702
+2026-03-19 04:12:46 [INFO] Epoch: [30] Step : [564/564] Loss: 3.3865
+2026-03-19 04:14:51 [INFO] Epoch 30/300 | Train Loss: 0.9269 | Test Loss: 2.4744 | Acc: 0.7408 | Top-5: 0.8741 | F1(M): 0.4516 | Prec(M): 0.4614 | Rec(M): 0.5397 | Prec(W): 0.8320
+2026-03-19 04:14:51 [INFO] --> Best model saved with F1: 0.4516 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260319_0015.pth
+2026-03-19 04:15:08 [INFO] Epoch: [31] Step : [1/564] Loss: 1.6359
+2026-03-19 04:16:17 [INFO] Epoch: [31] Step : [100/564] Loss: 0.7626
+2026-03-19 04:17:26 [INFO] Epoch: [31] Step : [200/564] Loss: 1.5874
+2026-03-19 04:18:28 [INFO] Epoch: [31] Step : [300/564] Loss: 1.4479
+2026-03-19 04:19:27 [INFO] Epoch: [31] Step : [400/564] Loss: 0.5234
+2026-03-19 04:20:25 [INFO] Epoch: [31] Step : [500/564] Loss: 2.3118
+2026-03-19 04:21:02 [INFO] Epoch: [31] Step : [564/564] Loss: 3.5433
+2026-03-19 04:22:55 [INFO] Epoch 31/300 | Train Loss: 0.9091 | Test Loss: 2.4465 | Acc: 0.7641 | Top-5: 0.8967 | F1(M): 0.4621 | Prec(M): 0.4681 | Rec(M): 0.5519 | Prec(W): 0.8572
+2026-03-19 04:22:55 [INFO] --> Best model saved with F1: 0.4621 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260319_0015.pth
+2026-03-19 04:23:11 [INFO] Epoch: [32] Step : [1/564] Loss: 2.2094
+2026-03-19 04:24:09 [INFO] Epoch: [32] Step : [100/564] Loss: 0.3968
+2026-03-19 04:25:07 [INFO] Epoch: [32] Step : [200/564] Loss: 1.5856
+2026-03-19 04:26:05 [INFO] Epoch: [32] Step : [300/564] Loss: 1.1581
+2026-03-19 04:27:04 [INFO] Epoch: [32] Step : [400/564] Loss: 1.9390
+2026-03-19 04:28:02 [INFO] Epoch: [32] Step : [500/564] Loss: 1.5648
+2026-03-19 04:28:38 [INFO] Epoch: [32] Step : [564/564] Loss: 1.9728
+2026-03-19 04:30:32 [INFO] Epoch 32/300 | Train Loss: 0.8912 | Test Loss: 2.5553 | Acc: 0.7118 | Top-5: 0.8592 | F1(M): 0.4406 | Prec(M): 0.4517 | Rec(M): 0.5260 | Prec(W): 0.7894
+2026-03-19 04:30:48 [INFO] Epoch: [33] Step : [1/564] Loss: 0.6098
+2026-03-19 04:31:46 [INFO] Epoch: [33] Step : [100/564] Loss: 7.0509
+2026-03-19 04:32:44 [INFO] Epoch: [33] Step : [200/564] Loss: 0.6401
+2026-03-19 04:33:43 [INFO] Epoch: [33] Step : [300/564] Loss: 0.4459
+2026-03-19 04:34:42 [INFO] Epoch: [33] Step : [400/564] Loss: 2.4181
+2026-03-19 04:35:41 [INFO] Epoch: [33] Step : [500/564] Loss: 1.4819
+2026-03-19 04:36:18 [INFO] Epoch: [33] Step : [564/564] Loss: 0.2313
+2026-03-19 04:38:11 [INFO] Epoch 33/300 | Train Loss: 0.8982 | Test Loss: 2.4535 | Acc: 0.7291 | Top-5: 0.8825 | F1(M): 0.4576 | Prec(M): 0.4640 | Rec(M): 0.5433 | Prec(W): 0.8618
+2026-03-19 04:38:27 [INFO] Epoch: [34] Step : [1/564] Loss: 0.9680
+2026-03-19 04:39:25 [INFO] Epoch: [34] Step : [100/564] Loss: 1.6268
+2026-03-19 04:40:24 [INFO] Epoch: [34] Step : [200/564] Loss: 0.3833
+2026-03-19 04:41:22 [INFO] Epoch: [34] Step : [300/564] Loss: 0.2726
+2026-03-19 04:42:21 [INFO] Epoch: [34] Step : [400/564] Loss: 0.4596
+2026-03-19 04:43:19 [INFO] Epoch: [34] Step : [500/564] Loss: 1.0363
+2026-03-19 04:43:55 [INFO] Epoch: [34] Step : [564/564] Loss: 0.4064
+2026-03-19 04:45:48 [INFO] Epoch 34/300 | Train Loss: 0.8861 | Test Loss: 2.5920 | Acc: 0.6846 | Top-5: 0.8676 | F1(M): 0.4470 | Prec(M): 0.4642 | Rec(M): 0.5288 | Prec(W): 0.8083
+2026-03-19 04:46:05 [INFO] Epoch: [35] Step : [1/564] Loss: 1.1834
+2026-03-19 04:47:02 [INFO] Epoch: [35] Step : [100/564] Loss: 2.1073
+2026-03-19 04:48:02 [INFO] Epoch: [35] Step : [200/564] Loss: 1.5708
+2026-03-19 04:49:01 [INFO] Epoch: [35] Step : [300/564] Loss: 1.0307
+2026-03-19 04:49:58 [INFO] Epoch: [35] Step : [400/564] Loss: 1.9078
+2026-03-19 04:50:57 [INFO] Epoch: [35] Step : [500/564] Loss: 1.0141
+2026-03-19 04:51:34 [INFO] Epoch: [35] Step : [564/564] Loss: 0.6445
+2026-03-19 04:53:28 [INFO] Epoch 35/300 | Train Loss: 0.8898 | Test Loss: 2.4475 | Acc: 0.7345 | Top-5: 0.8751 | F1(M): 0.4651 | Prec(M): 0.4778 | Rec(M): 0.5480 | Prec(W): 0.8132
+2026-03-19 04:53:28 [INFO] --> Best model saved with F1: 0.4651 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260319_0015.pth
+2026-03-19 04:53:44 [INFO] Epoch: [36] Step : [1/564] Loss: 1.8509
+2026-03-19 04:54:42 [INFO] Epoch: [36] Step : [100/564] Loss: 1.2070
+2026-03-19 04:55:40 [INFO] Epoch: [36] Step : [200/564] Loss: 1.5417
+2026-03-19 04:56:39 [INFO] Epoch: [36] Step : [300/564] Loss: 2.5654
+2026-03-19 04:57:37 [INFO] Epoch: [36] Step : [400/564] Loss: 0.4378
+2026-03-19 04:58:35 [INFO] Epoch: [36] Step : [500/564] Loss: 0.6798
+2026-03-19 04:59:12 [INFO] Epoch: [36] Step : [564/564] Loss: 1.6565
+2026-03-19 05:01:05 [INFO] Epoch 36/300 | Train Loss: 0.8830 | Test Loss: 2.3721 | Acc: 0.7468 | Top-5: 0.8803 | F1(M): 0.4696 | Prec(M): 0.4790 | Rec(M): 0.5614 | Prec(W): 0.8369
+2026-03-19 05:01:05 [INFO] --> Best model saved with F1: 0.4696 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260319_0015.pth
+2026-03-19 05:01:21 [INFO] Epoch: [37] Step : [1/564] Loss: 1.0308
+2026-03-19 05:02:20 [INFO] Epoch: [37] Step : [100/564] Loss: 1.0641
+2026-03-19 05:03:18 [INFO] Epoch: [37] Step : [200/564] Loss: 1.1209
+2026-03-19 05:04:17 [INFO] Epoch: [37] Step : [300/564] Loss: 0.3527
+2026-03-19 05:05:16 [INFO] Epoch: [37] Step : [400/564] Loss: 1.0997
+2026-03-19 05:06:16 [INFO] Epoch: [37] Step : [500/564] Loss: 1.2962
+2026-03-19 05:06:52 [INFO] Epoch: [37] Step : [564/564] Loss: 0.5151
+2026-03-19 05:08:47 [INFO] Epoch 37/300 | Train Loss: 0.8821 | Test Loss: 2.3440 | Acc: 0.7445 | Top-5: 0.9070 | F1(M): 0.4726 | Prec(M): 0.4807 | Rec(M): 0.5659 | Prec(W): 0.8714
+2026-03-19 05:08:47 [INFO] --> Best model saved with F1: 0.4726 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260319_0015.pth
+2026-03-19 05:09:03 [INFO] Epoch: [38] Step : [1/564] Loss: 0.7516
+2026-03-19 05:10:01 [INFO] Epoch: [38] Step : [100/564] Loss: 0.5106
+2026-03-19 05:11:01 [INFO] Epoch: [38] Step : [200/564] Loss: 0.6948
+2026-03-19 05:11:59 [INFO] Epoch: [38] Step : [300/564] Loss: 0.5816
+2026-03-19 05:12:58 [INFO] Epoch: [38] Step : [400/564] Loss: 1.6996
+2026-03-19 05:13:56 [INFO] Epoch: [38] Step : [500/564] Loss: 4.0156
+2026-03-19 05:14:33 [INFO] Epoch: [38] Step : [564/564] Loss: 1.1468
+2026-03-19 05:16:27 [INFO] Epoch 38/300 | Train Loss: 0.8831 | Test Loss: 2.3819 | Acc: 0.7462 | Top-5: 0.8748 | F1(M): 0.4675 | Prec(M): 0.4750 | Rec(M): 0.5682 | Prec(W): 0.8124
+2026-03-19 05:16:42 [INFO] Epoch: [39] Step : [1/564] Loss: 0.6096
+2026-03-19 05:17:40 [INFO] Epoch: [39] Step : [100/564] Loss: 0.3903
+2026-03-19 05:18:38 [INFO] Epoch: [39] Step : [200/564] Loss: 1.8726
+2026-03-19 05:19:36 [INFO] Epoch: [39] Step : [300/564] Loss: 1.6348
+2026-03-19 05:20:34 [INFO] Epoch: [39] Step : [400/564] Loss: 1.4215
+2026-03-19 05:21:32 [INFO] Epoch: [39] Step : [500/564] Loss: 0.6953
+2026-03-19 05:22:09 [INFO] Epoch: [39] Step : [564/564] Loss: 0.4025
+2026-03-19 05:24:05 [INFO] Epoch 39/300 | Train Loss: 0.8548 | Test Loss: 2.4606 | Acc: 0.7011 | Top-5: 0.8663 | F1(M): 0.4381 | Prec(M): 0.4565 | Rec(M): 0.5212 | Prec(W): 0.7975
+2026-03-19 05:24:20 [INFO] Epoch: [40] Step : [1/564] Loss: 0.6760
+2026-03-19 05:25:19 [INFO] Epoch: [40] Step : [100/564] Loss: 1.4241
+2026-03-19 05:26:17 [INFO] Epoch: [40] Step : [200/564] Loss: 1.1185
+2026-03-19 05:27:16 [INFO] Epoch: [40] Step : [300/564] Loss: 2.3833
+2026-03-19 05:28:14 [INFO] Epoch: [40] Step : [400/564] Loss: 0.4281
+2026-03-19 05:29:12 [INFO] Epoch: [40] Step : [500/564] Loss: 0.9718
+2026-03-19 05:29:49 [INFO] Epoch: [40] Step : [564/564] Loss: 0.4027
+2026-03-19 05:31:44 [INFO] Epoch 40/300 | Train Loss: 0.8508 | Test Loss: 2.4109 | Acc: 0.7324 | Top-5: 0.8764 | F1(M): 0.4621 | Prec(M): 0.4711 | Rec(M): 0.5497 | Prec(W): 0.8690
+2026-03-19 05:32:01 [INFO] Epoch: [41] Step : [1/564] Loss: 4.5809
+2026-03-19 05:32:58 [INFO] Epoch: [41] Step : [100/564] Loss: 1.5365
+2026-03-19 05:33:56 [INFO] Epoch: [41] Step : [200/564] Loss: 1.8989
+2026-03-19 05:34:53 [INFO] Epoch: [41] Step : [300/564] Loss: 1.4770
+2026-03-19 05:35:51 [INFO] Epoch: [41] Step : [400/564] Loss: 1.1407
+2026-03-19 05:36:48 [INFO] Epoch: [41] Step : [500/564] Loss: 1.1950
+2026-03-19 05:37:25 [INFO] Epoch: [41] Step : [564/564] Loss: 0.4633
+2026-03-19 05:39:18 [INFO] Epoch 41/300 | Train Loss: 0.8628 | Test Loss: 2.5890 | Acc: 0.6826 | Top-5: 0.8553 | F1(M): 0.4422 | Prec(M): 0.4587 | Rec(M): 0.5242 | Prec(W): 0.8060
+2026-03-19 05:39:34 [INFO] Epoch: [42] Step : [1/564] Loss: 1.5633
+2026-03-19 05:40:33 [INFO] Epoch: [42] Step : [100/564] Loss: 0.5985
+2026-03-19 05:41:32 [INFO] Epoch: [42] Step : [200/564] Loss: 2.3369
+2026-03-19 05:42:31 [INFO] Epoch: [42] Step : [300/564] Loss: 2.2862
+2026-03-19 05:43:29 [INFO] Epoch: [42] Step : [400/564] Loss: 1.8672
+2026-03-19 05:44:27 [INFO] Epoch: [42] Step : [500/564] Loss: 3.0081
+2026-03-19 05:45:05 [INFO] Epoch: [42] Step : [564/564] Loss: 2.6959
+2026-03-19 05:46:58 [INFO] Epoch 42/300 | Train Loss: 0.8397 | Test Loss: 2.3672 | Acc: 0.7484 | Top-5: 0.8829 | F1(M): 0.4783 | Prec(M): 0.4865 | Rec(M): 0.5617 | Prec(W): 0.8116
+2026-03-19 05:46:58 [INFO] --> Best model saved with F1: 0.4783 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260319_0015.pth
+2026-03-19 05:47:14 [INFO] Epoch: [43] Step : [1/564] Loss: 1.2022
+2026-03-19 05:48:11 [INFO] Epoch: [43] Step : [100/564] Loss: 0.4549
+2026-03-19 05:49:10 [INFO] Epoch: [43] Step : [200/564] Loss: 1.5463
+2026-03-19 05:50:10 [INFO] Epoch: [43] Step : [300/564] Loss: 0.8006
+2026-03-19 05:51:08 [INFO] Epoch: [43] Step : [400/564] Loss: 0.6340
+2026-03-19 05:52:07 [INFO] Epoch: [43] Step : [500/564] Loss: 1.1452
+2026-03-19 05:52:44 [INFO] Epoch: [43] Step : [564/564] Loss: 0.2260
+2026-03-19 05:54:37 [INFO] Epoch 43/300 | Train Loss: 0.8580 | Test Loss: 2.4646 | Acc: 0.7630 | Top-5: 0.8910 | F1(M): 0.4846 | Prec(M): 0.4934 | Rec(M): 0.5648 | Prec(W): 0.8565
+2026-03-19 05:54:37 [INFO] --> Best model saved with F1: 0.4846 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260319_0015.pth
+2026-03-19 05:54:54 [INFO] Epoch: [44] Step : [1/564] Loss: 1.1772
+2026-03-19 05:55:51 [INFO] Epoch: [44] Step : [100/564] Loss: 0.6095
+2026-03-19 05:56:51 [INFO] Epoch: [44] Step : [200/564] Loss: 2.4537
+2026-03-19 05:57:49 [INFO] Epoch: [44] Step : [300/564] Loss: 0.6018
+2026-03-19 05:58:47 [INFO] Epoch: [44] Step : [400/564] Loss: 4.4308
+2026-03-19 05:59:46 [INFO] Epoch: [44] Step : [500/564] Loss: 1.4375
+2026-03-19 06:00:22 [INFO] Epoch: [44] Step : [564/564] Loss: 0.5160
+2026-03-19 06:02:16 [INFO] Epoch 44/300 | Train Loss: 0.8528 | Test Loss: 2.4038 | Acc: 0.7070 | Top-5: 0.8810 | F1(M): 0.4695 | Prec(M): 0.4828 | Rec(M): 0.5555 | Prec(W): 0.8397
+2026-03-19 06:02:32 [INFO] Epoch: [45] Step : [1/564] Loss: 0.8021
+2026-03-19 06:03:30 [INFO] Epoch: [45] Step : [100/564] Loss: 0.3511
+2026-03-19 06:04:28 [INFO] Epoch: [45] Step : [200/564] Loss: 0.6199
+2026-03-19 06:05:26 [INFO] Epoch: [45] Step : [300/564] Loss: 1.6605
+2026-03-19 06:06:24 [INFO] Epoch: [45] Step : [400/564] Loss: 1.1439
+2026-03-19 06:07:23 [INFO] Epoch: [45] Step : [500/564] Loss: 0.9906
+2026-03-19 06:07:59 [INFO] Epoch: [45] Step : [564/564] Loss: 0.3520
+2026-03-19 06:09:52 [INFO] Epoch 45/300 | Train Loss: 0.8537 | Test Loss: 2.4155 | Acc: 0.7436 | Top-5: 0.9115 | F1(M): 0.4606 | Prec(M): 0.4731 | Rec(M): 0.5546 | Prec(W): 0.8642
+2026-03-19 06:10:09 [INFO] Epoch: [46] Step : [1/564] Loss: 0.3190
+2026-03-19 06:11:06 [INFO] Epoch: [46] Step : [100/564] Loss: 2.1827
+2026-03-19 06:12:05 [INFO] Epoch: [46] Step : [200/564] Loss: 3.5650
+2026-03-19 06:13:03 [INFO] Epoch: [46] Step : [300/564] Loss: 2.1522
+2026-03-19 06:14:01 [INFO] Epoch: [46] Step : [400/564] Loss: 2.7631
+2026-03-19 06:15:01 [INFO] Epoch: [46] Step : [500/564] Loss: 5.7795
+2026-03-19 06:15:38 [INFO] Epoch: [46] Step : [564/564] Loss: 1.0654
+2026-03-19 06:17:30 [INFO] Epoch 46/300 | Train Loss: 0.8374 | Test Loss: 2.3531 | Acc: 0.7528 | Top-5: 0.8794 | F1(M): 0.4739 | Prec(M): 0.4837 | Rec(M): 0.5629 | Prec(W): 0.8254
+2026-03-19 06:17:49 [INFO] Epoch: [47] Step : [1/564] Loss: 1.1651
+2026-03-19 06:18:46 [INFO] Epoch: [47] Step : [100/564] Loss: 0.5865
+2026-03-19 06:19:45 [INFO] Epoch: [47] Step : [200/564] Loss: 1.1316
+2026-03-19 06:20:43 [INFO] Epoch: [47] Step : [300/564] Loss: 1.8629
+2026-03-19 06:21:42 [INFO] Epoch: [47] Step : [400/564] Loss: 3.3688
+2026-03-19 06:22:41 [INFO] Epoch: [47] Step : [500/564] Loss: 1.4780
+2026-03-19 06:23:18 [INFO] Epoch: [47] Step : [564/564] Loss: 1.0839
+2026-03-19 06:25:11 [INFO] Epoch 47/300 | Train Loss: 0.8203 | Test Loss: 2.3503 | Acc: 0.7588 | Top-5: 0.8946 | F1(M): 0.4844 | Prec(M): 0.4904 | Rec(M): 0.5704 | Prec(W): 0.8375
