@@ -1,0 +1,1982 @@
+2026-03-16 01:29:15 [INFO] ==============================================
+2026-03-16 01:29:15 [INFO]       Starting Engine in Mode: [TRAIN]
+2026-03-16 01:29:15 [INFO] ==============================================
+2026-03-16 01:29:16 [INFO] ========== Training Configuration ==========
+2026-03-16 01:29:16 [INFO]   learning_rate: 0.001
+2026-03-16 01:29:16 [INFO]   batch_size: 64
+2026-03-16 01:29:16 [INFO]   epochs: 300
+2026-03-16 01:29:16 [INFO]   min_epochs: 100
+2026-03-16 01:29:16 [INFO]   test_size: 0.3
+2026-03-16 01:29:16 [INFO]   focal_loss_alpha: auto
+2026-03-16 01:29:16 [INFO]   focal_loss_gamma: 2.0
+2026-03-16 01:29:16 [INFO]   random_state: 42
+2026-03-16 01:29:16 [INFO]   input_dim: 1536
+2026-03-16 01:29:16 [INFO]   hidden_dim: 1024
+2026-03-16 01:29:16 [INFO]   num_layers: 4
+2026-03-16 01:29:16 [INFO]   heads: 8
+2026-03-16 01:29:16 [INFO]   dropout: 0.5
+2026-03-16 01:29:16 [INFO]   weight_decay: 0.0005
+2026-03-16 01:29:16 [INFO]   lr_patience: 10
+2026-03-16 01:29:16 [INFO]   early_stopping_patience: 20
+2026-03-16 01:29:16 [INFO] ============================================
+2026-03-16 01:29:16 [INFO] Using device: cuda:0 (Distributed: True)
+2026-03-16 01:29:16 [INFO] Loading data...
+2026-03-16 01:29:22 [INFO] Total samples after filtering: 103015
+2026-03-16 01:29:22 [INFO] Total classes: 1765
+2026-03-16 01:29:22 [INFO] Class Weights Range: [0.0128, 58.3654]
+2026-03-16 01:29:22 [WARNING] Stratified split failed (likely due to classes with < 2 samples). Falling back to random split.
+2026-03-16 01:29:22 [INFO] Using graph_dir: /data/lihb/enzyme_functional_annotation/optimal_radius/graph
+2026-03-16 01:29:22 [INFO] Initializing dataset with 72110 entries from graph_dir=/data/lihb/enzyme_functional_annotation/optimal_radius/graph ...
+2026-03-16 01:29:25 [INFO] Found samples with pdb_id: 2794
+2026-03-16 01:29:25 [INFO] Found samples without pdb_id: 69316
+2026-03-16 01:29:25 [INFO] Dataset initialized with 72110 valid samples.
+2026-03-16 01:29:25 [INFO] Initializing dataset with 30905 entries from graph_dir=/data/lihb/enzyme_functional_annotation/optimal_radius/graph ...
+2026-03-16 01:29:26 [INFO] Found samples with pdb_id: 1302
+2026-03-16 01:29:26 [INFO] Found samples without pdb_id: 29603
+2026-03-16 01:29:26 [INFO] Dataset initialized with 30905 valid samples.
+2026-03-16 01:29:26 [INFO] Data loaded. Train steps per epoch (optimizer updates): 564 | Expected: 564 | Train samples: 72110 | Batch/GPU: 64 | World Size: 2 | Global Batch: 128
+2026-03-16 01:29:26 [INFO] Data loaded. Test steps per epoch: 242 | Expected: 242 | Test samples: 30905
+2026-03-16 01:29:27 [INFO] Using Automatic Class Weights for Focal Loss. Range: [0.0128, 58.3654]
+2026-03-16 01:29:27 [INFO] Start training...
+2026-03-16 01:29:45 [INFO] Epoch: [1] Step : [1/564] Loss: 7.5600
+2026-03-16 01:30:45 [INFO] Epoch: [1] Step : [100/564] Loss: 12.3961
+2026-03-16 01:31:45 [INFO] Epoch: [1] Step : [200/564] Loss: 8.9197
+2026-03-16 01:32:45 [INFO] Epoch: [1] Step : [300/564] Loss: 2.7908
+2026-03-16 01:33:44 [INFO] Epoch: [1] Step : [400/564] Loss: 8.2888
+2026-03-16 01:34:41 [INFO] Epoch: [1] Step : [500/564] Loss: 5.6573
+2026-03-16 01:35:18 [INFO] Epoch: [1] Step : [564/564] Loss: 2.2178
+2026-03-16 01:37:08 [INFO] Epoch 1/300 | Train Loss: 3.3963 | Test Loss: 7.2316 | Acc: 0.0064 | Top-5: 0.0373 | F1(M): 0.0007 | Prec(M): 0.0007 | Rec(M): 0.0058 | Prec(W): 0.0025
+2026-03-16 01:37:09 [INFO] --> Best model saved with F1: 0.0007 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260316_0129.pth
+2026-03-16 01:37:27 [INFO] Epoch: [2] Step : [1/564] Loss: 6.1223
+2026-03-16 01:38:24 [INFO] Epoch: [2] Step : [100/564] Loss: 8.0228
+2026-03-16 01:39:22 [INFO] Epoch: [2] Step : [200/564] Loss: 2.8926
+2026-03-16 01:40:20 [INFO] Epoch: [2] Step : [300/564] Loss: 4.1477
+2026-03-16 01:41:19 [INFO] Epoch: [2] Step : [400/564] Loss: 5.4562
+2026-03-16 01:42:18 [INFO] Epoch: [2] Step : [500/564] Loss: 1.5365
+2026-03-16 01:42:55 [INFO] Epoch: [2] Step : [564/564] Loss: 6.0627
+2026-03-16 01:45:50 [INFO] Epoch 2/300 | Train Loss: 2.6277 | Test Loss: 6.4206 | Acc: 0.0371 | Top-5: 0.1240 | F1(M): 0.0092 | Prec(M): 0.0103 | Rec(M): 0.0239 | Prec(W): 0.0291
+2026-03-16 01:45:50 [INFO] --> Best model saved with F1: 0.0092 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260316_0129.pth
+2026-03-16 01:46:06 [INFO] Epoch: [3] Step : [1/564] Loss: 3.9510
+2026-03-16 01:47:03 [INFO] Epoch: [3] Step : [100/564] Loss: 2.4581
+2026-03-16 01:48:00 [INFO] Epoch: [3] Step : [200/564] Loss: 4.6876
+2026-03-16 01:48:58 [INFO] Epoch: [3] Step : [300/564] Loss: 3.1058
+2026-03-16 01:49:57 [INFO] Epoch: [3] Step : [400/564] Loss: 3.3445
+2026-03-16 01:50:54 [INFO] Epoch: [3] Step : [500/564] Loss: 5.7265
+2026-03-16 01:51:30 [INFO] Epoch: [3] Step : [564/564] Loss: 2.2329
+2026-03-16 01:53:21 [INFO] Epoch 3/300 | Train Loss: 2.0499 | Test Loss: 5.7332 | Acc: 0.0701 | Top-5: 0.2179 | F1(M): 0.0241 | Prec(M): 0.0286 | Rec(M): 0.0501 | Prec(W): 0.0641
+2026-03-16 01:53:21 [INFO] --> Best model saved with F1: 0.0241 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260316_0129.pth
+2026-03-16 01:53:41 [INFO] Epoch: [4] Step : [1/564] Loss: 1.4414
+2026-03-16 01:54:38 [INFO] Epoch: [4] Step : [100/564] Loss: 1.7566
+2026-03-16 01:55:36 [INFO] Epoch: [4] Step : [200/564] Loss: 1.6129
+2026-03-16 01:56:34 [INFO] Epoch: [4] Step : [300/564] Loss: 1.3816
+2026-03-16 01:57:32 [INFO] Epoch: [4] Step : [400/564] Loss: 1.6029
+2026-03-16 01:58:30 [INFO] Epoch: [4] Step : [500/564] Loss: 1.2277
+2026-03-16 01:59:08 [INFO] Epoch: [4] Step : [564/564] Loss: 0.3783
+2026-03-16 02:01:23 [INFO] Epoch 4/300 | Train Loss: 1.6712 | Test Loss: 5.2449 | Acc: 0.1023 | Top-5: 0.2930 | F1(M): 0.0454 | Prec(M): 0.0573 | Rec(M): 0.0829 | Prec(W): 0.1135
+2026-03-16 02:01:23 [INFO] --> Best model saved with F1: 0.0454 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260316_0129.pth
+2026-03-16 02:01:39 [INFO] Epoch: [5] Step : [1/564] Loss: 2.5109
+2026-03-16 02:02:36 [INFO] Epoch: [5] Step : [100/564] Loss: 5.6314
+2026-03-16 02:03:35 [INFO] Epoch: [5] Step : [200/564] Loss: 2.0712
+2026-03-16 02:04:34 [INFO] Epoch: [5] Step : [300/564] Loss: 2.8215
+2026-03-16 02:05:31 [INFO] Epoch: [5] Step : [400/564] Loss: 2.5291
+2026-03-16 02:06:30 [INFO] Epoch: [5] Step : [500/564] Loss: 7.0299
+2026-03-16 02:07:07 [INFO] Epoch: [5] Step : [564/564] Loss: 3.6694
+2026-03-16 02:08:59 [INFO] Epoch 5/300 | Train Loss: 1.4448 | Test Loss: 4.7608 | Acc: 0.1320 | Top-5: 0.3815 | F1(M): 0.0841 | Prec(M): 0.1078 | Rec(M): 0.1244 | Prec(W): 0.2220
+2026-03-16 02:09:00 [INFO] --> Best model saved with F1: 0.0841 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260316_0129.pth
+2026-03-16 02:09:16 [INFO] Epoch: [6] Step : [1/564] Loss: 1.4921
+2026-03-16 02:10:13 [INFO] Epoch: [6] Step : [100/564] Loss: 1.2024
+2026-03-16 02:11:11 [INFO] Epoch: [6] Step : [200/564] Loss: 1.5192
+2026-03-16 02:12:08 [INFO] Epoch: [6] Step : [300/564] Loss: 1.6020
+2026-03-16 02:13:06 [INFO] Epoch: [6] Step : [400/564] Loss: 3.7007
+2026-03-16 02:14:03 [INFO] Epoch: [6] Step : [500/564] Loss: 3.0525
+2026-03-16 02:14:40 [INFO] Epoch: [6] Step : [564/564] Loss: 0.7200
+2026-03-16 02:16:37 [INFO] Epoch 6/300 | Train Loss: 1.3175 | Test Loss: 4.2730 | Acc: 0.2520 | Top-5: 0.5516 | F1(M): 0.1330 | Prec(M): 0.1610 | Rec(M): 0.1958 | Prec(W): 0.3530
+2026-03-16 02:16:37 [INFO] --> Best model saved with F1: 0.1330 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260316_0129.pth
+2026-03-16 02:16:59 [INFO] Epoch: [7] Step : [1/564] Loss: 3.4882
+2026-03-16 02:17:56 [INFO] Epoch: [7] Step : [100/564] Loss: 2.3752
+2026-03-16 02:18:53 [INFO] Epoch: [7] Step : [200/564] Loss: 1.1341
+2026-03-16 02:19:52 [INFO] Epoch: [7] Step : [300/564] Loss: 2.5254
+2026-03-16 02:20:50 [INFO] Epoch: [7] Step : [400/564] Loss: 7.2661
+2026-03-16 02:21:47 [INFO] Epoch: [7] Step : [500/564] Loss: 1.5921
+2026-03-16 02:22:24 [INFO] Epoch: [7] Step : [564/564] Loss: 2.3728
+2026-03-16 02:24:15 [INFO] Epoch 7/300 | Train Loss: 1.2445 | Test Loss: 4.1487 | Acc: 0.3020 | Top-5: 0.6248 | F1(M): 0.1505 | Prec(M): 0.1811 | Rec(M): 0.2085 | Prec(W): 0.4200
+2026-03-16 02:24:15 [INFO] --> Best model saved with F1: 0.1505 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260316_0129.pth
+2026-03-16 02:24:31 [INFO] Epoch: [8] Step : [1/564] Loss: 1.4777
+2026-03-16 02:25:28 [INFO] Epoch: [8] Step : [100/564] Loss: 1.4309
+2026-03-16 02:26:26 [INFO] Epoch: [8] Step : [200/564] Loss: 1.1904
+2026-03-16 02:27:24 [INFO] Epoch: [8] Step : [300/564] Loss: 2.7210
+2026-03-16 02:28:22 [INFO] Epoch: [8] Step : [400/564] Loss: 7.2773
+2026-03-16 02:29:19 [INFO] Epoch: [8] Step : [500/564] Loss: 1.9140
+2026-03-16 02:29:56 [INFO] Epoch: [8] Step : [564/564] Loss: 0.8431
+2026-03-16 02:32:19 [INFO] Epoch 8/300 | Train Loss: 1.1904 | Test Loss: 4.0258 | Acc: 0.3765 | Top-5: 0.6532 | F1(M): 0.1653 | Prec(M): 0.1968 | Rec(M): 0.2245 | Prec(W): 0.4808
+2026-03-16 02:32:19 [INFO] --> Best model saved with F1: 0.1653 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260316_0129.pth
+2026-03-16 02:32:35 [INFO] Epoch: [9] Step : [1/564] Loss: 5.5722
+2026-03-16 02:33:32 [INFO] Epoch: [9] Step : [100/564] Loss: 1.9668
+2026-03-16 02:34:30 [INFO] Epoch: [9] Step : [200/564] Loss: 2.9668
+2026-03-16 02:35:28 [INFO] Epoch: [9] Step : [300/564] Loss: 1.3069
+2026-03-16 02:36:27 [INFO] Epoch: [9] Step : [400/564] Loss: 1.1731
+2026-03-16 02:37:25 [INFO] Epoch: [9] Step : [500/564] Loss: 1.1967
+2026-03-16 02:38:01 [INFO] Epoch: [9] Step : [564/564] Loss: 4.9425
+2026-03-16 02:39:52 [INFO] Epoch 9/300 | Train Loss: 1.1502 | Test Loss: 3.8909 | Acc: 0.4470 | Top-5: 0.7069 | F1(M): 0.1960 | Prec(M): 0.2313 | Rec(M): 0.2515 | Prec(W): 0.5327
+2026-03-16 02:39:52 [INFO] --> Best model saved with F1: 0.1960 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260316_0129.pth
+2026-03-16 02:40:08 [INFO] Epoch: [10] Step : [1/564] Loss: 2.0443
+2026-03-16 02:41:05 [INFO] Epoch: [10] Step : [100/564] Loss: 1.9733
+2026-03-16 02:42:02 [INFO] Epoch: [10] Step : [200/564] Loss: 0.6673
+2026-03-16 02:42:59 [INFO] Epoch: [10] Step : [300/564] Loss: 0.7707
+2026-03-16 02:43:57 [INFO] Epoch: [10] Step : [400/564] Loss: 2.3159
+2026-03-16 02:44:55 [INFO] Epoch: [10] Step : [500/564] Loss: 1.1234
+2026-03-16 02:45:31 [INFO] Epoch: [10] Step : [564/564] Loss: 1.8167
+2026-03-16 02:48:14 [INFO] Epoch 10/300 | Train Loss: 1.1172 | Test Loss: 3.4677 | Acc: 0.5392 | Top-5: 0.7773 | F1(M): 0.2667 | Prec(M): 0.2976 | Rec(M): 0.3292 | Prec(W): 0.6074
+2026-03-16 02:48:14 [INFO] --> Best model saved with F1: 0.2667 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260316_0129.pth
+2026-03-16 02:49:24 [INFO] Epoch: [11] Step : [1/564] Loss: 0.8191
+2026-03-16 02:50:22 [INFO] Epoch: [11] Step : [100/564] Loss: 0.8799
+2026-03-16 02:51:19 [INFO] Epoch: [11] Step : [200/564] Loss: 4.6994
+2026-03-16 02:52:16 [INFO] Epoch: [11] Step : [300/564] Loss: 1.9096
+2026-03-16 02:53:13 [INFO] Epoch: [11] Step : [400/564] Loss: 1.5081
+2026-03-16 02:54:10 [INFO] Epoch: [11] Step : [500/564] Loss: 1.6415
+2026-03-16 02:54:45 [INFO] Epoch: [11] Step : [564/564] Loss: 1.5495
+2026-03-16 02:56:35 [INFO] Epoch 11/300 | Train Loss: 1.0878 | Test Loss: 3.2312 | Acc: 0.5506 | Top-5: 0.8071 | F1(M): 0.3094 | Prec(M): 0.3397 | Rec(M): 0.3827 | Prec(W): 0.6779
+2026-03-16 02:56:36 [INFO] --> Best model saved with F1: 0.3094 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260316_0129.pth
+2026-03-16 02:56:51 [INFO] Epoch: [12] Step : [1/564] Loss: 2.0397
+2026-03-16 02:57:48 [INFO] Epoch: [12] Step : [100/564] Loss: 2.4291
+2026-03-16 02:58:46 [INFO] Epoch: [12] Step : [200/564] Loss: 1.0059
+2026-03-16 02:59:44 [INFO] Epoch: [12] Step : [300/564] Loss: 1.2382
+2026-03-16 03:00:41 [INFO] Epoch: [12] Step : [400/564] Loss: 1.5690
+2026-03-16 03:01:39 [INFO] Epoch: [12] Step : [500/564] Loss: 1.9935
+2026-03-16 03:02:15 [INFO] Epoch: [12] Step : [564/564] Loss: 2.5225
+2026-03-16 03:04:50 [INFO] Epoch 12/300 | Train Loss: 1.0807 | Test Loss: 3.2975 | Acc: 0.5856 | Top-5: 0.8159 | F1(M): 0.3011 | Prec(M): 0.3301 | Rec(M): 0.3694 | Prec(W): 0.6773
+2026-03-16 03:05:08 [INFO] Epoch: [13] Step : [1/564] Loss: 1.3868
+2026-03-16 03:06:04 [INFO] Epoch: [13] Step : [100/564] Loss: 0.7363
+2026-03-16 03:07:01 [INFO] Epoch: [13] Step : [200/564] Loss: 0.9628
+2026-03-16 03:07:58 [INFO] Epoch: [13] Step : [300/564] Loss: 5.0622
+2026-03-16 03:08:55 [INFO] Epoch: [13] Step : [400/564] Loss: 0.9871
+2026-03-16 03:09:52 [INFO] Epoch: [13] Step : [500/564] Loss: 4.6147
+2026-03-16 03:10:28 [INFO] Epoch: [13] Step : [564/564] Loss: 0.3282
+2026-03-16 03:12:17 [INFO] Epoch 13/300 | Train Loss: 1.0435 | Test Loss: 3.0432 | Acc: 0.6454 | Top-5: 0.8468 | F1(M): 0.3453 | Prec(M): 0.3596 | Rec(M): 0.4203 | Prec(W): 0.7104
+2026-03-16 03:12:17 [INFO] --> Best model saved with F1: 0.3453 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260316_0129.pth
+2026-03-16 03:12:33 [INFO] Epoch: [14] Step : [1/564] Loss: 1.0453
+2026-03-16 03:13:28 [INFO] Epoch: [14] Step : [100/564] Loss: 1.2898
+2026-03-16 03:14:24 [INFO] Epoch: [14] Step : [200/564] Loss: 2.5698
+2026-03-16 03:15:21 [INFO] Epoch: [14] Step : [300/564] Loss: 1.6166
+2026-03-16 03:16:17 [INFO] Epoch: [14] Step : [400/564] Loss: 1.7314
+2026-03-16 03:17:14 [INFO] Epoch: [14] Step : [500/564] Loss: 1.7904
+2026-03-16 03:17:50 [INFO] Epoch: [14] Step : [564/564] Loss: 0.3547
+2026-03-16 03:19:39 [INFO] Epoch 14/300 | Train Loss: 1.0476 | Test Loss: 3.0181 | Acc: 0.6776 | Top-5: 0.8389 | F1(M): 0.3501 | Prec(M): 0.3679 | Rec(M): 0.4253 | Prec(W): 0.7258
+2026-03-16 03:19:39 [INFO] --> Best model saved with F1: 0.3501 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260316_0129.pth
+2026-03-16 03:19:55 [INFO] Epoch: [15] Step : [1/564] Loss: 2.1984
+2026-03-16 03:20:51 [INFO] Epoch: [15] Step : [100/564] Loss: 2.4922
+2026-03-16 03:21:48 [INFO] Epoch: [15] Step : [200/564] Loss: 1.2571
+2026-03-16 03:22:44 [INFO] Epoch: [15] Step : [300/564] Loss: 0.5786
+2026-03-16 03:23:41 [INFO] Epoch: [15] Step : [400/564] Loss: 1.9385
+2026-03-16 03:24:40 [INFO] Epoch: [15] Step : [500/564] Loss: 1.5458
+2026-03-16 03:25:15 [INFO] Epoch: [15] Step : [564/564] Loss: 0.2889
+2026-03-16 03:27:05 [INFO] Epoch 15/300 | Train Loss: 1.0183 | Test Loss: 2.9134 | Acc: 0.6889 | Top-5: 0.8431 | F1(M): 0.3656 | Prec(M): 0.3805 | Rec(M): 0.4462 | Prec(W): 0.7647
+2026-03-16 03:27:05 [INFO] --> Best model saved with F1: 0.3656 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260316_0129.pth
+2026-03-16 03:27:21 [INFO] Epoch: [16] Step : [1/564] Loss: 1.9412
+2026-03-16 03:28:17 [INFO] Epoch: [16] Step : [100/564] Loss: 1.2054
+2026-03-16 03:29:13 [INFO] Epoch: [16] Step : [200/564] Loss: 1.1239
+2026-03-16 03:30:10 [INFO] Epoch: [16] Step : [300/564] Loss: 1.5527
+2026-03-16 03:31:06 [INFO] Epoch: [16] Step : [400/564] Loss: 1.3843
+2026-03-16 03:32:04 [INFO] Epoch: [16] Step : [500/564] Loss: 0.8272
+2026-03-16 03:32:40 [INFO] Epoch: [16] Step : [564/564] Loss: 2.7237
+2026-03-16 03:34:32 [INFO] Epoch 16/300 | Train Loss: 1.0219 | Test Loss: 2.8263 | Acc: 0.6799 | Top-5: 0.8543 | F1(M): 0.3837 | Prec(M): 0.4031 | Rec(M): 0.4616 | Prec(W): 0.7808
+2026-03-16 03:34:32 [INFO] --> Best model saved with F1: 0.3837 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260316_0129.pth
+2026-03-16 03:34:48 [INFO] Epoch: [17] Step : [1/564] Loss: 1.5859
+2026-03-16 03:35:45 [INFO] Epoch: [17] Step : [100/564] Loss: 0.6936
+2026-03-16 03:36:42 [INFO] Epoch: [17] Step : [200/564] Loss: 1.5037
+2026-03-16 03:37:39 [INFO] Epoch: [17] Step : [300/564] Loss: 1.8391
+2026-03-16 03:38:36 [INFO] Epoch: [17] Step : [400/564] Loss: 1.2940
+2026-03-16 03:39:34 [INFO] Epoch: [17] Step : [500/564] Loss: 2.6263
+2026-03-16 03:40:11 [INFO] Epoch: [17] Step : [564/564] Loss: 1.6146
+2026-03-16 03:42:00 [INFO] Epoch 17/300 | Train Loss: 1.0081 | Test Loss: 2.8975 | Acc: 0.6844 | Top-5: 0.8416 | F1(M): 0.3762 | Prec(M): 0.4007 | Rec(M): 0.4493 | Prec(W): 0.7572
+2026-03-16 03:42:16 [INFO] Epoch: [18] Step : [1/564] Loss: 1.1993
+2026-03-16 03:43:13 [INFO] Epoch: [18] Step : [100/564] Loss: 0.7803
+2026-03-16 03:44:10 [INFO] Epoch: [18] Step : [200/564] Loss: 0.9572
+2026-03-16 03:45:07 [INFO] Epoch: [18] Step : [300/564] Loss: 0.4815
+2026-03-16 03:46:05 [INFO] Epoch: [18] Step : [400/564] Loss: 1.7843
+2026-03-16 03:47:02 [INFO] Epoch: [18] Step : [500/564] Loss: 0.2645
+2026-03-16 03:47:38 [INFO] Epoch: [18] Step : [564/564] Loss: 3.1181
+2026-03-16 03:49:29 [INFO] Epoch 18/300 | Train Loss: 0.9870 | Test Loss: 2.7185 | Acc: 0.7001 | Top-5: 0.8428 | F1(M): 0.4121 | Prec(M): 0.4251 | Rec(M): 0.5014 | Prec(W): 0.7777
+2026-03-16 03:49:29 [INFO] --> Best model saved with F1: 0.4121 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260316_0129.pth
+2026-03-16 03:49:46 [INFO] Epoch: [19] Step : [1/564] Loss: 1.1727
+2026-03-16 03:50:43 [INFO] Epoch: [19] Step : [100/564] Loss: 0.5843
+2026-03-16 03:51:40 [INFO] Epoch: [19] Step : [200/564] Loss: 0.6306
+2026-03-16 03:52:39 [INFO] Epoch: [19] Step : [300/564] Loss: 1.9481
+2026-03-16 03:53:38 [INFO] Epoch: [19] Step : [400/564] Loss: 2.4060
+2026-03-16 03:54:37 [INFO] Epoch: [19] Step : [500/564] Loss: 1.4495
+2026-03-16 03:55:14 [INFO] Epoch: [19] Step : [564/564] Loss: 0.7986
+2026-03-16 03:57:08 [INFO] Epoch 19/300 | Train Loss: 0.9907 | Test Loss: 2.6660 | Acc: 0.7136 | Top-5: 0.8583 | F1(M): 0.4111 | Prec(M): 0.4197 | Rec(M): 0.4995 | Prec(W): 0.7725
+2026-03-16 03:57:28 [INFO] Epoch: [20] Step : [1/564] Loss: 0.7359
+2026-03-16 03:58:25 [INFO] Epoch: [20] Step : [100/564] Loss: 0.9068
+2026-03-16 03:59:23 [INFO] Epoch: [20] Step : [200/564] Loss: 3.0413
+2026-03-16 04:00:22 [INFO] Epoch: [20] Step : [300/564] Loss: 0.7338
+2026-03-16 04:01:21 [INFO] Epoch: [20] Step : [400/564] Loss: 3.7087
+2026-03-16 04:02:20 [INFO] Epoch: [20] Step : [500/564] Loss: 0.8187
+2026-03-16 04:02:57 [INFO] Epoch: [20] Step : [564/564] Loss: 0.5937
+2026-03-16 04:04:50 [INFO] Epoch 20/300 | Train Loss: 0.9857 | Test Loss: 2.5147 | Acc: 0.7353 | Top-5: 0.8736 | F1(M): 0.4397 | Prec(M): 0.4519 | Rec(M): 0.5291 | Prec(W): 0.8194
+2026-03-16 04:04:50 [INFO] --> Best model saved with F1: 0.4397 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260316_0129.pth
+2026-03-16 04:05:07 [INFO] Epoch: [21] Step : [1/564] Loss: 0.8207
+2026-03-16 04:06:05 [INFO] Epoch: [21] Step : [100/564] Loss: 1.2910
+2026-03-16 04:07:03 [INFO] Epoch: [21] Step : [200/564] Loss: 1.7232
+2026-03-16 04:08:01 [INFO] Epoch: [21] Step : [300/564] Loss: 2.2818
+2026-03-16 04:08:59 [INFO] Epoch: [21] Step : [400/564] Loss: 2.8727
+2026-03-16 04:09:57 [INFO] Epoch: [21] Step : [500/564] Loss: 1.6205
+2026-03-16 04:10:33 [INFO] Epoch: [21] Step : [564/564] Loss: 2.4541
+2026-03-16 04:12:24 [INFO] Epoch 21/300 | Train Loss: 0.9867 | Test Loss: 2.5803 | Acc: 0.7441 | Top-5: 0.8649 | F1(M): 0.4306 | Prec(M): 0.4329 | Rec(M): 0.5202 | Prec(W): 0.8101
+2026-03-16 04:12:45 [INFO] Epoch: [22] Step : [1/564] Loss: 1.4018
+2026-03-16 04:13:43 [INFO] Epoch: [22] Step : [100/564] Loss: 0.3439
+2026-03-16 04:14:41 [INFO] Epoch: [22] Step : [200/564] Loss: 1.4040
+2026-03-16 04:15:39 [INFO] Epoch: [22] Step : [300/564] Loss: 6.9053
+2026-03-16 04:16:36 [INFO] Epoch: [22] Step : [400/564] Loss: 1.3629
+2026-03-16 04:17:34 [INFO] Epoch: [22] Step : [500/564] Loss: 4.4324
+2026-03-16 04:18:11 [INFO] Epoch: [22] Step : [564/564] Loss: 2.4912
+2026-03-16 04:20:03 [INFO] Epoch 22/300 | Train Loss: 0.9721 | Test Loss: 2.6213 | Acc: 0.7450 | Top-5: 0.8668 | F1(M): 0.4268 | Prec(M): 0.4283 | Rec(M): 0.5210 | Prec(W): 0.8512
+2026-03-16 04:20:21 [INFO] Epoch: [23] Step : [1/564] Loss: 1.1495
+2026-03-16 04:21:19 [INFO] Epoch: [23] Step : [100/564] Loss: 2.3824
+2026-03-16 04:22:15 [INFO] Epoch: [23] Step : [200/564] Loss: 0.9257
+2026-03-16 04:23:12 [INFO] Epoch: [23] Step : [300/564] Loss: 5.4218
+2026-03-16 04:24:10 [INFO] Epoch: [23] Step : [400/564] Loss: 1.7501
+2026-03-16 04:25:07 [INFO] Epoch: [23] Step : [500/564] Loss: 7.9583
+2026-03-16 04:25:44 [INFO] Epoch: [23] Step : [564/564] Loss: 0.7799
+2026-03-16 04:27:34 [INFO] Epoch 23/300 | Train Loss: 0.9499 | Test Loss: 2.6301 | Acc: 0.7176 | Top-5: 0.8602 | F1(M): 0.4212 | Prec(M): 0.4279 | Rec(M): 0.5168 | Prec(W): 0.7868
+2026-03-16 04:27:53 [INFO] Epoch: [24] Step : [1/564] Loss: 1.6721
+2026-03-16 04:28:50 [INFO] Epoch: [24] Step : [100/564] Loss: 1.1132
+2026-03-16 04:29:48 [INFO] Epoch: [24] Step : [200/564] Loss: 1.0451
+2026-03-16 04:30:45 [INFO] Epoch: [24] Step : [300/564] Loss: 0.3291
+2026-03-16 04:31:43 [INFO] Epoch: [24] Step : [400/564] Loss: 2.8715
+2026-03-16 04:32:41 [INFO] Epoch: [24] Step : [500/564] Loss: 0.7415
+2026-03-16 04:33:19 [INFO] Epoch: [24] Step : [564/564] Loss: 0.3316
+2026-03-16 04:35:10 [INFO] Epoch 24/300 | Train Loss: 0.9418 | Test Loss: 2.7709 | Acc: 0.6989 | Top-5: 0.8463 | F1(M): 0.4125 | Prec(M): 0.4241 | Rec(M): 0.4923 | Prec(W): 0.7644
+2026-03-16 04:35:43 [INFO] Epoch: [25] Step : [1/564] Loss: 1.8618
+2026-03-16 04:36:39 [INFO] Epoch: [25] Step : [100/564] Loss: 0.2622
+2026-03-16 04:37:37 [INFO] Epoch: [25] Step : [200/564] Loss: 0.8895
+2026-03-16 04:38:35 [INFO] Epoch: [25] Step : [300/564] Loss: 1.0421
+2026-03-16 04:39:33 [INFO] Epoch: [25] Step : [400/564] Loss: 1.1929
+2026-03-16 04:40:32 [INFO] Epoch: [25] Step : [500/564] Loss: 7.0450
+2026-03-16 04:41:08 [INFO] Epoch: [25] Step : [564/564] Loss: 5.1228
+2026-03-16 04:42:58 [INFO] Epoch 25/300 | Train Loss: 0.9266 | Test Loss: 2.6278 | Acc: 0.6919 | Top-5: 0.8712 | F1(M): 0.4227 | Prec(M): 0.4370 | Rec(M): 0.5070 | Prec(W): 0.8014
+2026-03-16 04:43:18 [INFO] Epoch: [26] Step : [1/564] Loss: 1.0352
+2026-03-16 04:44:14 [INFO] Epoch: [26] Step : [100/564] Loss: 0.8002
+2026-03-16 04:45:12 [INFO] Epoch: [26] Step : [200/564] Loss: 0.9489
+2026-03-16 04:46:11 [INFO] Epoch: [26] Step : [300/564] Loss: 1.2362
+2026-03-16 04:47:08 [INFO] Epoch: [26] Step : [400/564] Loss: 1.4719
+2026-03-16 04:48:06 [INFO] Epoch: [26] Step : [500/564] Loss: 1.7088
+2026-03-16 04:48:42 [INFO] Epoch: [26] Step : [564/564] Loss: 5.0947
+2026-03-16 04:50:33 [INFO] Epoch 26/300 | Train Loss: 0.9426 | Test Loss: 2.5185 | Acc: 0.7444 | Top-5: 0.8758 | F1(M): 0.4349 | Prec(M): 0.4417 | Rec(M): 0.5281 | Prec(W): 0.8621
+2026-03-16 04:50:53 [INFO] Epoch: [27] Step : [1/564] Loss: 1.1415
+2026-03-16 04:51:51 [INFO] Epoch: [27] Step : [100/564] Loss: 1.5218
+2026-03-16 04:52:49 [INFO] Epoch: [27] Step : [200/564] Loss: 3.6896
+2026-03-16 04:53:46 [INFO] Epoch: [27] Step : [300/564] Loss: 3.5050
+2026-03-16 04:54:43 [INFO] Epoch: [27] Step : [400/564] Loss: 0.7358
+2026-03-16 04:55:41 [INFO] Epoch: [27] Step : [500/564] Loss: 1.2015
+2026-03-16 04:56:18 [INFO] Epoch: [27] Step : [564/564] Loss: 3.0133
+2026-03-16 04:58:08 [INFO] Epoch 27/300 | Train Loss: 0.9236 | Test Loss: 2.4764 | Acc: 0.7461 | Top-5: 0.8972 | F1(M): 0.4558 | Prec(M): 0.4622 | Rec(M): 0.5314 | Prec(W): 0.8518
+2026-03-16 04:58:08 [INFO] --> Best model saved with F1: 0.4558 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260316_0129.pth
+2026-03-16 04:58:28 [INFO] Epoch: [28] Step : [1/564] Loss: 2.7122
+2026-03-16 04:59:25 [INFO] Epoch: [28] Step : [100/564] Loss: 2.6615
+2026-03-16 05:00:22 [INFO] Epoch: [28] Step : [200/564] Loss: 1.5701
+2026-03-16 05:01:20 [INFO] Epoch: [28] Step : [300/564] Loss: 0.8445
+2026-03-16 05:02:17 [INFO] Epoch: [28] Step : [400/564] Loss: 2.5435
+2026-03-16 05:03:15 [INFO] Epoch: [28] Step : [500/564] Loss: 0.8151
+2026-03-16 05:03:51 [INFO] Epoch: [28] Step : [564/564] Loss: 1.8790
+2026-03-16 05:05:43 [INFO] Epoch 28/300 | Train Loss: 0.9153 | Test Loss: 2.5422 | Acc: 0.7063 | Top-5: 0.8970 | F1(M): 0.4304 | Prec(M): 0.4460 | Rec(M): 0.5185 | Prec(W): 0.8603
+2026-03-16 05:06:03 [INFO] Epoch: [29] Step : [1/564] Loss: 2.2602
+2026-03-16 05:07:00 [INFO] Epoch: [29] Step : [100/564] Loss: 5.2438
+2026-03-16 05:07:58 [INFO] Epoch: [29] Step : [200/564] Loss: 1.4579
+2026-03-16 05:08:56 [INFO] Epoch: [29] Step : [300/564] Loss: 1.6864
+2026-03-16 05:09:53 [INFO] Epoch: [29] Step : [400/564] Loss: 0.7896
+2026-03-16 05:10:50 [INFO] Epoch: [29] Step : [500/564] Loss: 0.8068
+2026-03-16 05:11:27 [INFO] Epoch: [29] Step : [564/564] Loss: 1.2631
+2026-03-16 05:13:19 [INFO] Epoch 29/300 | Train Loss: 0.9108 | Test Loss: 2.3883 | Acc: 0.7360 | Top-5: 0.8626 | F1(M): 0.4566 | Prec(M): 0.4600 | Rec(M): 0.5476 | Prec(W): 0.8048
+2026-03-16 05:13:19 [INFO] --> Best model saved with F1: 0.4566 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260316_0129.pth
+2026-03-16 05:13:38 [INFO] Epoch: [30] Step : [1/564] Loss: 0.7467
+2026-03-16 05:14:35 [INFO] Epoch: [30] Step : [100/564] Loss: 1.5944
+2026-03-16 05:15:32 [INFO] Epoch: [30] Step : [200/564] Loss: 2.8573
+2026-03-16 05:16:30 [INFO] Epoch: [30] Step : [300/564] Loss: 1.0665
+2026-03-16 05:17:28 [INFO] Epoch: [30] Step : [400/564] Loss: 1.7061
+2026-03-16 05:18:26 [INFO] Epoch: [30] Step : [500/564] Loss: 0.9602
+2026-03-16 05:19:04 [INFO] Epoch: [30] Step : [564/564] Loss: 0.4003
+2026-03-16 05:20:54 [INFO] Epoch 30/300 | Train Loss: 0.9246 | Test Loss: 2.4512 | Acc: 0.7161 | Top-5: 0.8774 | F1(M): 0.4396 | Prec(M): 0.4498 | Rec(M): 0.5420 | Prec(W): 0.8486
+2026-03-16 05:21:11 [INFO] Epoch: [31] Step : [1/564] Loss: 0.5149
+2026-03-16 05:22:09 [INFO] Epoch: [31] Step : [100/564] Loss: 0.7916
+2026-03-16 05:23:06 [INFO] Epoch: [31] Step : [200/564] Loss: 1.2901
+2026-03-16 05:24:03 [INFO] Epoch: [31] Step : [300/564] Loss: 1.5211
+2026-03-16 05:25:01 [INFO] Epoch: [31] Step : [400/564] Loss: 1.3633
+2026-03-16 05:25:58 [INFO] Epoch: [31] Step : [500/564] Loss: 2.2413
+2026-03-16 05:26:34 [INFO] Epoch: [31] Step : [564/564] Loss: 0.4675
+2026-03-16 05:28:25 [INFO] Epoch 31/300 | Train Loss: 0.9239 | Test Loss: 2.4676 | Acc: 0.7479 | Top-5: 0.9061 | F1(M): 0.4527 | Prec(M): 0.4663 | Rec(M): 0.5386 | Prec(W): 0.8744
+2026-03-16 05:28:41 [INFO] Epoch: [32] Step : [1/564] Loss: 1.1562
+2026-03-16 05:29:39 [INFO] Epoch: [32] Step : [100/564] Loss: 0.3216
+2026-03-16 05:30:36 [INFO] Epoch: [32] Step : [200/564] Loss: 1.9987
+2026-03-16 05:31:34 [INFO] Epoch: [32] Step : [300/564] Loss: 2.1123
+2026-03-16 05:32:32 [INFO] Epoch: [32] Step : [400/564] Loss: 2.2691
+2026-03-16 05:33:29 [INFO] Epoch: [32] Step : [500/564] Loss: 1.2286
+2026-03-16 05:34:06 [INFO] Epoch: [32] Step : [564/564] Loss: 1.6986
+2026-03-16 05:35:57 [INFO] Epoch 32/300 | Train Loss: 0.8936 | Test Loss: 2.5855 | Acc: 0.7183 | Top-5: 0.8542 | F1(M): 0.4308 | Prec(M): 0.4434 | Rec(M): 0.5150 | Prec(W): 0.7954
+2026-03-16 05:36:13 [INFO] Epoch: [33] Step : [1/564] Loss: 1.2326
+2026-03-16 05:37:09 [INFO] Epoch: [33] Step : [100/564] Loss: 8.0598
+2026-03-16 05:38:06 [INFO] Epoch: [33] Step : [200/564] Loss: 1.0216
+2026-03-16 05:39:04 [INFO] Epoch: [33] Step : [300/564] Loss: 0.9611
+2026-03-16 05:40:02 [INFO] Epoch: [33] Step : [400/564] Loss: 2.5593
+2026-03-16 05:41:00 [INFO] Epoch: [33] Step : [500/564] Loss: 1.7641
+2026-03-16 05:41:36 [INFO] Epoch: [33] Step : [564/564] Loss: 0.6143
+2026-03-16 05:43:27 [INFO] Epoch 33/300 | Train Loss: 0.9259 | Test Loss: 2.3998 | Acc: 0.7381 | Top-5: 0.8766 | F1(M): 0.4595 | Prec(M): 0.4691 | Rec(M): 0.5528 | Prec(W): 0.8107
+2026-03-16 05:43:27 [INFO] --> Best model saved with F1: 0.4595 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260316_0129.pth
+2026-03-16 05:43:46 [INFO] Epoch: [34] Step : [1/564] Loss: 0.8616
+2026-03-16 05:44:43 [INFO] Epoch: [34] Step : [100/564] Loss: 1.1816
+2026-03-16 05:45:40 [INFO] Epoch: [34] Step : [200/564] Loss: 0.2888
+2026-03-16 05:46:37 [INFO] Epoch: [34] Step : [300/564] Loss: 0.5428
+2026-03-16 05:47:35 [INFO] Epoch: [34] Step : [400/564] Loss: 1.2681
+2026-03-16 05:48:31 [INFO] Epoch: [34] Step : [500/564] Loss: 0.4954
+2026-03-16 05:49:07 [INFO] Epoch: [34] Step : [564/564] Loss: 0.1854
+2026-03-16 05:50:59 [INFO] Epoch 34/300 | Train Loss: 0.8949 | Test Loss: 2.5822 | Acc: 0.6979 | Top-5: 0.8722 | F1(M): 0.4351 | Prec(M): 0.4445 | Rec(M): 0.5279 | Prec(W): 0.8165
+2026-03-16 05:51:17 [INFO] Epoch: [35] Step : [1/564] Loss: 0.3893
+2026-03-16 05:52:14 [INFO] Epoch: [35] Step : [100/564] Loss: 2.5994
+2026-03-16 05:53:12 [INFO] Epoch: [35] Step : [200/564] Loss: 1.3020
+2026-03-16 05:54:10 [INFO] Epoch: [35] Step : [300/564] Loss: 1.2578
+2026-03-16 05:55:07 [INFO] Epoch: [35] Step : [400/564] Loss: 1.3079
+2026-03-16 05:56:03 [INFO] Epoch: [35] Step : [500/564] Loss: 1.4012
+2026-03-16 05:56:40 [INFO] Epoch: [35] Step : [564/564] Loss: 0.3992
+2026-03-16 05:58:31 [INFO] Epoch 35/300 | Train Loss: 0.8927 | Test Loss: 2.5213 | Acc: 0.7223 | Top-5: 0.8636 | F1(M): 0.4453 | Prec(M): 0.4576 | Rec(M): 0.5326 | Prec(W): 0.8425
+2026-03-16 05:58:47 [INFO] Epoch: [36] Step : [1/564] Loss: 1.5988
+2026-03-16 05:59:43 [INFO] Epoch: [36] Step : [100/564] Loss: 1.6581
+2026-03-16 06:00:41 [INFO] Epoch: [36] Step : [200/564] Loss: 2.1034
+2026-03-16 06:01:39 [INFO] Epoch: [36] Step : [300/564] Loss: 3.2288
+2026-03-16 06:02:36 [INFO] Epoch: [36] Step : [400/564] Loss: 1.3595
+2026-03-16 06:03:34 [INFO] Epoch: [36] Step : [500/564] Loss: 0.4938
+2026-03-16 06:04:11 [INFO] Epoch: [36] Step : [564/564] Loss: 0.9083
+2026-03-16 06:06:02 [INFO] Epoch 36/300 | Train Loss: 0.8927 | Test Loss: 2.3719 | Acc: 0.7304 | Top-5: 0.8993 | F1(M): 0.4644 | Prec(M): 0.4728 | Rec(M): 0.5525 | Prec(W): 0.8114
+2026-03-16 06:06:02 [INFO] --> Best model saved with F1: 0.4644 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260316_0129.pth
+2026-03-16 06:06:18 [INFO] Epoch: [37] Step : [1/564] Loss: 0.6826
+2026-03-16 06:07:15 [INFO] Epoch: [37] Step : [100/564] Loss: 0.7410
+2026-03-16 06:08:13 [INFO] Epoch: [37] Step : [200/564] Loss: 1.3101
+2026-03-16 06:09:10 [INFO] Epoch: [37] Step : [300/564] Loss: 0.9749
+2026-03-16 06:10:08 [INFO] Epoch: [37] Step : [400/564] Loss: 1.0437
+2026-03-16 06:11:07 [INFO] Epoch: [37] Step : [500/564] Loss: 2.2921
+2026-03-16 06:11:43 [INFO] Epoch: [37] Step : [564/564] Loss: 0.3516
+2026-03-16 06:13:34 [INFO] Epoch 37/300 | Train Loss: 0.8760 | Test Loss: 2.4706 | Acc: 0.7470 | Top-5: 0.9137 | F1(M): 0.4520 | Prec(M): 0.4643 | Rec(M): 0.5422 | Prec(W): 0.8535
+2026-03-16 06:13:52 [INFO] Epoch: [38] Step : [1/564] Loss: 1.2644
+2026-03-16 06:14:49 [INFO] Epoch: [38] Step : [100/564] Loss: 0.3006
+2026-03-16 06:15:47 [INFO] Epoch: [38] Step : [200/564] Loss: 1.5840
+2026-03-16 06:16:45 [INFO] Epoch: [38] Step : [300/564] Loss: 0.2571
+2026-03-16 06:17:43 [INFO] Epoch: [38] Step : [400/564] Loss: 1.5405
+2026-03-16 06:18:42 [INFO] Epoch: [38] Step : [500/564] Loss: 3.2946
+2026-03-16 06:19:18 [INFO] Epoch: [38] Step : [564/564] Loss: 0.3672
+2026-03-16 06:21:08 [INFO] Epoch 38/300 | Train Loss: 0.8811 | Test Loss: 2.4830 | Acc: 0.7471 | Top-5: 0.8758 | F1(M): 0.4670 | Prec(M): 0.4744 | Rec(M): 0.5533 | Prec(W): 0.8462
+2026-03-16 06:21:08 [INFO] --> Best model saved with F1: 0.4670 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260316_0129.pth
+2026-03-16 06:59:06 [INFO] Epoch: [39] Step : [1/564] Loss: 0.3718
+2026-03-16 07:00:08 [INFO] Epoch: [39] Step : [100/564] Loss: 1.0551
+2026-03-16 07:01:07 [INFO] Epoch: [39] Step : [200/564] Loss: 1.0100
+2026-03-16 07:02:05 [INFO] Epoch: [39] Step : [300/564] Loss: 1.4935
+2026-03-16 07:03:03 [INFO] Epoch: [39] Step : [400/564] Loss: 1.1130
+2026-03-16 07:04:00 [INFO] Epoch: [39] Step : [500/564] Loss: 0.8128
+2026-03-16 07:04:38 [INFO] Epoch: [39] Step : [564/564] Loss: 0.9346
+2026-03-16 07:06:30 [INFO] Epoch 39/300 | Train Loss: 0.8723 | Test Loss: 2.4028 | Acc: 0.7404 | Top-5: 0.9023 | F1(M): 0.4746 | Prec(M): 0.4862 | Rec(M): 0.5557 | Prec(W): 0.8568
+2026-03-16 07:06:30 [INFO] --> Best model saved with F1: 0.4746 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260316_0658.pth
+2026-03-16 07:06:45 [INFO] Epoch: [40] Step : [1/564] Loss: 0.7350
+2026-03-16 07:07:42 [INFO] Epoch: [40] Step : [100/564] Loss: 3.8802
+2026-03-16 07:08:40 [INFO] Epoch: [40] Step : [200/564] Loss: 0.6966
+2026-03-16 07:09:38 [INFO] Epoch: [40] Step : [300/564] Loss: 2.4475
+2026-03-16 07:10:35 [INFO] Epoch: [40] Step : [400/564] Loss: 0.6201
+2026-03-16 07:11:33 [INFO] Epoch: [40] Step : [500/564] Loss: 0.6714
+2026-03-16 07:12:10 [INFO] Epoch: [40] Step : [564/564] Loss: 0.8198
+2026-03-16 07:14:02 [INFO] Epoch 40/300 | Train Loss: 0.8623 | Test Loss: 2.3505 | Acc: 0.7503 | Top-5: 0.8854 | F1(M): 0.4821 | Prec(M): 0.4915 | Rec(M): 0.5679 | Prec(W): 0.8815
+2026-03-16 07:14:02 [INFO] --> Best model saved with F1: 0.4821 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260316_0658.pth
+2026-03-16 07:14:17 [INFO] Epoch: [41] Step : [1/564] Loss: 4.3590
+2026-03-16 07:15:14 [INFO] Epoch: [41] Step : [100/564] Loss: 0.9220
+2026-03-16 07:16:12 [INFO] Epoch: [41] Step : [200/564] Loss: 1.7575
+2026-03-16 07:17:10 [INFO] Epoch: [41] Step : [300/564] Loss: 1.4977
+2026-03-16 07:18:07 [INFO] Epoch: [41] Step : [400/564] Loss: 2.7041
+2026-03-16 07:19:05 [INFO] Epoch: [41] Step : [500/564] Loss: 1.4161
+2026-03-16 07:19:41 [INFO] Epoch: [41] Step : [564/564] Loss: 0.4475
+2026-03-16 07:21:33 [INFO] Epoch 41/300 | Train Loss: 0.8728 | Test Loss: 2.3208 | Acc: 0.7759 | Top-5: 0.9298 | F1(M): 0.4914 | Prec(M): 0.5011 | Rec(M): 0.5732 | Prec(W): 0.8739
+2026-03-16 07:21:33 [INFO] --> Best model saved with F1: 0.4914 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260316_0658.pth
+2026-03-16 07:21:49 [INFO] Epoch: [42] Step : [1/564] Loss: 1.7113
+2026-03-16 07:22:46 [INFO] Epoch: [42] Step : [100/564] Loss: 0.7102
+2026-03-16 07:23:43 [INFO] Epoch: [42] Step : [200/564] Loss: 2.9950
+2026-03-16 07:24:41 [INFO] Epoch: [42] Step : [300/564] Loss: 2.1597
+2026-03-16 07:25:38 [INFO] Epoch: [42] Step : [400/564] Loss: 2.1089
+2026-03-16 07:26:36 [INFO] Epoch: [42] Step : [500/564] Loss: 3.0944
+2026-03-16 07:27:13 [INFO] Epoch: [42] Step : [564/564] Loss: 2.4637
+2026-03-16 07:29:04 [INFO] Epoch 42/300 | Train Loss: 0.8662 | Test Loss: 2.4693 | Acc: 0.7441 | Top-5: 0.9224 | F1(M): 0.4731 | Prec(M): 0.4862 | Rec(M): 0.5482 | Prec(W): 0.8763
+2026-03-16 07:29:20 [INFO] Epoch: [43] Step : [1/564] Loss: 1.3431
+2026-03-16 07:30:16 [INFO] Epoch: [43] Step : [100/564] Loss: 0.8761
+2026-03-16 07:31:13 [INFO] Epoch: [43] Step : [200/564] Loss: 1.1155
+2026-03-16 07:32:12 [INFO] Epoch: [43] Step : [300/564] Loss: 1.3197
+2026-03-16 07:33:09 [INFO] Epoch: [43] Step : [400/564] Loss: 1.3110
+2026-03-16 07:34:07 [INFO] Epoch: [43] Step : [500/564] Loss: 0.7510
+2026-03-16 07:34:44 [INFO] Epoch: [43] Step : [564/564] Loss: 0.9272
+2026-03-16 07:36:35 [INFO] Epoch 43/300 | Train Loss: 0.8589 | Test Loss: 2.3738 | Acc: 0.7641 | Top-5: 0.9288 | F1(M): 0.4751 | Prec(M): 0.4829 | Rec(M): 0.5669 | Prec(W): 0.8789
+2026-03-16 07:36:51 [INFO] Epoch: [44] Step : [1/564] Loss: 1.3511
+2026-03-16 07:37:47 [INFO] Epoch: [44] Step : [100/564] Loss: 2.0162
+2026-03-16 07:38:45 [INFO] Epoch: [44] Step : [200/564] Loss: 2.5358
+2026-03-16 07:39:43 [INFO] Epoch: [44] Step : [300/564] Loss: 0.5804
+2026-03-16 07:40:41 [INFO] Epoch: [44] Step : [400/564] Loss: 2.3854
+2026-03-16 07:41:38 [INFO] Epoch: [44] Step : [500/564] Loss: 1.2037
+2026-03-16 07:42:15 [INFO] Epoch: [44] Step : [564/564] Loss: 1.3305
+2026-03-16 07:44:09 [INFO] Epoch 44/300 | Train Loss: 0.8720 | Test Loss: 2.4558 | Acc: 0.7019 | Top-5: 0.8479 | F1(M): 0.4585 | Prec(M): 0.4662 | Rec(M): 0.5478 | Prec(W): 0.7842
+2026-03-16 07:44:24 [INFO] Epoch: [45] Step : [1/564] Loss: 0.7924
+2026-03-16 07:45:21 [INFO] Epoch: [45] Step : [100/564] Loss: 0.4252
+2026-03-16 07:46:19 [INFO] Epoch: [45] Step : [200/564] Loss: 1.1405
+2026-03-16 07:47:16 [INFO] Epoch: [45] Step : [300/564] Loss: 1.0871
+2026-03-16 07:48:13 [INFO] Epoch: [45] Step : [400/564] Loss: 1.4151
+2026-03-16 07:49:11 [INFO] Epoch: [45] Step : [500/564] Loss: 0.7818
+2026-03-16 07:49:48 [INFO] Epoch: [45] Step : [564/564] Loss: 0.3383
+2026-03-16 07:51:38 [INFO] Epoch 45/300 | Train Loss: 0.8452 | Test Loss: 2.4058 | Acc: 0.7299 | Top-5: 0.8900 | F1(M): 0.4641 | Prec(M): 0.4797 | Rec(M): 0.5499 | Prec(W): 0.8677
+2026-03-16 07:51:54 [INFO] Epoch: [46] Step : [1/564] Loss: 0.6925
+2026-03-16 07:52:51 [INFO] Epoch: [46] Step : [100/564] Loss: 1.8842
+2026-03-16 07:53:49 [INFO] Epoch: [46] Step : [200/564] Loss: 4.2039
+2026-03-16 07:54:46 [INFO] Epoch: [46] Step : [300/564] Loss: 2.2463
+2026-03-16 07:55:44 [INFO] Epoch: [46] Step : [400/564] Loss: 1.9879
+2026-03-16 07:56:42 [INFO] Epoch: [46] Step : [500/564] Loss: 5.8558
+2026-03-16 07:57:19 [INFO] Epoch: [46] Step : [564/564] Loss: 0.7153
+2026-03-16 07:59:09 [INFO] Epoch 46/300 | Train Loss: 0.8497 | Test Loss: 2.3169 | Acc: 0.7987 | Top-5: 0.9205 | F1(M): 0.4731 | Prec(M): 0.4807 | Rec(M): 0.5607 | Prec(W): 0.8773
+2026-03-16 07:59:25 [INFO] Epoch: [47] Step : [1/564] Loss: 1.1770
+2026-03-16 08:00:21 [INFO] Epoch: [47] Step : [100/564] Loss: 0.5136
+2026-03-16 08:01:19 [INFO] Epoch: [47] Step : [200/564] Loss: 1.3670
+2026-03-16 08:02:17 [INFO] Epoch: [47] Step : [300/564] Loss: 2.7630
+2026-03-16 08:03:15 [INFO] Epoch: [47] Step : [400/564] Loss: 4.1425
+2026-03-16 08:04:14 [INFO] Epoch: [47] Step : [500/564] Loss: 2.6245
+2026-03-16 08:04:50 [INFO] Epoch: [47] Step : [564/564] Loss: 0.7615
+2026-03-16 08:06:40 [INFO] Epoch 47/300 | Train Loss: 0.8605 | Test Loss: 2.3471 | Acc: 0.7605 | Top-5: 0.9135 | F1(M): 0.4774 | Prec(M): 0.4833 | Rec(M): 0.5609 | Prec(W): 0.8494
+2026-03-16 08:06:56 [INFO] Epoch: [48] Step : [1/564] Loss: 0.2535
+2026-03-16 08:07:52 [INFO] Epoch: [48] Step : [100/564] Loss: 1.1195
+2026-03-16 08:08:50 [INFO] Epoch: [48] Step : [200/564] Loss: 0.5460
+2026-03-16 08:09:48 [INFO] Epoch: [48] Step : [300/564] Loss: 0.9088
+2026-03-16 08:10:46 [INFO] Epoch: [48] Step : [400/564] Loss: 1.8287
+2026-03-16 08:11:43 [INFO] Epoch: [48] Step : [500/564] Loss: 1.5322
+2026-03-16 08:12:19 [INFO] Epoch: [48] Step : [564/564] Loss: 0.5219
+2026-03-16 08:14:10 [INFO] Epoch 48/300 | Train Loss: 0.8607 | Test Loss: 2.3735 | Acc: 0.7560 | Top-5: 0.9203 | F1(M): 0.4775 | Prec(M): 0.4870 | Rec(M): 0.5698 | Prec(W): 0.8791
+2026-03-16 08:14:26 [INFO] Epoch: [49] Step : [1/564] Loss: 0.5119
+2026-03-16 08:15:23 [INFO] Epoch: [49] Step : [100/564] Loss: 1.0069
+2026-03-16 08:16:20 [INFO] Epoch: [49] Step : [200/564] Loss: 0.7317
+2026-03-16 08:17:17 [INFO] Epoch: [49] Step : [300/564] Loss: 1.9532
+2026-03-16 08:18:15 [INFO] Epoch: [49] Step : [400/564] Loss: 7.7567
+2026-03-16 08:19:13 [INFO] Epoch: [49] Step : [500/564] Loss: 2.1730
+2026-03-16 08:19:50 [INFO] Epoch: [49] Step : [564/564] Loss: 2.5481
+2026-03-16 08:21:39 [INFO] Epoch 49/300 | Train Loss: 0.8432 | Test Loss: 2.3062 | Acc: 0.7595 | Top-5: 0.8930 | F1(M): 0.4820 | Prec(M): 0.4950 | Rec(M): 0.5684 | Prec(W): 0.8810
+2026-03-16 08:21:56 [INFO] Epoch: [50] Step : [1/564] Loss: 1.7839
+2026-03-16 08:22:53 [INFO] Epoch: [50] Step : [100/564] Loss: 2.9334
+2026-03-16 08:23:51 [INFO] Epoch: [50] Step : [200/564] Loss: 7.1976
+2026-03-16 08:24:49 [INFO] Epoch: [50] Step : [300/564] Loss: 0.4913
+2026-03-16 08:25:46 [INFO] Epoch: [50] Step : [400/564] Loss: 2.2793
+2026-03-16 08:26:45 [INFO] Epoch: [50] Step : [500/564] Loss: 2.1332
+2026-03-16 08:27:21 [INFO] Epoch: [50] Step : [564/564] Loss: 3.8420
+2026-03-16 08:29:10 [INFO] Epoch 50/300 | Train Loss: 0.8369 | Test Loss: 2.3706 | Acc: 0.7410 | Top-5: 0.8846 | F1(M): 0.4824 | Prec(M): 0.4951 | Rec(M): 0.5685 | Prec(W): 0.8349
+2026-03-16 08:29:26 [INFO] Epoch: [51] Step : [1/564] Loss: 0.5268
+2026-03-16 08:30:23 [INFO] Epoch: [51] Step : [100/564] Loss: 0.8285
+2026-03-16 08:31:20 [INFO] Epoch: [51] Step : [200/564] Loss: 2.7035
+2026-03-16 08:32:17 [INFO] Epoch: [51] Step : [300/564] Loss: 8.3602
+2026-03-16 08:33:15 [INFO] Epoch: [51] Step : [400/564] Loss: 0.7661
+2026-03-16 08:34:12 [INFO] Epoch: [51] Step : [500/564] Loss: 12.0279
+2026-03-16 08:34:48 [INFO] Epoch: [51] Step : [564/564] Loss: 0.4556
+2026-03-16 08:36:38 [INFO] Epoch 51/300 | Train Loss: 0.8239 | Test Loss: 2.3335 | Acc: 0.7678 | Top-5: 0.9113 | F1(M): 0.4902 | Prec(M): 0.4982 | Rec(M): 0.5757 | Prec(W): 0.8776
+2026-03-16 08:36:54 [INFO] Epoch: [52] Step : [1/564] Loss: 3.0593
+2026-03-16 08:37:50 [INFO] Epoch: [52] Step : [100/564] Loss: 0.3767
+2026-03-16 08:38:48 [INFO] Epoch: [52] Step : [200/564] Loss: 1.7494
+2026-03-16 08:39:45 [INFO] Epoch: [52] Step : [300/564] Loss: 1.6349
+2026-03-16 08:40:43 [INFO] Epoch: [52] Step : [400/564] Loss: 0.4612
+2026-03-16 08:41:40 [INFO] Epoch: [52] Step : [500/564] Loss: 3.3361
+2026-03-16 08:42:16 [INFO] Epoch: [52] Step : [564/564] Loss: 2.7593
+2026-03-16 08:44:06 [INFO] Epoch 52/300 | Train Loss: 0.8523 | Test Loss: 2.3963 | Acc: 0.7510 | Top-5: 0.9140 | F1(M): 0.4627 | Prec(M): 0.4733 | Rec(M): 0.5505 | Prec(W): 0.8626
+2026-03-16 08:44:22 [INFO] Epoch: [53] Step : [1/564] Loss: 1.3099
+2026-03-16 08:45:18 [INFO] Epoch: [53] Step : [100/564] Loss: 0.7473
+2026-03-16 08:46:15 [INFO] Epoch: [53] Step : [200/564] Loss: 6.3879
+2026-03-16 08:47:14 [INFO] Epoch: [53] Step : [300/564] Loss: 3.7225
+2026-03-16 08:48:11 [INFO] Epoch: [53] Step : [400/564] Loss: 3.5083
+2026-03-16 08:49:08 [INFO] Epoch: [53] Step : [500/564] Loss: 6.0917
+2026-03-16 08:49:45 [INFO] Epoch: [53] Step : [564/564] Loss: 1.5165
+2026-03-16 08:51:34 [INFO] Epoch 53/300 | Train Loss: 0.8389 | Test Loss: 2.3169 | Acc: 0.7897 | Top-5: 0.9226 | F1(M): 0.4866 | Prec(M): 0.4971 | Rec(M): 0.5694 | Prec(W): 0.8746
+2026-03-16 08:51:51 [INFO] Epoch: [54] Step : [1/564] Loss: 1.3766
+2026-03-16 08:52:48 [INFO] Epoch: [54] Step : [100/564] Loss: 0.1266
+2026-03-16 08:53:46 [INFO] Epoch: [54] Step : [200/564] Loss: 2.1451
+2026-03-16 08:54:44 [INFO] Epoch: [54] Step : [300/564] Loss: 1.4376
+2026-03-16 08:55:43 [INFO] Epoch: [54] Step : [400/564] Loss: 0.5041
+2026-03-16 08:56:41 [INFO] Epoch: [54] Step : [500/564] Loss: 1.0477
+2026-03-16 08:57:18 [INFO] Epoch: [54] Step : [564/564] Loss: 4.9548
+2026-03-16 08:59:08 [INFO] Epoch 54/300 | Train Loss: 0.8303 | Test Loss: 2.3612 | Acc: 0.7763 | Top-5: 0.9201 | F1(M): 0.4779 | Prec(M): 0.4919 | Rec(M): 0.5569 | Prec(W): 0.8748
+2026-03-16 08:59:24 [INFO] Epoch: [55] Step : [1/564] Loss: 0.6305
+2026-03-16 09:00:21 [INFO] Epoch: [55] Step : [100/564] Loss: 1.1474
+2026-03-16 09:01:18 [INFO] Epoch: [55] Step : [200/564] Loss: 0.3750
+2026-03-16 09:02:16 [INFO] Epoch: [55] Step : [300/564] Loss: 0.6816
+2026-03-16 09:03:14 [INFO] Epoch: [55] Step : [400/564] Loss: 1.6173
+2026-03-16 09:04:21 [INFO] Epoch: [55] Step : [500/564] Loss: 3.2628
+2026-03-16 09:05:02 [INFO] Epoch: [55] Step : [564/564] Loss: 0.4506
+2026-03-16 09:10:04 [INFO] Epoch 55/300 | Train Loss: 0.8336 | Test Loss: 2.3073 | Acc: 0.8019 | Top-5: 0.9200 | F1(M): 0.4813 | Prec(M): 0.4826 | Rec(M): 0.5703 | Prec(W): 0.8818
+2026-03-16 09:10:21 [INFO] Epoch: [56] Step : [1/564] Loss: 0.8182
+2026-03-16 09:11:28 [INFO] Epoch: [56] Step : [100/564] Loss: 1.5545
+2026-03-16 09:12:41 [INFO] Epoch: [56] Step : [200/564] Loss: 0.6886
+2026-03-16 09:13:46 [INFO] Epoch: [56] Step : [300/564] Loss: 1.0736
+2026-03-16 09:14:55 [INFO] Epoch: [56] Step : [400/564] Loss: 1.4478
+2026-03-16 09:16:03 [INFO] Epoch: [56] Step : [500/564] Loss: 1.5612
+2026-03-16 09:16:44 [INFO] Epoch: [56] Step : [564/564] Loss: 0.9127
+2026-03-16 09:22:42 [INFO] Epoch 56/300 | Train Loss: 0.8138 | Test Loss: 2.2757 | Acc: 0.7672 | Top-5: 0.9156 | F1(M): 0.4953 | Prec(M): 0.5041 | Rec(M): 0.5869 | Prec(W): 0.8852
+2026-03-16 09:22:42 [INFO] --> Best model saved with F1: 0.4953 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260316_0658.pth
+2026-03-16 09:22:58 [INFO] Epoch: [57] Step : [1/564] Loss: 1.4086
+2026-03-16 09:24:03 [INFO] Epoch: [57] Step : [100/564] Loss: 1.3836
+2026-03-16 09:25:09 [INFO] Epoch: [57] Step : [200/564] Loss: 0.6348
+2026-03-16 09:26:10 [INFO] Epoch: [57] Step : [300/564] Loss: 1.7342
+2026-03-16 09:27:07 [INFO] Epoch: [57] Step : [400/564] Loss: 2.7980
+2026-03-16 09:28:05 [INFO] Epoch: [57] Step : [500/564] Loss: 1.3636
+2026-03-16 09:28:42 [INFO] Epoch: [57] Step : [564/564] Loss: 0.7849
+2026-03-16 09:30:32 [INFO] Epoch 57/300 | Train Loss: 0.8143 | Test Loss: 2.3548 | Acc: 0.7689 | Top-5: 0.9235 | F1(M): 0.4784 | Prec(M): 0.4897 | Rec(M): 0.5636 | Prec(W): 0.8838
+2026-03-16 09:30:49 [INFO] Epoch: [58] Step : [1/564] Loss: 0.3872
+2026-03-16 09:31:46 [INFO] Epoch: [58] Step : [100/564] Loss: 0.5121
+2026-03-16 09:32:44 [INFO] Epoch: [58] Step : [200/564] Loss: 0.8540
+2026-03-16 09:33:42 [INFO] Epoch: [58] Step : [300/564] Loss: 1.0077
+2026-03-16 09:34:43 [INFO] Epoch: [58] Step : [400/564] Loss: 0.9106
+2026-03-16 09:35:50 [INFO] Epoch: [58] Step : [500/564] Loss: 0.3862
+2026-03-16 09:36:31 [INFO] Epoch: [58] Step : [564/564] Loss: 2.1381
+2026-03-16 09:39:55 [INFO] Epoch 58/300 | Train Loss: 0.8374 | Test Loss: 2.3236 | Acc: 0.7666 | Top-5: 0.9125 | F1(M): 0.4831 | Prec(M): 0.4928 | Rec(M): 0.5740 | Prec(W): 0.8594
+2026-03-16 09:40:12 [INFO] Epoch: [59] Step : [1/564] Loss: 0.6582
+2026-03-16 09:41:18 [INFO] Epoch: [59] Step : [100/564] Loss: 3.6278
+2026-03-16 09:42:25 [INFO] Epoch: [59] Step : [200/564] Loss: 2.1508
+2026-03-16 09:43:38 [INFO] Epoch: [59] Step : [300/564] Loss: 0.8985
+2026-03-16 09:44:55 [INFO] Epoch: [59] Step : [400/564] Loss: 1.4704
+2026-03-16 09:46:05 [INFO] Epoch: [59] Step : [500/564] Loss: 0.4757
+2026-03-16 09:46:46 [INFO] Epoch: [59] Step : [564/564] Loss: 0.1587
+2026-03-16 09:49:25 [INFO] Epoch 59/300 | Train Loss: 0.8171 | Test Loss: 2.2525 | Acc: 0.7680 | Top-5: 0.9152 | F1(M): 0.4933 | Prec(M): 0.5020 | Rec(M): 0.5747 | Prec(W): 0.8715
+2026-03-16 09:49:41 [INFO] Epoch: [60] Step : [1/564] Loss: 0.3105
+2026-03-16 09:50:38 [INFO] Epoch: [60] Step : [100/564] Loss: 0.6791
+2026-03-16 09:51:35 [INFO] Epoch: [60] Step : [200/564] Loss: 2.2205
+2026-03-16 09:52:32 [INFO] Epoch: [60] Step : [300/564] Loss: 0.4885
+2026-03-16 09:53:29 [INFO] Epoch: [60] Step : [400/564] Loss: 2.0842
+2026-03-16 09:54:26 [INFO] Epoch: [60] Step : [500/564] Loss: 0.1844
+2026-03-16 09:55:03 [INFO] Epoch: [60] Step : [564/564] Loss: 0.3377
+2026-03-16 09:56:55 [INFO] Epoch 60/300 | Train Loss: 0.8178 | Test Loss: 2.3946 | Acc: 0.7389 | Top-5: 0.9128 | F1(M): 0.4732 | Prec(M): 0.4905 | Rec(M): 0.5513 | Prec(W): 0.8792
+2026-03-16 09:57:10 [INFO] Epoch: [61] Step : [1/564] Loss: 1.5267
+2026-03-16 09:58:09 [INFO] Epoch: [61] Step : [100/564] Loss: 2.3069
+2026-03-16 09:59:06 [INFO] Epoch: [61] Step : [200/564] Loss: 6.4659
+2026-03-16 10:00:05 [INFO] Epoch: [61] Step : [300/564] Loss: 0.7087
+2026-03-16 10:01:05 [INFO] Epoch: [61] Step : [400/564] Loss: 1.0035
+2026-03-16 10:02:20 [INFO] Epoch: [61] Step : [500/564] Loss: 0.5933
+2026-03-16 10:03:08 [INFO] Epoch: [61] Step : [564/564] Loss: 1.0483
+2026-03-16 10:07:54 [INFO] Epoch 61/300 | Train Loss: 0.8064 | Test Loss: 2.3456 | Acc: 0.7566 | Top-5: 0.9187 | F1(M): 0.4741 | Prec(M): 0.4911 | Rec(M): 0.5453 | Prec(W): 0.8667
+2026-03-16 10:08:10 [INFO] Epoch: [62] Step : [1/564] Loss: 1.0801
+2026-03-16 10:09:14 [INFO] Epoch: [62] Step : [100/564] Loss: 2.9609
+2026-03-16 10:10:15 [INFO] Epoch: [62] Step : [200/564] Loss: 0.5296
+2026-03-16 10:11:13 [INFO] Epoch: [62] Step : [300/564] Loss: 6.5740
+2026-03-16 10:12:12 [INFO] Epoch: [62] Step : [400/564] Loss: 0.8513
+2026-03-16 10:13:10 [INFO] Epoch: [62] Step : [500/564] Loss: 2.7590
+2026-03-16 10:13:48 [INFO] Epoch: [62] Step : [564/564] Loss: 2.5496
+2026-03-16 10:15:45 [INFO] Epoch 62/300 | Train Loss: 0.7960 | Test Loss: 2.2449 | Acc: 0.8073 | Top-5: 0.9253 | F1(M): 0.5007 | Prec(M): 0.5076 | Rec(M): 0.5855 | Prec(W): 0.8817
+2026-03-16 10:15:45 [INFO] --> Best model saved with F1: 0.5007 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260316_0658.pth
+2026-03-16 10:16:01 [INFO] Epoch: [63] Step : [1/564] Loss: 1.1038
+2026-03-16 10:16:58 [INFO] Epoch: [63] Step : [100/564] Loss: 0.7437
+2026-03-16 10:17:55 [INFO] Epoch: [63] Step : [200/564] Loss: 1.8096
+2026-03-16 10:18:55 [INFO] Epoch: [63] Step : [300/564] Loss: 1.3371
+2026-03-16 10:19:53 [INFO] Epoch: [63] Step : [400/564] Loss: 2.7601
+2026-03-16 10:20:52 [INFO] Epoch: [63] Step : [500/564] Loss: 2.9108
+2026-03-16 10:21:30 [INFO] Epoch: [63] Step : [564/564] Loss: 11.2601
+2026-03-16 10:29:12 [INFO] Epoch 63/300 | Train Loss: 0.8067 | Test Loss: 2.2250 | Acc: 0.7569 | Top-5: 0.9233 | F1(M): 0.4800 | Prec(M): 0.4880 | Rec(M): 0.5747 | Prec(W): 0.8695
+2026-03-16 10:29:28 [INFO] Epoch: [64] Step : [1/564] Loss: 0.8865
+2026-03-16 10:30:32 [INFO] Epoch: [64] Step : [100/564] Loss: 0.8972
+2026-03-16 10:31:38 [INFO] Epoch: [64] Step : [200/564] Loss: 0.5849
+2026-03-16 10:32:40 [INFO] Epoch: [64] Step : [300/564] Loss: 0.7129
+2026-03-16 10:33:40 [INFO] Epoch: [64] Step : [400/564] Loss: 1.2830
+2026-03-16 10:34:37 [INFO] Epoch: [64] Step : [500/564] Loss: 1.6670
+2026-03-16 10:35:14 [INFO] Epoch: [64] Step : [564/564] Loss: 0.4771
+2026-03-16 10:37:07 [INFO] Epoch 64/300 | Train Loss: 0.7976 | Test Loss: 2.2157 | Acc: 0.8059 | Top-5: 0.9241 | F1(M): 0.5171 | Prec(M): 0.5201 | Rec(M): 0.5980 | Prec(W): 0.8738
+2026-03-16 10:37:07 [INFO] --> Best model saved with F1: 0.5171 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260316_0658.pth
+2026-03-16 10:37:23 [INFO] Epoch: [65] Step : [1/564] Loss: 0.3969
+2026-03-16 10:38:20 [INFO] Epoch: [65] Step : [100/564] Loss: 1.5906
+2026-03-16 10:39:17 [INFO] Epoch: [65] Step : [200/564] Loss: 3.3836
+2026-03-16 10:40:16 [INFO] Epoch: [65] Step : [300/564] Loss: 2.1640
+2026-03-16 10:41:14 [INFO] Epoch: [65] Step : [400/564] Loss: 5.0699
+2026-03-16 10:42:12 [INFO] Epoch: [65] Step : [500/564] Loss: 1.5470
+2026-03-16 10:42:49 [INFO] Epoch: [65] Step : [564/564] Loss: 1.1985
+2026-03-16 10:48:31 [INFO] Epoch 65/300 | Train Loss: 0.8039 | Test Loss: 2.3581 | Acc: 0.7370 | Top-5: 0.8747 | F1(M): 0.4865 | Prec(M): 0.5019 | Rec(M): 0.5614 | Prec(W): 0.8178
+2026-03-16 10:48:47 [INFO] Epoch: [66] Step : [1/564] Loss: 1.9507
+2026-03-16 10:49:49 [INFO] Epoch: [66] Step : [100/564] Loss: 1.9393
+2026-03-16 10:50:52 [INFO] Epoch: [66] Step : [200/564] Loss: 4.3200
+2026-03-16 10:51:55 [INFO] Epoch: [66] Step : [300/564] Loss: 1.7773
+2026-03-16 10:52:54 [INFO] Epoch: [66] Step : [400/564] Loss: 1.3843
+2026-03-16 10:53:51 [INFO] Epoch: [66] Step : [500/564] Loss: 5.1580
+2026-03-16 10:54:28 [INFO] Epoch: [66] Step : [564/564] Loss: 0.1810
+2026-03-16 10:56:21 [INFO] Epoch 66/300 | Train Loss: 0.7912 | Test Loss: 2.3486 | Acc: 0.7462 | Top-5: 0.9183 | F1(M): 0.4780 | Prec(M): 0.4879 | Rec(M): 0.5698 | Prec(W): 0.8706
+2026-03-16 10:56:37 [INFO] Epoch: [67] Step : [1/564] Loss: 1.6521
+2026-03-16 10:57:34 [INFO] Epoch: [67] Step : [100/564] Loss: 1.1154
+2026-03-16 10:58:33 [INFO] Epoch: [67] Step : [200/564] Loss: 1.0607
+2026-03-16 10:59:32 [INFO] Epoch: [67] Step : [300/564] Loss: 1.6323
+2026-03-16 11:00:29 [INFO] Epoch: [67] Step : [400/564] Loss: 0.8005
+2026-03-16 11:01:27 [INFO] Epoch: [67] Step : [500/564] Loss: 0.8106
+2026-03-16 11:02:04 [INFO] Epoch: [67] Step : [564/564] Loss: 7.2802
+2026-03-16 11:03:59 [INFO] Epoch 67/300 | Train Loss: 0.7924 | Test Loss: 2.2424 | Acc: 0.7811 | Top-5: 0.9163 | F1(M): 0.5031 | Prec(M): 0.5116 | Rec(M): 0.5868 | Prec(W): 0.8698
+2026-03-16 11:04:15 [INFO] Epoch: [68] Step : [1/564] Loss: 1.1547
+2026-03-16 11:05:13 [INFO] Epoch: [68] Step : [100/564] Loss: 0.8580
+2026-03-16 11:06:10 [INFO] Epoch: [68] Step : [200/564] Loss: 0.6391
+2026-03-16 11:07:17 [INFO] Epoch: [68] Step : [300/564] Loss: 1.7115
+2026-03-16 11:08:26 [INFO] Epoch: [68] Step : [400/564] Loss: 2.1421
+2026-03-16 11:09:33 [INFO] Epoch: [68] Step : [500/564] Loss: 0.3849
+2026-03-16 11:10:15 [INFO] Epoch: [68] Step : [564/564] Loss: 1.0667
+2026-03-16 11:13:18 [INFO] Epoch 68/300 | Train Loss: 0.7898 | Test Loss: 2.3504 | Acc: 0.7620 | Top-5: 0.9186 | F1(M): 0.4834 | Prec(M): 0.4931 | Rec(M): 0.5715 | Prec(W): 0.8658
+2026-03-16 11:13:38 [INFO] Epoch: [69] Step : [1/564] Loss: 1.3947
+2026-03-16 11:14:36 [INFO] Epoch: [69] Step : [100/564] Loss: 1.4957
+2026-03-16 11:15:33 [INFO] Epoch: [69] Step : [200/564] Loss: 0.3780
+2026-03-16 11:16:32 [INFO] Epoch: [69] Step : [300/564] Loss: 1.5000
+2026-03-16 11:17:31 [INFO] Epoch: [69] Step : [400/564] Loss: 0.4489
+2026-03-16 11:18:29 [INFO] Epoch: [69] Step : [500/564] Loss: 0.3395
+2026-03-16 11:19:06 [INFO] Epoch: [69] Step : [564/564] Loss: 0.4432
+2026-03-16 11:20:59 [INFO] Epoch 69/300 | Train Loss: 0.7747 | Test Loss: 2.3132 | Acc: 0.7585 | Top-5: 0.8924 | F1(M): 0.5044 | Prec(M): 0.5155 | Rec(M): 0.5825 | Prec(W): 0.8666
+2026-03-16 11:21:17 [INFO] Epoch: [70] Step : [1/564] Loss: 0.7170
+2026-03-16 11:22:14 [INFO] Epoch: [70] Step : [100/564] Loss: 1.2044
+2026-03-16 11:23:12 [INFO] Epoch: [70] Step : [200/564] Loss: 1.4550
+2026-03-16 11:24:10 [INFO] Epoch: [70] Step : [300/564] Loss: 3.1837
+2026-03-16 11:25:08 [INFO] Epoch: [70] Step : [400/564] Loss: 0.4453
+2026-03-16 11:26:07 [INFO] Epoch: [70] Step : [500/564] Loss: 1.7818
+2026-03-16 11:26:46 [INFO] Epoch: [70] Step : [564/564] Loss: 0.3346
+2026-03-16 11:29:53 [INFO] Epoch 70/300 | Train Loss: 0.7891 | Test Loss: 2.3370 | Acc: 0.7871 | Top-5: 0.9318 | F1(M): 0.4887 | Prec(M): 0.5021 | Rec(M): 0.5659 | Prec(W): 0.8909
+2026-03-16 11:30:12 [INFO] Epoch: [71] Step : [1/564] Loss: 1.0098
+2026-03-16 11:31:09 [INFO] Epoch: [71] Step : [100/564] Loss: 0.8290
+2026-03-16 11:32:06 [INFO] Epoch: [71] Step : [200/564] Loss: 0.4765
+2026-03-16 11:33:04 [INFO] Epoch: [71] Step : [300/564] Loss: 0.3828
+2026-03-16 11:34:01 [INFO] Epoch: [71] Step : [400/564] Loss: 2.1203
+2026-03-16 11:35:00 [INFO] Epoch: [71] Step : [500/564] Loss: 0.7416
+2026-03-16 11:35:37 [INFO] Epoch: [71] Step : [564/564] Loss: 0.4703
+2026-03-16 11:37:33 [INFO] Epoch 71/300 | Train Loss: 0.7970 | Test Loss: 2.1819 | Acc: 0.7922 | Top-5: 0.9212 | F1(M): 0.5063 | Prec(M): 0.5147 | Rec(M): 0.5874 | Prec(W): 0.8788
+2026-03-16 11:37:51 [INFO] Epoch: [72] Step : [1/564] Loss: 0.3949
+2026-03-16 11:38:50 [INFO] Epoch: [72] Step : [100/564] Loss: 2.9043
+2026-03-16 11:39:49 [INFO] Epoch: [72] Step : [200/564] Loss: 0.5412
+2026-03-16 11:40:48 [INFO] Epoch: [72] Step : [300/564] Loss: 4.5529
+2026-03-16 11:41:49 [INFO] Epoch: [72] Step : [400/564] Loss: 0.5577
+2026-03-16 11:42:50 [INFO] Epoch: [72] Step : [500/564] Loss: 0.4955
+2026-03-16 11:43:30 [INFO] Epoch: [72] Step : [564/564] Loss: 0.3180
+2026-03-16 11:49:11 [INFO] Epoch 72/300 | Train Loss: 0.7836 | Test Loss: 2.3019 | Acc: 0.7201 | Top-5: 0.8595 | F1(M): 0.4843 | Prec(M): 0.4928 | Rec(M): 0.5742 | Prec(W): 0.7944
+2026-03-16 11:50:57 [INFO] Epoch: [73] Step : [1/564] Loss: 1.1736
+2026-03-16 11:51:53 [INFO] Epoch: [73] Step : [100/564] Loss: 0.8350
+2026-03-16 11:52:50 [INFO] Epoch: [73] Step : [200/564] Loss: 1.3696
+2026-03-16 11:53:48 [INFO] Epoch: [73] Step : [300/564] Loss: 0.7907
+2026-03-16 11:54:45 [INFO] Epoch: [73] Step : [400/564] Loss: 0.4152
+2026-03-16 11:55:44 [INFO] Epoch: [73] Step : [500/564] Loss: 3.2150
+2026-03-16 11:56:20 [INFO] Epoch: [73] Step : [564/564] Loss: 0.1812
+2026-03-16 11:58:13 [INFO] Epoch 73/300 | Train Loss: 0.7894 | Test Loss: 2.4426 | Acc: 0.7230 | Top-5: 0.8796 | F1(M): 0.4747 | Prec(M): 0.4887 | Rec(M): 0.5489 | Prec(W): 0.8537
+2026-03-16 11:58:35 [INFO] Epoch: [74] Step : [1/564] Loss: 2.1460
+2026-03-16 11:59:32 [INFO] Epoch: [74] Step : [100/564] Loss: 1.6654
+2026-03-16 12:00:30 [INFO] Epoch: [74] Step : [200/564] Loss: 2.2580
+2026-03-16 12:01:29 [INFO] Epoch: [74] Step : [300/564] Loss: 1.5000
+2026-03-16 12:02:29 [INFO] Epoch: [74] Step : [400/564] Loss: 1.3566
+2026-03-16 12:03:36 [INFO] Epoch: [74] Step : [500/564] Loss: 0.4617
+2026-03-16 12:04:18 [INFO] Epoch: [74] Step : [564/564] Loss: 1.7807
+2026-03-16 12:10:46 [INFO] Epoch 74/300 | Train Loss: 0.7954 | Test Loss: 2.2792 | Acc: 0.7654 | Top-5: 0.9082 | F1(M): 0.4993 | Prec(M): 0.5109 | Rec(M): 0.5811 | Prec(W): 0.8843
+2026-03-16 12:11:11 [INFO] Epoch: [75] Step : [1/564] Loss: 0.4014
+2026-03-16 12:12:07 [INFO] Epoch: [75] Step : [100/564] Loss: 0.4699
+2026-03-16 12:13:05 [INFO] Epoch: [75] Step : [200/564] Loss: 1.0523
+2026-03-16 12:14:03 [INFO] Epoch: [75] Step : [300/564] Loss: 0.3349
+2026-03-16 12:15:01 [INFO] Epoch: [75] Step : [400/564] Loss: 0.5980
+2026-03-16 12:16:00 [INFO] Epoch: [75] Step : [500/564] Loss: 0.3381
+2026-03-16 12:16:36 [INFO] Epoch: [75] Step : [564/564] Loss: 1.3523
+2026-03-16 12:18:29 [INFO] Epoch 75/300 | Train Loss: 0.7751 | Test Loss: 2.2585 | Acc: 0.7498 | Top-5: 0.9012 | F1(M): 0.4834 | Prec(M): 0.4942 | Rec(M): 0.5772 | Prec(W): 0.8743
+2026-03-16 12:18:53 [INFO] Epoch: [76] Step : [1/564] Loss: 0.7160
+2026-03-16 12:19:50 [INFO] Epoch: [76] Step : [100/564] Loss: 3.4323
+2026-03-16 12:20:49 [INFO] Epoch: [76] Step : [200/564] Loss: 0.4358
+2026-03-16 12:21:47 [INFO] Epoch: [76] Step : [300/564] Loss: 1.0809
+2026-03-16 12:22:46 [INFO] Epoch: [76] Step : [400/564] Loss: 1.2342
+2026-03-16 12:23:46 [INFO] Epoch: [76] Step : [500/564] Loss: 0.7240
+2026-03-16 12:24:24 [INFO] Epoch: [76] Step : [564/564] Loss: 1.9262
+2026-03-16 12:29:11 [INFO] Epoch 76/300 | Train Loss: 0.7795 | Test Loss: 2.2294 | Acc: 0.7836 | Top-5: 0.9012 | F1(M): 0.5083 | Prec(M): 0.5129 | Rec(M): 0.5932 | Prec(W): 0.8682
+2026-03-16 12:29:51 [INFO] Epoch: [77] Step : [1/564] Loss: 2.5630
+2026-03-16 12:30:48 [INFO] Epoch: [77] Step : [100/564] Loss: 0.7423
+2026-03-16 12:31:46 [INFO] Epoch: [77] Step : [200/564] Loss: 0.4775
+2026-03-16 12:32:45 [INFO] Epoch: [77] Step : [300/564] Loss: 1.0786
+2026-03-16 12:33:43 [INFO] Epoch: [77] Step : [400/564] Loss: 4.2792
+2026-03-16 12:34:42 [INFO] Epoch: [77] Step : [500/564] Loss: 0.4457
+2026-03-16 12:35:18 [INFO] Epoch: [77] Step : [564/564] Loss: 0.4389
+2026-03-16 12:37:12 [INFO] Epoch 77/300 | Train Loss: 0.7849 | Test Loss: 2.2553 | Acc: 0.7382 | Top-5: 0.8787 | F1(M): 0.4954 | Prec(M): 0.5082 | Rec(M): 0.5759 | Prec(W): 0.8196
+2026-03-16 12:37:30 [INFO] Epoch: [78] Step : [1/564] Loss: 1.0486
+2026-03-16 12:38:28 [INFO] Epoch: [78] Step : [100/564] Loss: 1.4039
+2026-03-16 12:39:26 [INFO] Epoch: [78] Step : [200/564] Loss: 1.3170
+2026-03-16 12:40:25 [INFO] Epoch: [78] Step : [300/564] Loss: 1.2925
+2026-03-16 12:41:23 [INFO] Epoch: [78] Step : [400/564] Loss: 2.5975
+2026-03-16 12:42:23 [INFO] Epoch: [78] Step : [500/564] Loss: 0.4776
+2026-03-16 12:43:00 [INFO] Epoch: [78] Step : [564/564] Loss: 0.7859
+2026-03-16 12:50:17 [INFO] Epoch 78/300 | Train Loss: 0.7636 | Test Loss: 2.3426 | Acc: 0.7519 | Top-5: 0.8913 | F1(M): 0.4915 | Prec(M): 0.5023 | Rec(M): 0.5669 | Prec(W): 0.8675
+2026-03-16 12:50:34 [INFO] Epoch: [79] Step : [1/564] Loss: 1.4853
+2026-03-16 12:51:31 [INFO] Epoch: [79] Step : [100/564] Loss: 2.4541
+2026-03-16 12:52:27 [INFO] Epoch: [79] Step : [200/564] Loss: 0.8383
+2026-03-16 12:53:25 [INFO] Epoch: [79] Step : [300/564] Loss: 1.0033
+2026-03-16 12:54:21 [INFO] Epoch: [79] Step : [400/564] Loss: 0.6881
+2026-03-16 12:55:20 [INFO] Epoch: [79] Step : [500/564] Loss: 1.3986
+2026-03-16 12:55:56 [INFO] Epoch: [79] Step : [564/564] Loss: 0.2572
+2026-03-16 12:57:52 [INFO] Epoch 79/300 | Train Loss: 0.7906 | Test Loss: 2.2527 | Acc: 0.7785 | Top-5: 0.9088 | F1(M): 0.4887 | Prec(M): 0.4977 | Rec(M): 0.5814 | Prec(W): 0.8637
+2026-03-16 12:58:11 [INFO] Epoch: [80] Step : [1/564] Loss: 0.7958
+2026-03-16 12:59:09 [INFO] Epoch: [80] Step : [100/564] Loss: 1.0907
+2026-03-16 13:00:07 [INFO] Epoch: [80] Step : [200/564] Loss: 0.7611
+2026-03-16 13:01:06 [INFO] Epoch: [80] Step : [300/564] Loss: 4.7720
+2026-03-16 13:02:06 [INFO] Epoch: [80] Step : [400/564] Loss: 1.6319
+2026-03-16 13:03:05 [INFO] Epoch: [80] Step : [500/564] Loss: 0.8291
+2026-03-16 13:03:48 [INFO] Epoch: [80] Step : [564/564] Loss: 1.4731
+2026-03-16 13:07:39 [INFO] Epoch 80/300 | Train Loss: 0.7903 | Test Loss: 2.3990 | Acc: 0.7416 | Top-5: 0.8783 | F1(M): 0.4750 | Prec(M): 0.4876 | Rec(M): 0.5580 | Prec(W): 0.8349
+2026-03-16 13:07:57 [INFO] Epoch: [81] Step : [1/564] Loss: 1.6593
+2026-03-16 13:08:52 [INFO] Epoch: [81] Step : [100/564] Loss: 1.2437
+2026-03-16 13:09:49 [INFO] Epoch: [81] Step : [200/564] Loss: 2.1211
+2026-03-16 13:10:46 [INFO] Epoch: [81] Step : [300/564] Loss: 0.3284
+2026-03-16 13:11:42 [INFO] Epoch: [81] Step : [400/564] Loss: 0.5030
+2026-03-16 13:12:39 [INFO] Epoch: [81] Step : [500/564] Loss: 0.3197
+2026-03-16 13:13:15 [INFO] Epoch: [81] Step : [564/564] Loss: 0.8788
+2026-03-16 13:15:12 [INFO] Epoch 81/300 | Train Loss: 0.7624 | Test Loss: 2.3639 | Acc: 0.7366 | Top-5: 0.8805 | F1(M): 0.4916 | Prec(M): 0.5004 | Rec(M): 0.5767 | Prec(W): 0.8218
+2026-03-16 13:15:30 [INFO] Epoch: [82] Step : [1/564] Loss: 1.9857
+2026-03-16 13:16:28 [INFO] Epoch: [82] Step : [100/564] Loss: 0.9435
+2026-03-16 13:17:26 [INFO] Epoch: [82] Step : [200/564] Loss: 0.7307
+2026-03-16 13:18:25 [INFO] Epoch: [82] Step : [300/564] Loss: 0.4897
+2026-03-16 13:19:23 [INFO] Epoch: [82] Step : [400/564] Loss: 0.6062
+2026-03-16 13:20:21 [INFO] Epoch: [82] Step : [500/564] Loss: 1.1155
+2026-03-16 13:21:03 [INFO] Epoch: [82] Step : [564/564] Loss: 0.2593
+2026-03-16 13:31:09 [INFO] Epoch 82/300 | Train Loss: 0.8004 | Test Loss: 2.3185 | Acc: 0.7556 | Top-5: 0.9125 | F1(M): 0.4848 | Prec(M): 0.4901 | Rec(M): 0.5818 | Prec(W): 0.8774
+2026-03-16 13:31:34 [INFO] Epoch: [83] Step : [1/564] Loss: 1.5427
+2026-03-16 13:32:30 [INFO] Epoch: [83] Step : [100/564] Loss: 1.1865
+2026-03-16 13:33:27 [INFO] Epoch: [83] Step : [200/564] Loss: 1.0478
+2026-03-16 13:34:23 [INFO] Epoch: [83] Step : [300/564] Loss: 4.4931
+2026-03-16 13:35:20 [INFO] Epoch: [83] Step : [400/564] Loss: 0.8579
+2026-03-16 13:36:17 [INFO] Epoch: [83] Step : [500/564] Loss: 0.8245
+2026-03-16 13:36:54 [INFO] Epoch: [83] Step : [564/564] Loss: 0.1618
+2026-03-16 13:38:49 [INFO] Epoch 83/300 | Train Loss: 0.5148 | Test Loss: 1.8192 | Acc: 0.8476 | Top-5: 0.9589 | F1(M): 0.5954 | Prec(M): 0.5914 | Rec(M): 0.6779 | Prec(W): 0.9192
+2026-03-16 13:38:49 [INFO] --> Best model saved with F1: 0.5954 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260316_0658.pth
+2026-03-16 13:39:06 [INFO] Epoch: [84] Step : [1/564] Loss: 0.6376
+2026-03-16 13:40:03 [INFO] Epoch: [84] Step : [100/564] Loss: 0.5978
+2026-03-16 13:41:01 [INFO] Epoch: [84] Step : [200/564] Loss: 1.8411
+2026-03-16 13:41:58 [INFO] Epoch: [84] Step : [300/564] Loss: 0.1580
+2026-03-16 13:42:56 [INFO] Epoch: [84] Step : [400/564] Loss: 0.3978
+2026-03-16 13:43:55 [INFO] Epoch: [84] Step : [500/564] Loss: 1.5545
+2026-03-16 13:44:33 [INFO] Epoch: [84] Step : [564/564] Loss: 8.0162
+2026-03-16 13:49:15 [INFO] Epoch 84/300 | Train Loss: 0.4360 | Test Loss: 1.7849 | Acc: 0.8760 | Top-5: 0.9536 | F1(M): 0.5980 | Prec(M): 0.5885 | Rec(M): 0.6803 | Prec(W): 0.9318
+2026-03-16 13:49:15 [INFO] --> Best model saved with F1: 0.5980 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260316_0658.pth
+2026-03-16 13:49:31 [INFO] Epoch: [85] Step : [1/564] Loss: 0.1552
+2026-03-16 13:50:28 [INFO] Epoch: [85] Step : [100/564] Loss: 0.5893
+2026-03-16 13:51:25 [INFO] Epoch: [85] Step : [200/564] Loss: 0.9222
+2026-03-16 13:52:22 [INFO] Epoch: [85] Step : [300/564] Loss: 0.5693
+2026-03-16 13:53:20 [INFO] Epoch: [85] Step : [400/564] Loss: 1.2096
+2026-03-16 13:54:17 [INFO] Epoch: [85] Step : [500/564] Loss: 0.2705
+2026-03-16 13:54:54 [INFO] Epoch: [85] Step : [564/564] Loss: 0.2267
+2026-03-16 13:56:48 [INFO] Epoch 85/300 | Train Loss: 0.4541 | Test Loss: 1.7330 | Acc: 0.8609 | Top-5: 0.9597 | F1(M): 0.6026 | Prec(M): 0.5946 | Rec(M): 0.6840 | Prec(W): 0.9181
+2026-03-16 13:56:48 [INFO] --> Best model saved with F1: 0.6026 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260316_0658.pth
+2026-03-16 13:57:05 [INFO] Epoch: [86] Step : [1/564] Loss: 0.5295
+2026-03-16 13:58:02 [INFO] Epoch: [86] Step : [100/564] Loss: 0.7898
+2026-03-16 13:59:00 [INFO] Epoch: [86] Step : [200/564] Loss: 0.5273
+2026-03-16 13:59:59 [INFO] Epoch: [86] Step : [300/564] Loss: 0.2161
+2026-03-16 14:00:57 [INFO] Epoch: [86] Step : [400/564] Loss: 1.3066
+2026-03-16 14:01:56 [INFO] Epoch: [86] Step : [500/564] Loss: 0.3113
+2026-03-16 14:02:34 [INFO] Epoch: [86] Step : [564/564] Loss: 0.2591
+2026-03-16 14:10:49 [INFO] Epoch 86/300 | Train Loss: 0.4239 | Test Loss: 1.7689 | Acc: 0.8703 | Top-5: 0.9646 | F1(M): 0.6058 | Prec(M): 0.6053 | Rec(M): 0.6848 | Prec(W): 0.9330
+2026-03-16 14:10:50 [INFO] --> Best model saved with F1: 0.6058 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260316_0658.pth
+2026-03-16 14:11:17 [INFO] Epoch: [87] Step : [1/564] Loss: 1.3136
+2026-03-16 14:12:14 [INFO] Epoch: [87] Step : [100/564] Loss: 0.5979
+2026-03-16 14:13:11 [INFO] Epoch: [87] Step : [200/564] Loss: 0.3356
+2026-03-16 14:14:08 [INFO] Epoch: [87] Step : [300/564] Loss: 0.5770
+2026-03-16 14:15:06 [INFO] Epoch: [87] Step : [400/564] Loss: 1.1880
+2026-03-16 14:16:03 [INFO] Epoch: [87] Step : [500/564] Loss: 0.3214
+2026-03-16 14:16:39 [INFO] Epoch: [87] Step : [564/564] Loss: 0.1555
+2026-03-16 14:18:32 [INFO] Epoch 87/300 | Train Loss: 0.4144 | Test Loss: 1.7296 | Acc: 0.8687 | Top-5: 0.9628 | F1(M): 0.6079 | Prec(M): 0.6002 | Rec(M): 0.6868 | Prec(W): 0.9268
+2026-03-16 14:18:32 [INFO] --> Best model saved with F1: 0.6079 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260316_0658.pth
+2026-03-16 14:18:48 [INFO] Epoch: [88] Step : [1/564] Loss: 1.0797
+2026-03-16 14:19:45 [INFO] Epoch: [88] Step : [100/564] Loss: 0.1613
+2026-03-16 14:20:43 [INFO] Epoch: [88] Step : [200/564] Loss: 0.7045
+2026-03-16 14:21:42 [INFO] Epoch: [88] Step : [300/564] Loss: 2.2525
+2026-03-16 14:22:40 [INFO] Epoch: [88] Step : [400/564] Loss: 0.2871
+2026-03-16 14:23:38 [INFO] Epoch: [88] Step : [500/564] Loss: 0.3217
+2026-03-16 14:24:18 [INFO] Epoch: [88] Step : [564/564] Loss: 0.5561
+2026-03-16 14:34:58 [INFO] Epoch 88/300 | Train Loss: 0.4214 | Test Loss: 1.7991 | Acc: 0.8671 | Top-5: 0.9673 | F1(M): 0.6062 | Prec(M): 0.6010 | Rec(M): 0.6831 | Prec(W): 0.9233
+2026-03-16 14:35:36 [INFO] Epoch: [89] Step : [1/564] Loss: 0.1103
+2026-03-16 14:36:40 [INFO] Epoch: [89] Step : [100/564] Loss: 0.2773
+2026-03-16 14:37:43 [INFO] Epoch: [89] Step : [200/564] Loss: 0.8656
+2026-03-16 14:38:46 [INFO] Epoch: [89] Step : [300/564] Loss: 0.5721
+2026-03-16 14:39:48 [INFO] Epoch: [89] Step : [400/564] Loss: 0.5567
+2026-03-16 14:40:51 [INFO] Epoch: [89] Step : [500/564] Loss: 0.8360
+2026-03-16 14:41:32 [INFO] Epoch: [89] Step : [564/564] Loss: 0.1656
+2026-03-16 14:43:22 [INFO] Epoch 89/300 | Train Loss: 0.4278 | Test Loss: 1.7809 | Acc: 0.8745 | Top-5: 0.9663 | F1(M): 0.6017 | Prec(M): 0.6002 | Rec(M): 0.6771 | Prec(W): 0.9314
+2026-03-16 14:43:46 [INFO] Epoch: [90] Step : [1/564] Loss: 0.9301
+2026-03-16 14:44:42 [INFO] Epoch: [90] Step : [100/564] Loss: 2.8940
+2026-03-16 14:45:39 [INFO] Epoch: [90] Step : [200/564] Loss: 0.3683
+2026-03-16 14:46:37 [INFO] Epoch: [90] Step : [300/564] Loss: 1.2505
+2026-03-16 14:47:35 [INFO] Epoch: [90] Step : [400/564] Loss: 0.6424
+2026-03-16 14:48:33 [INFO] Epoch: [90] Step : [500/564] Loss: 0.4072
+2026-03-16 14:49:10 [INFO] Epoch: [90] Step : [564/564] Loss: 0.4053
+2026-03-16 14:51:03 [INFO] Epoch 90/300 | Train Loss: 0.4198 | Test Loss: 1.7617 | Acc: 0.8749 | Top-5: 0.9657 | F1(M): 0.6109 | Prec(M): 0.6032 | Rec(M): 0.6894 | Prec(W): 0.9322
+2026-03-16 14:51:03 [INFO] --> Best model saved with F1: 0.6109 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260316_0658.pth
+2026-03-16 14:51:20 [INFO] Epoch: [91] Step : [1/564] Loss: 0.9751
+2026-03-16 14:52:17 [INFO] Epoch: [91] Step : [100/564] Loss: 1.2631
+2026-03-16 14:53:15 [INFO] Epoch: [91] Step : [200/564] Loss: 0.3463
+2026-03-16 14:54:13 [INFO] Epoch: [91] Step : [300/564] Loss: 1.3148
+2026-03-16 14:55:19 [INFO] Epoch: [91] Step : [400/564] Loss: 0.4173
+2026-03-16 14:56:26 [INFO] Epoch: [91] Step : [500/564] Loss: 0.5175
+2026-03-16 14:57:05 [INFO] Epoch: [91] Step : [564/564] Loss: 2.3105
+2026-03-16 15:09:08 [INFO] Epoch 91/300 | Train Loss: 0.4244 | Test Loss: 1.7452 | Acc: 0.8725 | Top-5: 0.9636 | F1(M): 0.6096 | Prec(M): 0.6069 | Rec(M): 0.6841 | Prec(W): 0.9293
+2026-03-16 15:09:24 [INFO] Epoch: [92] Step : [1/564] Loss: 2.2338
+2026-03-16 15:10:31 [INFO] Epoch: [92] Step : [100/564] Loss: 0.6869
+2026-03-16 15:11:40 [INFO] Epoch: [92] Step : [200/564] Loss: 0.1802
+2026-03-16 15:12:43 [INFO] Epoch: [92] Step : [300/564] Loss: 0.5989
+2026-03-16 15:13:40 [INFO] Epoch: [92] Step : [400/564] Loss: 0.5166
+2026-03-16 15:14:37 [INFO] Epoch: [92] Step : [500/564] Loss: 0.6661
+2026-03-16 15:15:14 [INFO] Epoch: [92] Step : [564/564] Loss: 0.2262
+2026-03-16 15:17:04 [INFO] Epoch 92/300 | Train Loss: 0.4395 | Test Loss: 1.8070 | Acc: 0.8715 | Top-5: 0.9600 | F1(M): 0.6000 | Prec(M): 0.5938 | Rec(M): 0.6796 | Prec(W): 0.9273
+2026-03-16 15:17:20 [INFO] Epoch: [93] Step : [1/564] Loss: 0.8483
+2026-03-16 15:18:18 [INFO] Epoch: [93] Step : [100/564] Loss: 1.3154
+2026-03-16 15:19:14 [INFO] Epoch: [93] Step : [200/564] Loss: 1.0524
+2026-03-16 15:20:12 [INFO] Epoch: [93] Step : [300/564] Loss: 0.1524
+2026-03-16 15:21:11 [INFO] Epoch: [93] Step : [400/564] Loss: 0.3604
+2026-03-16 15:22:10 [INFO] Epoch: [93] Step : [500/564] Loss: 4.5959
+2026-03-16 15:22:46 [INFO] Epoch: [93] Step : [564/564] Loss: 0.5476
+2026-03-16 15:27:23 [INFO] Epoch 93/300 | Train Loss: 0.4262 | Test Loss: 1.7711 | Acc: 0.8752 | Top-5: 0.9625 | F1(M): 0.6109 | Prec(M): 0.6054 | Rec(M): 0.6865 | Prec(W): 0.9324
+2026-03-16 15:27:23 [INFO] --> Best model saved with F1: 0.6109 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260316_0658.pth
+2026-03-16 15:27:45 [INFO] Epoch: [94] Step : [1/564] Loss: 0.6196
+2026-03-16 15:28:49 [INFO] Epoch: [94] Step : [100/564] Loss: 1.4757
+2026-03-16 15:29:58 [INFO] Epoch: [94] Step : [200/564] Loss: 1.9958
+2026-03-16 15:31:12 [INFO] Epoch: [94] Step : [300/564] Loss: 0.2874
+2026-03-16 15:32:20 [INFO] Epoch: [94] Step : [400/564] Loss: 2.5855
+2026-03-16 15:33:27 [INFO] Epoch: [94] Step : [500/564] Loss: 0.3454
+2026-03-16 15:34:13 [INFO] Epoch: [94] Step : [564/564] Loss: 0.2715
+2026-03-16 15:36:20 [INFO] Epoch 94/300 | Train Loss: 0.4281 | Test Loss: 1.8147 | Acc: 0.8677 | Top-5: 0.9551 | F1(M): 0.6021 | Prec(M): 0.5982 | Rec(M): 0.6775 | Prec(W): 0.9295
+2026-03-16 15:36:36 [INFO] Epoch: [95] Step : [1/564] Loss: 0.4700
+2026-03-16 15:37:32 [INFO] Epoch: [95] Step : [100/564] Loss: 0.3459
+2026-03-16 15:38:29 [INFO] Epoch: [95] Step : [200/564] Loss: 0.5445
+2026-03-16 15:39:26 [INFO] Epoch: [95] Step : [300/564] Loss: 0.9766
+2026-03-16 15:40:23 [INFO] Epoch: [95] Step : [400/564] Loss: 0.8571
+2026-03-16 15:41:21 [INFO] Epoch: [95] Step : [500/564] Loss: 0.4308
+2026-03-16 15:41:58 [INFO] Epoch: [95] Step : [564/564] Loss: 3.5007
+2026-03-16 15:43:53 [INFO] Epoch 95/300 | Train Loss: 0.4513 | Test Loss: 1.7193 | Acc: 0.8579 | Top-5: 0.9575 | F1(M): 0.6076 | Prec(M): 0.6028 | Rec(M): 0.6866 | Prec(W): 0.9247
+2026-03-16 15:44:09 [INFO] Epoch: [96] Step : [1/564] Loss: 0.4771
+2026-03-16 15:45:07 [INFO] Epoch: [96] Step : [100/564] Loss: 2.6757
+2026-03-16 15:46:06 [INFO] Epoch: [96] Step : [200/564] Loss: 0.3817
+2026-03-16 15:47:05 [INFO] Epoch: [96] Step : [300/564] Loss: 0.6056
+2026-03-16 15:48:07 [INFO] Epoch: [96] Step : [400/564] Loss: 1.1422
+2026-03-16 15:49:17 [INFO] Epoch: [96] Step : [500/564] Loss: 0.3069
+2026-03-16 15:49:59 [INFO] Epoch: [96] Step : [564/564] Loss: 0.2176
+2026-03-16 15:59:20 [INFO] Epoch 96/300 | Train Loss: 0.4353 | Test Loss: 1.7257 | Acc: 0.8753 | Top-5: 0.9631 | F1(M): 0.6089 | Prec(M): 0.6057 | Rec(M): 0.6833 | Prec(W): 0.9315
+2026-03-16 16:00:59 [INFO] Epoch: [97] Step : [1/564] Loss: 0.5501
+2026-03-16 16:01:55 [INFO] Epoch: [97] Step : [100/564] Loss: 0.8703
+2026-03-16 16:02:52 [INFO] Epoch: [97] Step : [200/564] Loss: 0.1607
+2026-03-16 16:03:48 [INFO] Epoch: [97] Step : [300/564] Loss: 0.1788
+2026-03-16 16:04:46 [INFO] Epoch: [97] Step : [400/564] Loss: 0.6272
+2026-03-16 16:05:42 [INFO] Epoch: [97] Step : [500/564] Loss: 0.3184
+2026-03-16 16:06:19 [INFO] Epoch: [97] Step : [564/564] Loss: 0.2838
+2026-03-16 16:08:14 [INFO] Epoch 97/300 | Train Loss: 0.4332 | Test Loss: 1.7470 | Acc: 0.8764 | Top-5: 0.9660 | F1(M): 0.6080 | Prec(M): 0.6052 | Rec(M): 0.6849 | Prec(W): 0.9344
+2026-03-16 16:08:30 [INFO] Epoch: [98] Step : [1/564] Loss: 0.5115
+2026-03-16 16:09:28 [INFO] Epoch: [98] Step : [100/564] Loss: 0.2401
+2026-03-16 16:10:26 [INFO] Epoch: [98] Step : [200/564] Loss: 0.7048
+2026-03-16 16:11:23 [INFO] Epoch: [98] Step : [300/564] Loss: 1.3974
+2026-03-16 16:12:21 [INFO] Epoch: [98] Step : [400/564] Loss: 0.2344
+2026-03-16 16:13:30 [INFO] Epoch: [98] Step : [500/564] Loss: 1.4393
+2026-03-16 16:14:16 [INFO] Epoch: [98] Step : [564/564] Loss: 0.1354
+2026-03-16 16:23:07 [INFO] Epoch 98/300 | Train Loss: 0.4383 | Test Loss: 1.8204 | Acc: 0.8722 | Top-5: 0.9557 | F1(M): 0.6013 | Prec(M): 0.5999 | Rec(M): 0.6788 | Prec(W): 0.9262
+2026-03-16 16:25:26 [INFO] Epoch: [99] Step : [1/564] Loss: 0.8197
+2026-03-16 16:26:28 [INFO] Epoch: [99] Step : [100/564] Loss: 0.2518
+2026-03-16 16:27:29 [INFO] Epoch: [99] Step : [200/564] Loss: 1.4812
+2026-03-16 16:28:26 [INFO] Epoch: [99] Step : [300/564] Loss: 0.6232
+2026-03-16 16:29:24 [INFO] Epoch: [99] Step : [400/564] Loss: 0.0869
+2026-03-16 16:30:21 [INFO] Epoch: [99] Step : [500/564] Loss: 0.4371
+2026-03-16 16:30:58 [INFO] Epoch: [99] Step : [564/564] Loss: 1.0940
+2026-03-16 16:32:52 [INFO] Epoch 99/300 | Train Loss: 0.4501 | Test Loss: 1.7703 | Acc: 0.8686 | Top-5: 0.9586 | F1(M): 0.6072 | Prec(M): 0.6032 | Rec(M): 0.6857 | Prec(W): 0.9308
+2026-03-17 01:17:15 [INFO] Epoch: [100] Step : [1/564] Loss: 0.3139
+2026-03-17 01:18:16 [INFO] Epoch: [100] Step : [100/564] Loss: 0.6847
+2026-03-17 01:19:14 [INFO] Epoch: [100] Step : [200/564] Loss: 0.6883
+2026-03-17 01:20:10 [INFO] Epoch: [100] Step : [300/564] Loss: 0.2991
+2026-03-17 01:21:08 [INFO] Epoch: [100] Step : [400/564] Loss: 0.9967
+2026-03-17 01:22:06 [INFO] Epoch: [100] Step : [500/564] Loss: 0.5016
+2026-03-17 01:22:43 [INFO] Epoch: [100] Step : [564/564] Loss: 0.4189
+2026-03-17 01:24:34 [INFO] Epoch 100/300 | Train Loss: 0.4191 | Test Loss: 1.7803 | Acc: 0.8633 | Top-5: 0.9575 | F1(M): 0.6133 | Prec(M): 0.6103 | Rec(M): 0.6875 | Prec(W): 0.9304
+2026-03-17 01:24:34 [INFO] --> Best model saved with F1: 0.6133 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260317_0116.pth
+2026-03-17 01:24:50 [INFO] Epoch: [101] Step : [1/564] Loss: 0.8259
+2026-03-17 01:25:49 [INFO] Epoch: [101] Step : [100/564] Loss: 0.1760
+2026-03-17 01:26:48 [INFO] Epoch: [101] Step : [200/564] Loss: 0.1270
+2026-03-17 01:27:45 [INFO] Epoch: [101] Step : [300/564] Loss: 1.6968
+2026-03-17 01:28:42 [INFO] Epoch: [101] Step : [400/564] Loss: 0.5950
+2026-03-17 01:29:41 [INFO] Epoch: [101] Step : [500/564] Loss: 0.2118
+2026-03-17 01:30:17 [INFO] Epoch: [101] Step : [564/564] Loss: 0.1784
+2026-03-17 01:32:08 [INFO] Epoch 101/300 | Train Loss: 0.4450 | Test Loss: 1.7839 | Acc: 0.8706 | Top-5: 0.9607 | F1(M): 0.6081 | Prec(M): 0.6083 | Rec(M): 0.6788 | Prec(W): 0.9372
+2026-03-17 01:32:24 [INFO] Epoch: [102] Step : [1/564] Loss: 0.3057
+2026-03-17 01:33:20 [INFO] Epoch: [102] Step : [100/564] Loss: 0.3282
+2026-03-17 01:34:18 [INFO] Epoch: [102] Step : [200/564] Loss: 0.1360
+2026-03-17 01:35:17 [INFO] Epoch: [102] Step : [300/564] Loss: 1.3665
+2026-03-17 01:36:14 [INFO] Epoch: [102] Step : [400/564] Loss: 0.4429
+2026-03-17 01:37:12 [INFO] Epoch: [102] Step : [500/564] Loss: 0.6325
+2026-03-17 01:37:48 [INFO] Epoch: [102] Step : [564/564] Loss: 3.6544
+2026-03-17 01:39:39 [INFO] Epoch 102/300 | Train Loss: 0.4385 | Test Loss: 1.7849 | Acc: 0.8685 | Top-5: 0.9570 | F1(M): 0.6139 | Prec(M): 0.6114 | Rec(M): 0.6876 | Prec(W): 0.9331
+2026-03-17 01:39:39 [INFO] --> Best model saved with F1: 0.6139 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260317_0116.pth
+2026-03-17 01:39:56 [INFO] Epoch: [103] Step : [1/564] Loss: 0.1806
+2026-03-17 01:40:53 [INFO] Epoch: [103] Step : [100/564] Loss: 0.2385
+2026-03-17 01:41:50 [INFO] Epoch: [103] Step : [200/564] Loss: 0.4849
+2026-03-17 01:42:48 [INFO] Epoch: [103] Step : [300/564] Loss: 0.6038
+2026-03-17 01:43:45 [INFO] Epoch: [103] Step : [400/564] Loss: 0.6280
+2026-03-17 01:44:42 [INFO] Epoch: [103] Step : [500/564] Loss: 1.4117
+2026-03-17 01:45:19 [INFO] Epoch: [103] Step : [564/564] Loss: 0.1051
+2026-03-17 01:47:12 [INFO] Epoch 103/300 | Train Loss: 0.4501 | Test Loss: 1.7718 | Acc: 0.8783 | Top-5: 0.9626 | F1(M): 0.6089 | Prec(M): 0.6075 | Rec(M): 0.6836 | Prec(W): 0.9273
+2026-03-17 01:47:28 [INFO] Epoch: [104] Step : [1/564] Loss: 1.0328
+2026-03-17 01:48:25 [INFO] Epoch: [104] Step : [100/564] Loss: 1.3754
+2026-03-17 01:49:23 [INFO] Epoch: [104] Step : [200/564] Loss: 0.3923
+2026-03-17 01:50:20 [INFO] Epoch: [104] Step : [300/564] Loss: 1.1361
+2026-03-17 01:51:17 [INFO] Epoch: [104] Step : [400/564] Loss: 0.7184
+2026-03-17 01:52:15 [INFO] Epoch: [104] Step : [500/564] Loss: 0.1024
+2026-03-17 01:52:51 [INFO] Epoch: [104] Step : [564/564] Loss: 0.1160
+2026-03-17 01:54:41 [INFO] Epoch 104/300 | Train Loss: 0.4523 | Test Loss: 1.8060 | Acc: 0.8709 | Top-5: 0.9589 | F1(M): 0.6127 | Prec(M): 0.6119 | Rec(M): 0.6814 | Prec(W): 0.9257
+2026-03-17 01:54:58 [INFO] Epoch: [105] Step : [1/564] Loss: 0.2660
+2026-03-17 01:55:54 [INFO] Epoch: [105] Step : [100/564] Loss: 1.2083
+2026-03-17 01:56:52 [INFO] Epoch: [105] Step : [200/564] Loss: 0.6359
+2026-03-17 01:57:50 [INFO] Epoch: [105] Step : [300/564] Loss: 1.8619
+2026-03-17 01:58:47 [INFO] Epoch: [105] Step : [400/564] Loss: 0.4127
+2026-03-17 01:59:45 [INFO] Epoch: [105] Step : [500/564] Loss: 0.2931
+2026-03-17 02:00:22 [INFO] Epoch: [105] Step : [564/564] Loss: 0.7990
+2026-03-17 02:02:13 [INFO] Epoch 105/300 | Train Loss: 0.4337 | Test Loss: 1.7866 | Acc: 0.8646 | Top-5: 0.9531 | F1(M): 0.6019 | Prec(M): 0.6020 | Rec(M): 0.6796 | Prec(W): 0.9317
+2026-03-17 02:02:30 [INFO] Epoch: [106] Step : [1/564] Loss: 1.0091
+2026-03-17 02:03:26 [INFO] Epoch: [106] Step : [100/564] Loss: 0.4869
+2026-03-17 02:04:23 [INFO] Epoch: [106] Step : [200/564] Loss: 0.2320
+2026-03-17 02:05:21 [INFO] Epoch: [106] Step : [300/564] Loss: 0.3120
+2026-03-17 02:06:18 [INFO] Epoch: [106] Step : [400/564] Loss: 0.5990
+2026-03-17 02:07:17 [INFO] Epoch: [106] Step : [500/564] Loss: 0.9792
+2026-03-17 02:07:53 [INFO] Epoch: [106] Step : [564/564] Loss: 0.2065
+2026-03-17 02:09:46 [INFO] Epoch 106/300 | Train Loss: 0.4406 | Test Loss: 1.8102 | Acc: 0.8548 | Top-5: 0.9542 | F1(M): 0.5963 | Prec(M): 0.5986 | Rec(M): 0.6737 | Prec(W): 0.9224
+2026-03-17 02:10:03 [INFO] Epoch: [107] Step : [1/564] Loss: 0.8383
+2026-03-17 02:11:00 [INFO] Epoch: [107] Step : [100/564] Loss: 0.2156
+2026-03-17 02:11:57 [INFO] Epoch: [107] Step : [200/564] Loss: 0.5743
+2026-03-17 02:12:54 [INFO] Epoch: [107] Step : [300/564] Loss: 0.4475
+2026-03-17 02:13:52 [INFO] Epoch: [107] Step : [400/564] Loss: 0.1830
+2026-03-17 02:14:50 [INFO] Epoch: [107] Step : [500/564] Loss: 0.2418
+2026-03-17 02:15:26 [INFO] Epoch: [107] Step : [564/564] Loss: 0.1143
+2026-03-17 02:17:16 [INFO] Epoch 107/300 | Train Loss: 0.3013 | Test Loss: 1.6540 | Acc: 0.8989 | Top-5: 0.9719 | F1(M): 0.6447 | Prec(M): 0.6348 | Rec(M): 0.7139 | Prec(W): 0.9438
+2026-03-17 02:17:16 [INFO] --> Best model saved with F1: 0.6447 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260317_0116.pth
+2026-03-17 02:17:33 [INFO] Epoch: [108] Step : [1/564] Loss: 0.2942
+2026-03-17 02:18:29 [INFO] Epoch: [108] Step : [100/564] Loss: 0.1875
+2026-03-17 02:19:26 [INFO] Epoch: [108] Step : [200/564] Loss: 0.3416
+2026-03-17 02:20:24 [INFO] Epoch: [108] Step : [300/564] Loss: 0.1927
+2026-03-17 02:21:21 [INFO] Epoch: [108] Step : [400/564] Loss: 0.1257
+2026-03-17 02:22:19 [INFO] Epoch: [108] Step : [500/564] Loss: 1.3756
+2026-03-17 02:22:55 [INFO] Epoch: [108] Step : [564/564] Loss: 0.4014
+2026-03-17 02:24:45 [INFO] Epoch 108/300 | Train Loss: 0.2603 | Test Loss: 1.5948 | Acc: 0.9070 | Top-5: 0.9750 | F1(M): 0.6536 | Prec(M): 0.6435 | Rec(M): 0.7178 | Prec(W): 0.9443
+2026-03-17 02:24:45 [INFO] --> Best model saved with F1: 0.6536 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260317_0116.pth
+2026-03-17 02:25:02 [INFO] Epoch: [109] Step : [1/564] Loss: 0.2130
+2026-03-17 02:25:58 [INFO] Epoch: [109] Step : [100/564] Loss: 0.3568
+2026-03-17 02:26:55 [INFO] Epoch: [109] Step : [200/564] Loss: 0.0711
+2026-03-17 02:27:54 [INFO] Epoch: [109] Step : [300/564] Loss: 0.2585
+2026-03-17 02:28:52 [INFO] Epoch: [109] Step : [400/564] Loss: 0.3282
+2026-03-17 02:29:49 [INFO] Epoch: [109] Step : [500/564] Loss: 0.2823
+2026-03-17 02:30:25 [INFO] Epoch: [109] Step : [564/564] Loss: 0.5099
+2026-03-17 02:32:16 [INFO] Epoch 109/300 | Train Loss: 0.2453 | Test Loss: 1.6229 | Acc: 0.9031 | Top-5: 0.9757 | F1(M): 0.6502 | Prec(M): 0.6434 | Rec(M): 0.7135 | Prec(W): 0.9429
+2026-03-17 02:32:32 [INFO] Epoch: [110] Step : [1/564] Loss: 0.1656
+2026-03-17 02:33:28 [INFO] Epoch: [110] Step : [100/564] Loss: 0.4683
+2026-03-17 02:34:26 [INFO] Epoch: [110] Step : [200/564] Loss: 0.1246
+2026-03-17 02:35:23 [INFO] Epoch: [110] Step : [300/564] Loss: 0.1967
+2026-03-17 02:36:20 [INFO] Epoch: [110] Step : [400/564] Loss: 0.1907
+2026-03-17 02:37:16 [INFO] Epoch: [110] Step : [500/564] Loss: 1.8219
+2026-03-17 02:37:53 [INFO] Epoch: [110] Step : [564/564] Loss: 7.6997
+2026-03-17 02:40:42 [INFO] Epoch 110/300 | Train Loss: 0.2437 | Test Loss: 1.6051 | Acc: 0.9039 | Top-5: 0.9761 | F1(M): 0.6518 | Prec(M): 0.6425 | Rec(M): 0.7175 | Prec(W): 0.9449
+2026-03-17 02:41:06 [INFO] Epoch: [111] Step : [1/564] Loss: 0.2669
+2026-03-17 02:42:01 [INFO] Epoch: [111] Step : [100/564] Loss: 0.3488
+2026-03-17 02:42:58 [INFO] Epoch: [111] Step : [200/564] Loss: 0.2213
+2026-03-17 02:43:56 [INFO] Epoch: [111] Step : [300/564] Loss: 0.5700
+2026-03-17 02:44:52 [INFO] Epoch: [111] Step : [400/564] Loss: 0.4363
+2026-03-17 02:45:51 [INFO] Epoch: [111] Step : [500/564] Loss: 0.5654
+2026-03-17 02:46:25 [INFO] Epoch: [111] Step : [564/564] Loss: 0.1795
+2026-03-17 02:48:35 [INFO] Epoch 111/300 | Train Loss: 0.2447 | Test Loss: 1.6276 | Acc: 0.9108 | Top-5: 0.9768 | F1(M): 0.6567 | Prec(M): 0.6478 | Rec(M): 0.7165 | Prec(W): 0.9458
+2026-03-17 02:48:35 [INFO] --> Best model saved with F1: 0.6567 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260317_0116.pth
+2026-03-17 02:49:01 [INFO] Epoch: [112] Step : [1/564] Loss: 0.3490
+2026-03-17 02:49:56 [INFO] Epoch: [112] Step : [100/564] Loss: 0.3510
+2026-03-17 02:50:51 [INFO] Epoch: [112] Step : [200/564] Loss: 0.0981
+2026-03-17 02:51:49 [INFO] Epoch: [112] Step : [300/564] Loss: 0.5080
+2026-03-17 02:52:46 [INFO] Epoch: [112] Step : [400/564] Loss: 0.2504
+2026-03-17 02:53:45 [INFO] Epoch: [112] Step : [500/564] Loss: 0.4239
+2026-03-17 02:54:21 [INFO] Epoch: [112] Step : [564/564] Loss: 0.1069
+2026-03-17 02:57:00 [INFO] Epoch 112/300 | Train Loss: 0.2508 | Test Loss: 1.6325 | Acc: 0.9027 | Top-5: 0.9762 | F1(M): 0.6633 | Prec(M): 0.6560 | Rec(M): 0.7240 | Prec(W): 0.9447
+2026-03-17 02:57:00 [INFO] --> Best model saved with F1: 0.6633 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260317_0116.pth
+2026-03-17 02:57:18 [INFO] Epoch: [113] Step : [1/564] Loss: 0.6641
+2026-03-17 02:58:13 [INFO] Epoch: [113] Step : [100/564] Loss: 0.3921
+2026-03-17 02:59:08 [INFO] Epoch: [113] Step : [200/564] Loss: 0.1847
+2026-03-17 03:00:04 [INFO] Epoch: [113] Step : [300/564] Loss: 0.7056
+2026-03-17 03:01:00 [INFO] Epoch: [113] Step : [400/564] Loss: 0.5668
+2026-03-17 03:01:56 [INFO] Epoch: [113] Step : [500/564] Loss: 0.1174
+2026-03-17 03:02:32 [INFO] Epoch: [113] Step : [564/564] Loss: 0.1487
+2026-03-17 03:05:06 [INFO] Epoch 113/300 | Train Loss: 0.2509 | Test Loss: 1.6472 | Acc: 0.9103 | Top-5: 0.9759 | F1(M): 0.6586 | Prec(M): 0.6547 | Rec(M): 0.7122 | Prec(W): 0.9454
+2026-03-17 03:05:34 [INFO] Epoch: [114] Step : [1/564] Loss: 0.2819
+2026-03-17 03:06:28 [INFO] Epoch: [114] Step : [100/564] Loss: 0.0873
+2026-03-17 03:07:24 [INFO] Epoch: [114] Step : [200/564] Loss: 3.4062
+2026-03-17 03:08:19 [INFO] Epoch: [114] Step : [300/564] Loss: 0.8678
+2026-03-17 03:09:16 [INFO] Epoch: [114] Step : [400/564] Loss: 0.1621
+2026-03-17 03:10:12 [INFO] Epoch: [114] Step : [500/564] Loss: 1.2131
+2026-03-17 03:10:50 [INFO] Epoch: [114] Step : [564/564] Loss: 0.3784
+2026-03-17 03:13:08 [INFO] Epoch 114/300 | Train Loss: 0.2438 | Test Loss: 1.5918 | Acc: 0.9055 | Top-5: 0.9742 | F1(M): 0.6568 | Prec(M): 0.6510 | Rec(M): 0.7172 | Prec(W): 0.9457
+2026-03-17 03:13:34 [INFO] Epoch: [115] Step : [1/564] Loss: 0.1319
+2026-03-17 03:14:30 [INFO] Epoch: [115] Step : [100/564] Loss: 0.1955
+2026-03-17 03:15:25 [INFO] Epoch: [115] Step : [200/564] Loss: 2.1869
+2026-03-17 03:16:20 [INFO] Epoch: [115] Step : [300/564] Loss: 0.1440
+2026-03-17 03:17:15 [INFO] Epoch: [115] Step : [400/564] Loss: 0.4134
+2026-03-17 03:18:11 [INFO] Epoch: [115] Step : [500/564] Loss: 0.3123
+2026-03-17 03:18:47 [INFO] Epoch: [115] Step : [564/564] Loss: 1.1535
+2026-03-17 03:20:57 [INFO] Epoch 115/300 | Train Loss: 0.2431 | Test Loss: 1.6429 | Acc: 0.9052 | Top-5: 0.9738 | F1(M): 0.6559 | Prec(M): 0.6477 | Rec(M): 0.7160 | Prec(W): 0.9435
+2026-03-17 03:21:19 [INFO] Epoch: [116] Step : [1/564] Loss: 0.3644
+2026-03-17 03:22:14 [INFO] Epoch: [116] Step : [100/564] Loss: 0.2073
+2026-03-17 03:23:09 [INFO] Epoch: [116] Step : [200/564] Loss: 0.0859
+2026-03-17 03:24:05 [INFO] Epoch: [116] Step : [300/564] Loss: 0.3906
+2026-03-17 03:25:01 [INFO] Epoch: [116] Step : [400/564] Loss: 2.8195
+2026-03-17 03:26:00 [INFO] Epoch: [116] Step : [500/564] Loss: 0.1168
+2026-03-17 03:26:36 [INFO] Epoch: [116] Step : [564/564] Loss: 0.1077
+2026-03-17 03:29:21 [INFO] Epoch 116/300 | Train Loss: 0.2431 | Test Loss: 1.6167 | Acc: 0.9110 | Top-5: 0.9758 | F1(M): 0.6580 | Prec(M): 0.6529 | Rec(M): 0.7119 | Prec(W): 0.9436
+2026-03-17 03:29:48 [INFO] Epoch: [117] Step : [1/564] Loss: 0.2457
+2026-03-17 03:30:43 [INFO] Epoch: [117] Step : [100/564] Loss: 0.2389
+2026-03-17 03:31:39 [INFO] Epoch: [117] Step : [200/564] Loss: 0.2124
+2026-03-17 03:32:36 [INFO] Epoch: [117] Step : [300/564] Loss: 0.1353
+2026-03-17 03:33:31 [INFO] Epoch: [117] Step : [400/564] Loss: 0.6371
+2026-03-17 03:34:27 [INFO] Epoch: [117] Step : [500/564] Loss: 0.2976
+2026-03-17 03:35:03 [INFO] Epoch: [117] Step : [564/564] Loss: 0.0649
+2026-03-17 03:37:22 [INFO] Epoch 117/300 | Train Loss: 0.2382 | Test Loss: 1.6608 | Acc: 0.9077 | Top-5: 0.9771 | F1(M): 0.6621 | Prec(M): 0.6561 | Rec(M): 0.7200 | Prec(W): 0.9479
+2026-03-17 03:37:46 [INFO] Epoch: [118] Step : [1/564] Loss: 0.3064
+2026-03-17 03:38:42 [INFO] Epoch: [118] Step : [100/564] Loss: 0.2833
+2026-03-17 03:39:38 [INFO] Epoch: [118] Step : [200/564] Loss: 0.2000
+2026-03-17 03:40:33 [INFO] Epoch: [118] Step : [300/564] Loss: 0.8562
+2026-03-17 03:41:31 [INFO] Epoch: [118] Step : [400/564] Loss: 0.1655
+2026-03-17 03:42:26 [INFO] Epoch: [118] Step : [500/564] Loss: 0.0813
+2026-03-17 03:43:02 [INFO] Epoch: [118] Step : [564/564] Loss: 0.3688
+2026-03-17 03:44:51 [INFO] Epoch 118/300 | Train Loss: 0.2456 | Test Loss: 1.5891 | Acc: 0.9049 | Top-5: 0.9751 | F1(M): 0.6563 | Prec(M): 0.6491 | Rec(M): 0.7156 | Prec(W): 0.9445
+2026-03-17 03:45:10 [INFO] Epoch: [119] Step : [1/564] Loss: 0.0946
+2026-03-17 03:46:06 [INFO] Epoch: [119] Step : [100/564] Loss: 0.0781
+2026-03-17 03:47:02 [INFO] Epoch: [119] Step : [200/564] Loss: 0.4767
+2026-03-17 03:48:00 [INFO] Epoch: [119] Step : [300/564] Loss: 0.1330
+2026-03-17 03:48:57 [INFO] Epoch: [119] Step : [400/564] Loss: 0.0802
+2026-03-17 03:49:53 [INFO] Epoch: [119] Step : [500/564] Loss: 0.8800
+2026-03-17 03:50:29 [INFO] Epoch: [119] Step : [564/564] Loss: 0.2657
+2026-03-17 03:52:18 [INFO] Epoch 119/300 | Train Loss: 0.2435 | Test Loss: 1.5959 | Acc: 0.9067 | Top-5: 0.9753 | F1(M): 0.6524 | Prec(M): 0.6463 | Rec(M): 0.7131 | Prec(W): 0.9397
+2026-03-17 03:52:37 [INFO] Epoch: [120] Step : [1/564] Loss: 0.4391
+2026-03-17 03:53:34 [INFO] Epoch: [120] Step : [100/564] Loss: 0.3203
+2026-03-17 03:54:31 [INFO] Epoch: [120] Step : [200/564] Loss: 0.1003
+2026-03-17 03:55:27 [INFO] Epoch: [120] Step : [300/564] Loss: 0.1318
+2026-03-17 03:56:25 [INFO] Epoch: [120] Step : [400/564] Loss: 0.6142
+2026-03-17 03:57:22 [INFO] Epoch: [120] Step : [500/564] Loss: 0.1334
+2026-03-17 03:57:57 [INFO] Epoch: [120] Step : [564/564] Loss: 0.2494
+2026-03-17 03:59:47 [INFO] Epoch 120/300 | Train Loss: 0.2372 | Test Loss: 1.5540 | Acc: 0.9100 | Top-5: 0.9755 | F1(M): 0.6665 | Prec(M): 0.6577 | Rec(M): 0.7235 | Prec(W): 0.9444
+2026-03-17 03:59:47 [INFO] --> Best model saved with F1: 0.6665 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260317_0116.pth
+2026-03-17 04:00:06 [INFO] Epoch: [121] Step : [1/564] Loss: 0.5014
+2026-03-17 04:01:02 [INFO] Epoch: [121] Step : [100/564] Loss: 0.0922
+2026-03-17 04:01:59 [INFO] Epoch: [121] Step : [200/564] Loss: 0.4387
+2026-03-17 04:02:56 [INFO] Epoch: [121] Step : [300/564] Loss: 0.1536
+2026-03-17 04:03:53 [INFO] Epoch: [121] Step : [400/564] Loss: 0.1267
+2026-03-17 04:04:51 [INFO] Epoch: [121] Step : [500/564] Loss: 0.1156
+2026-03-17 04:05:27 [INFO] Epoch: [121] Step : [564/564] Loss: 1.4755
+2026-03-17 04:07:16 [INFO] Epoch 121/300 | Train Loss: 0.2364 | Test Loss: 1.5875 | Acc: 0.9135 | Top-5: 0.9774 | F1(M): 0.6653 | Prec(M): 0.6580 | Rec(M): 0.7189 | Prec(W): 0.9463
+2026-03-17 04:07:37 [INFO] Epoch: [122] Step : [1/564] Loss: 0.8343
+2026-03-17 04:08:34 [INFO] Epoch: [122] Step : [100/564] Loss: 0.1650
+2026-03-17 04:09:31 [INFO] Epoch: [122] Step : [200/564] Loss: 0.1001
+2026-03-17 04:10:28 [INFO] Epoch: [122] Step : [300/564] Loss: 0.3809
+2026-03-17 04:11:26 [INFO] Epoch: [122] Step : [400/564] Loss: 0.1800
+2026-03-17 04:12:23 [INFO] Epoch: [122] Step : [500/564] Loss: 0.3048
+2026-03-17 04:12:58 [INFO] Epoch: [122] Step : [564/564] Loss: 0.2172
+2026-03-17 04:14:55 [INFO] Epoch 122/300 | Train Loss: 0.2441 | Test Loss: 1.6411 | Acc: 0.9076 | Top-5: 0.9751 | F1(M): 0.6594 | Prec(M): 0.6526 | Rec(M): 0.7182 | Prec(W): 0.9457
+2026-03-17 04:15:12 [INFO] Epoch: [123] Step : [1/564] Loss: 0.4047
+2026-03-17 04:16:09 [INFO] Epoch: [123] Step : [100/564] Loss: 0.0539
+2026-03-17 04:17:06 [INFO] Epoch: [123] Step : [200/564] Loss: 0.9770
+2026-03-17 04:18:03 [INFO] Epoch: [123] Step : [300/564] Loss: 0.1793
+2026-03-17 04:19:01 [INFO] Epoch: [123] Step : [400/564] Loss: 0.2798
+2026-03-17 04:19:57 [INFO] Epoch: [123] Step : [500/564] Loss: 0.1753
+2026-03-17 04:20:32 [INFO] Epoch: [123] Step : [564/564] Loss: 0.1307
+2026-03-17 04:22:33 [INFO] Epoch 123/300 | Train Loss: 0.2407 | Test Loss: 1.6172 | Acc: 0.9071 | Top-5: 0.9737 | F1(M): 0.6538 | Prec(M): 0.6447 | Rec(M): 0.7151 | Prec(W): 0.9431
+2026-03-17 04:22:48 [INFO] Epoch: [124] Step : [1/564] Loss: 1.5363
+2026-03-17 04:23:45 [INFO] Epoch: [124] Step : [100/564] Loss: 0.5771
+2026-03-17 04:24:41 [INFO] Epoch: [124] Step : [200/564] Loss: 0.0817
+2026-03-17 04:25:38 [INFO] Epoch: [124] Step : [300/564] Loss: 0.1497
+2026-03-17 04:26:35 [INFO] Epoch: [124] Step : [400/564] Loss: 0.2692
+2026-03-17 04:27:32 [INFO] Epoch: [124] Step : [500/564] Loss: 1.9052
+2026-03-17 04:28:08 [INFO] Epoch: [124] Step : [564/564] Loss: 0.1550
+2026-03-17 04:30:23 [INFO] Epoch 124/300 | Train Loss: 0.2467 | Test Loss: 1.6515 | Acc: 0.9001 | Top-5: 0.9740 | F1(M): 0.6530 | Prec(M): 0.6497 | Rec(M): 0.7091 | Prec(W): 0.9453
+2026-03-17 04:30:39 [INFO] Epoch: [125] Step : [1/564] Loss: 0.2549
+2026-03-17 04:31:35 [INFO] Epoch: [125] Step : [100/564] Loss: 0.2072
+2026-03-17 04:32:31 [INFO] Epoch: [125] Step : [200/564] Loss: 0.1721
+2026-03-17 04:33:28 [INFO] Epoch: [125] Step : [300/564] Loss: 0.3135
+2026-03-17 04:34:25 [INFO] Epoch: [125] Step : [400/564] Loss: 0.2935
+2026-03-17 04:35:22 [INFO] Epoch: [125] Step : [500/564] Loss: 0.4802
+2026-03-17 04:35:58 [INFO] Epoch: [125] Step : [564/564] Loss: 0.8305
+2026-03-17 04:38:01 [INFO] Epoch 125/300 | Train Loss: 0.2388 | Test Loss: 1.6487 | Acc: 0.9079 | Top-5: 0.9766 | F1(M): 0.6591 | Prec(M): 0.6546 | Rec(M): 0.7159 | Prec(W): 0.9452
+2026-03-17 04:38:18 [INFO] Epoch: [126] Step : [1/564] Loss: 0.6900
+2026-03-17 04:39:13 [INFO] Epoch: [126] Step : [100/564] Loss: 0.1777
+2026-03-17 04:40:11 [INFO] Epoch: [126] Step : [200/564] Loss: 0.0811
+2026-03-17 04:41:08 [INFO] Epoch: [126] Step : [300/564] Loss: 0.2252
+2026-03-17 04:42:04 [INFO] Epoch: [126] Step : [400/564] Loss: 0.3084
+2026-03-17 04:43:01 [INFO] Epoch: [126] Step : [500/564] Loss: 0.2859
+2026-03-17 04:43:37 [INFO] Epoch: [126] Step : [564/564] Loss: 0.1871
+2026-03-17 04:45:42 [INFO] Epoch 126/300 | Train Loss: 0.2504 | Test Loss: 1.5960 | Acc: 0.9084 | Top-5: 0.9735 | F1(M): 0.6638 | Prec(M): 0.6557 | Rec(M): 0.7204 | Prec(W): 0.9448
+2026-03-17 04:45:59 [INFO] Epoch: [127] Step : [1/564] Loss: 0.0547
+2026-03-17 04:46:55 [INFO] Epoch: [127] Step : [100/564] Loss: 0.2755
+2026-03-17 04:47:51 [INFO] Epoch: [127] Step : [200/564] Loss: 0.4421
+2026-03-17 04:48:48 [INFO] Epoch: [127] Step : [300/564] Loss: 0.2535
+2026-03-17 04:49:45 [INFO] Epoch: [127] Step : [400/564] Loss: 2.0061
+2026-03-17 04:50:41 [INFO] Epoch: [127] Step : [500/564] Loss: 0.7521
+2026-03-17 04:51:17 [INFO] Epoch: [127] Step : [564/564] Loss: 0.0320
+2026-03-17 04:53:55 [INFO] Epoch 127/300 | Train Loss: 0.2479 | Test Loss: 1.6428 | Acc: 0.9120 | Top-5: 0.9776 | F1(M): 0.6614 | Prec(M): 0.6559 | Rec(M): 0.7167 | Prec(W): 0.9455
+2026-03-17 04:54:10 [INFO] Epoch: [128] Step : [1/564] Loss: 0.1588
+2026-03-17 04:55:06 [INFO] Epoch: [128] Step : [100/564] Loss: 0.2133
+2026-03-17 04:56:02 [INFO] Epoch: [128] Step : [200/564] Loss: 0.1391
+2026-03-17 04:56:58 [INFO] Epoch: [128] Step : [300/564] Loss: 0.1950
+2026-03-17 04:57:54 [INFO] Epoch: [128] Step : [400/564] Loss: 1.4899
+2026-03-17 04:58:50 [INFO] Epoch: [128] Step : [500/564] Loss: 0.1394
+2026-03-17 04:59:25 [INFO] Epoch: [128] Step : [564/564] Loss: 0.5329
+2026-03-17 05:01:19 [INFO] Epoch 128/300 | Train Loss: 0.2365 | Test Loss: 1.6535 | Acc: 0.9116 | Top-5: 0.9761 | F1(M): 0.6595 | Prec(M): 0.6533 | Rec(M): 0.7168 | Prec(W): 0.9452
+2026-03-17 05:01:34 [INFO] Epoch: [129] Step : [1/564] Loss: 0.4353
+2026-03-17 05:02:31 [INFO] Epoch: [129] Step : [100/564] Loss: 0.2503
+2026-03-17 05:03:27 [INFO] Epoch: [129] Step : [200/564] Loss: 0.3786
+2026-03-17 05:04:24 [INFO] Epoch: [129] Step : [300/564] Loss: 1.3073
+2026-03-17 05:05:21 [INFO] Epoch: [129] Step : [400/564] Loss: 1.0110
+2026-03-17 05:06:17 [INFO] Epoch: [129] Step : [500/564] Loss: 0.1216
+2026-03-17 05:06:53 [INFO] Epoch: [129] Step : [564/564] Loss: 0.2404
+2026-03-17 05:08:46 [INFO] Epoch 129/300 | Train Loss: 0.2354 | Test Loss: 1.5890 | Acc: 0.9112 | Top-5: 0.9756 | F1(M): 0.6616 | Prec(M): 0.6541 | Rec(M): 0.7193 | Prec(W): 0.9475
+2026-03-17 05:09:01 [INFO] Epoch: [130] Step : [1/564] Loss: 0.1671
+2026-03-17 05:09:56 [INFO] Epoch: [130] Step : [100/564] Loss: 0.1719
+2026-03-17 05:10:53 [INFO] Epoch: [130] Step : [200/564] Loss: 0.1001
+2026-03-17 05:11:49 [INFO] Epoch: [130] Step : [300/564] Loss: 0.0725
+2026-03-17 05:12:46 [INFO] Epoch: [130] Step : [400/564] Loss: 0.2253
+2026-03-17 05:13:42 [INFO] Epoch: [130] Step : [500/564] Loss: 1.0406
+2026-03-17 05:14:18 [INFO] Epoch: [130] Step : [564/564] Loss: 0.5826
+2026-03-17 05:16:10 [INFO] Epoch 130/300 | Train Loss: 0.2342 | Test Loss: 1.6239 | Acc: 0.9164 | Top-5: 0.9774 | F1(M): 0.6597 | Prec(M): 0.6552 | Rec(M): 0.7150 | Prec(W): 0.9472
+2026-03-17 05:16:26 [INFO] Epoch: [131] Step : [1/564] Loss: 0.2634
+2026-03-17 05:17:22 [INFO] Epoch: [131] Step : [100/564] Loss: 0.2735
+2026-03-17 05:18:18 [INFO] Epoch: [131] Step : [200/564] Loss: 0.6519
+2026-03-17 05:19:15 [INFO] Epoch: [131] Step : [300/564] Loss: 0.3023
+2026-03-17 05:20:12 [INFO] Epoch: [131] Step : [400/564] Loss: 0.2649
+2026-03-17 05:21:08 [INFO] Epoch: [131] Step : [500/564] Loss: 0.1773
+2026-03-17 05:21:44 [INFO] Epoch: [131] Step : [564/564] Loss: 0.1538
+2026-03-17 05:23:37 [INFO] Epoch 131/300 | Train Loss: 0.2394 | Test Loss: 1.6255 | Acc: 0.9097 | Top-5: 0.9768 | F1(M): 0.6542 | Prec(M): 0.6457 | Rec(M): 0.7144 | Prec(W): 0.9455
+2026-03-17 05:23:53 [INFO] Epoch: [132] Step : [1/564] Loss: 1.1857
+2026-03-17 05:24:48 [INFO] Epoch: [132] Step : [100/564] Loss: 0.3550
+2026-03-17 05:25:45 [INFO] Epoch: [132] Step : [200/564] Loss: 0.0624
+2026-03-17 05:26:41 [INFO] Epoch: [132] Step : [300/564] Loss: 0.2785
+2026-03-17 05:27:38 [INFO] Epoch: [132] Step : [400/564] Loss: 0.1694
+2026-03-17 05:28:35 [INFO] Epoch: [132] Step : [500/564] Loss: 0.0248
+2026-03-17 05:29:12 [INFO] Epoch: [132] Step : [564/564] Loss: 1.2847
+2026-03-17 05:31:05 [INFO] Epoch 132/300 | Train Loss: 0.1758 | Test Loss: 1.5413 | Acc: 0.9180 | Top-5: 0.9792 | F1(M): 0.6766 | Prec(M): 0.6684 | Rec(M): 0.7287 | Prec(W): 0.9494
+2026-03-17 05:31:05 [INFO] --> Best model saved with F1: 0.6766 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260317_0116.pth
+2026-03-17 05:31:20 [INFO] Epoch: [133] Step : [1/564] Loss: 4.0180
+2026-03-17 05:32:16 [INFO] Epoch: [133] Step : [100/564] Loss: 0.1965
+2026-03-17 05:33:12 [INFO] Epoch: [133] Step : [200/564] Loss: 3.7154
+2026-03-17 05:34:08 [INFO] Epoch: [133] Step : [300/564] Loss: 0.0664
+2026-03-17 05:35:05 [INFO] Epoch: [133] Step : [400/564] Loss: 0.1646
+2026-03-17 05:36:02 [INFO] Epoch: [133] Step : [500/564] Loss: 0.1299
+2026-03-17 05:36:37 [INFO] Epoch: [133] Step : [564/564] Loss: 0.0576
+2026-03-17 05:38:29 [INFO] Epoch 133/300 | Train Loss: 0.1580 | Test Loss: 1.5495 | Acc: 0.9235 | Top-5: 0.9801 | F1(M): 0.6858 | Prec(M): 0.6775 | Rec(M): 0.7351 | Prec(W): 0.9521
+2026-03-17 05:38:30 [INFO] --> Best model saved with F1: 0.6858 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260317_0116.pth
+2026-03-17 05:38:45 [INFO] Epoch: [134] Step : [1/564] Loss: 0.1648
+2026-03-17 05:39:41 [INFO] Epoch: [134] Step : [100/564] Loss: 0.2619
+2026-03-17 05:40:38 [INFO] Epoch: [134] Step : [200/564] Loss: 0.8901
+2026-03-17 05:41:34 [INFO] Epoch: [134] Step : [300/564] Loss: 0.3431
+2026-03-17 05:42:30 [INFO] Epoch: [134] Step : [400/564] Loss: 0.0852
+2026-03-17 05:43:26 [INFO] Epoch: [134] Step : [500/564] Loss: 0.1289
+2026-03-17 05:44:02 [INFO] Epoch: [134] Step : [564/564] Loss: 0.5035
+2026-03-17 05:45:54 [INFO] Epoch 134/300 | Train Loss: 0.1491 | Test Loss: 1.5402 | Acc: 0.9260 | Top-5: 0.9808 | F1(M): 0.6922 | Prec(M): 0.6853 | Rec(M): 0.7385 | Prec(W): 0.9510
+2026-03-17 05:45:54 [INFO] --> Best model saved with F1: 0.6922 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260317_0116.pth
+2026-03-17 05:46:09 [INFO] Epoch: [135] Step : [1/564] Loss: 0.2381
+2026-03-17 05:47:05 [INFO] Epoch: [135] Step : [100/564] Loss: 0.1525
+2026-03-17 05:48:01 [INFO] Epoch: [135] Step : [200/564] Loss: 0.2421
+2026-03-17 05:48:58 [INFO] Epoch: [135] Step : [300/564] Loss: 0.0343
+2026-03-17 05:49:55 [INFO] Epoch: [135] Step : [400/564] Loss: 1.2435
+2026-03-17 05:50:51 [INFO] Epoch: [135] Step : [500/564] Loss: 0.1758
+2026-03-17 05:51:27 [INFO] Epoch: [135] Step : [564/564] Loss: 0.0564
+2026-03-17 05:53:43 [INFO] Epoch 135/300 | Train Loss: 0.1404 | Test Loss: 1.5358 | Acc: 0.9263 | Top-5: 0.9823 | F1(M): 0.6897 | Prec(M): 0.6820 | Rec(M): 0.7359 | Prec(W): 0.9509
+2026-03-17 05:53:58 [INFO] Epoch: [136] Step : [1/564] Loss: 0.3930
+2026-03-17 05:54:55 [INFO] Epoch: [136] Step : [100/564] Loss: 0.4057
+2026-03-17 05:55:52 [INFO] Epoch: [136] Step : [200/564] Loss: 0.1621
+2026-03-17 05:56:49 [INFO] Epoch: [136] Step : [300/564] Loss: 1.8620
+2026-03-17 05:57:46 [INFO] Epoch: [136] Step : [400/564] Loss: 0.0987
+2026-03-17 05:58:42 [INFO] Epoch: [136] Step : [500/564] Loss: 0.8388
+2026-03-17 05:59:18 [INFO] Epoch: [136] Step : [564/564] Loss: 0.3296
+2026-03-17 06:01:53 [INFO] Epoch 136/300 | Train Loss: 0.1432 | Test Loss: 1.5466 | Acc: 0.9291 | Top-5: 0.9817 | F1(M): 0.6852 | Prec(M): 0.6796 | Rec(M): 0.7320 | Prec(W): 0.9515
+2026-03-17 06:02:09 [INFO] Epoch: [137] Step : [1/564] Loss: 0.4188
+2026-03-17 06:03:06 [INFO] Epoch: [137] Step : [100/564] Loss: 0.3731
+2026-03-17 06:04:03 [INFO] Epoch: [137] Step : [200/564] Loss: 1.6885
+2026-03-17 06:05:00 [INFO] Epoch: [137] Step : [300/564] Loss: 0.0676
+2026-03-17 06:05:56 [INFO] Epoch: [137] Step : [400/564] Loss: 0.2911
+2026-03-17 06:06:53 [INFO] Epoch: [137] Step : [500/564] Loss: 0.4733
+2026-03-17 06:07:28 [INFO] Epoch: [137] Step : [564/564] Loss: 0.3029
+2026-03-17 06:09:20 [INFO] Epoch 137/300 | Train Loss: 0.1541 | Test Loss: 1.5442 | Acc: 0.9266 | Top-5: 0.9815 | F1(M): 0.6894 | Prec(M): 0.6834 | Rec(M): 0.7375 | Prec(W): 0.9527
+2026-03-17 06:09:36 [INFO] Epoch: [138] Step : [1/564] Loss: 0.1433
+2026-03-17 06:10:32 [INFO] Epoch: [138] Step : [100/564] Loss: 0.0425
+2026-03-17 06:11:29 [INFO] Epoch: [138] Step : [200/564] Loss: 0.1935
+2026-03-17 06:12:26 [INFO] Epoch: [138] Step : [300/564] Loss: 0.0552
+2026-03-17 06:13:22 [INFO] Epoch: [138] Step : [400/564] Loss: 0.1156
+2026-03-17 06:14:20 [INFO] Epoch: [138] Step : [500/564] Loss: 0.4756
+2026-03-17 06:14:56 [INFO] Epoch: [138] Step : [564/564] Loss: 0.0575
+2026-03-17 06:16:47 [INFO] Epoch 138/300 | Train Loss: 0.1429 | Test Loss: 1.4919 | Acc: 0.9317 | Top-5: 0.9813 | F1(M): 0.6976 | Prec(M): 0.6916 | Rec(M): 0.7402 | Prec(W): 0.9527
+2026-03-17 06:16:47 [INFO] --> Best model saved with F1: 0.6976 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260317_0116.pth
+2026-03-17 06:17:03 [INFO] Epoch: [139] Step : [1/564] Loss: 0.8573
+2026-03-17 06:18:00 [INFO] Epoch: [139] Step : [100/564] Loss: 0.4025
+2026-03-17 06:18:57 [INFO] Epoch: [139] Step : [200/564] Loss: 0.0483
+2026-03-17 06:19:55 [INFO] Epoch: [139] Step : [300/564] Loss: 0.1995
+2026-03-17 06:20:53 [INFO] Epoch: [139] Step : [400/564] Loss: 0.0738
+2026-03-17 06:21:51 [INFO] Epoch: [139] Step : [500/564] Loss: 0.0977
+2026-03-17 06:22:27 [INFO] Epoch: [139] Step : [564/564] Loss: 0.0276
+2026-03-17 06:24:23 [INFO] Epoch 139/300 | Train Loss: 0.1435 | Test Loss: 1.5532 | Acc: 0.9284 | Top-5: 0.9807 | F1(M): 0.6888 | Prec(M): 0.6813 | Rec(M): 0.7347 | Prec(W): 0.9518
+2026-03-17 06:24:40 [INFO] Epoch: [140] Step : [1/564] Loss: 0.2003
+2026-03-17 06:25:37 [INFO] Epoch: [140] Step : [100/564] Loss: 0.4005
+2026-03-17 06:26:34 [INFO] Epoch: [140] Step : [200/564] Loss: 0.1255
+2026-03-17 06:27:29 [INFO] Epoch: [140] Step : [300/564] Loss: 0.0349
+2026-03-17 06:28:24 [INFO] Epoch: [140] Step : [400/564] Loss: 0.0608
+2026-03-17 06:29:19 [INFO] Epoch: [140] Step : [500/564] Loss: 0.2218
+2026-03-17 06:29:55 [INFO] Epoch: [140] Step : [564/564] Loss: 0.1691
+2026-03-17 06:31:56 [INFO] Epoch 140/300 | Train Loss: 0.1443 | Test Loss: 1.5290 | Acc: 0.9238 | Top-5: 0.9805 | F1(M): 0.6883 | Prec(M): 0.6791 | Rec(M): 0.7381 | Prec(W): 0.9516
+2026-03-17 06:32:12 [INFO] Epoch: [141] Step : [1/564] Loss: 0.0607
+2026-03-17 06:33:07 [INFO] Epoch: [141] Step : [100/564] Loss: 1.6599
+2026-03-17 06:34:03 [INFO] Epoch: [141] Step : [200/564] Loss: 1.9765
+2026-03-17 06:34:59 [INFO] Epoch: [141] Step : [300/564] Loss: 0.0967
+2026-03-17 06:35:56 [INFO] Epoch: [141] Step : [400/564] Loss: 0.0317
+2026-03-17 06:36:51 [INFO] Epoch: [141] Step : [500/564] Loss: 0.0551
+2026-03-17 06:37:26 [INFO] Epoch: [141] Step : [564/564] Loss: 0.1708
+2026-03-17 06:39:21 [INFO] Epoch 141/300 | Train Loss: 0.1428 | Test Loss: 1.5504 | Acc: 0.9258 | Top-5: 0.9814 | F1(M): 0.6930 | Prec(M): 0.6876 | Rec(M): 0.7401 | Prec(W): 0.9543
+2026-03-17 06:39:39 [INFO] Epoch: [142] Step : [1/564] Loss: 0.0874
+2026-03-17 06:40:34 [INFO] Epoch: [142] Step : [100/564] Loss: 0.0818
+2026-03-17 06:41:30 [INFO] Epoch: [142] Step : [200/564] Loss: 0.8737
+2026-03-17 06:42:26 [INFO] Epoch: [142] Step : [300/564] Loss: 0.9387
+2026-03-17 06:43:22 [INFO] Epoch: [142] Step : [400/564] Loss: 0.6060
+2026-03-17 06:44:17 [INFO] Epoch: [142] Step : [500/564] Loss: 0.0719
+2026-03-17 06:44:53 [INFO] Epoch: [142] Step : [564/564] Loss: 0.0445
+2026-03-17 06:46:49 [INFO] Epoch 142/300 | Train Loss: 0.1455 | Test Loss: 1.5266 | Acc: 0.9305 | Top-5: 0.9813 | F1(M): 0.6922 | Prec(M): 0.6836 | Rec(M): 0.7393 | Prec(W): 0.9529
+2026-03-17 06:47:06 [INFO] Epoch: [143] Step : [1/564] Loss: 0.0916
+2026-03-17 06:48:02 [INFO] Epoch: [143] Step : [100/564] Loss: 0.1018
+2026-03-17 06:48:57 [INFO] Epoch: [143] Step : [200/564] Loss: 0.3657
+2026-03-17 06:49:53 [INFO] Epoch: [143] Step : [300/564] Loss: 0.0526
+2026-03-17 06:50:48 [INFO] Epoch: [143] Step : [400/564] Loss: 0.2026
+2026-03-17 06:51:44 [INFO] Epoch: [143] Step : [500/564] Loss: 0.0482
+2026-03-17 06:52:20 [INFO] Epoch: [143] Step : [564/564] Loss: 0.1693
+2026-03-17 06:54:16 [INFO] Epoch 143/300 | Train Loss: 0.1447 | Test Loss: 1.4957 | Acc: 0.9302 | Top-5: 0.9809 | F1(M): 0.6921 | Prec(M): 0.6837 | Rec(M): 0.7383 | Prec(W): 0.9520
+2026-03-17 06:54:33 [INFO] Epoch: [144] Step : [1/564] Loss: 0.0780
+2026-03-17 06:55:28 [INFO] Epoch: [144] Step : [100/564] Loss: 0.1299
+2026-03-17 06:56:24 [INFO] Epoch: [144] Step : [200/564] Loss: 0.2123
+2026-03-17 06:57:20 [INFO] Epoch: [144] Step : [300/564] Loss: 0.1528
+2026-03-17 06:58:16 [INFO] Epoch: [144] Step : [400/564] Loss: 0.6362
+2026-03-17 06:59:13 [INFO] Epoch: [144] Step : [500/564] Loss: 0.1162
+2026-03-17 06:59:48 [INFO] Epoch: [144] Step : [564/564] Loss: 0.2015
+2026-03-17 07:01:39 [INFO] Epoch 144/300 | Train Loss: 0.1329 | Test Loss: 1.4982 | Acc: 0.9287 | Top-5: 0.9803 | F1(M): 0.6923 | Prec(M): 0.6851 | Rec(M): 0.7387 | Prec(W): 0.9526
+2026-03-17 07:01:56 [INFO] Epoch: [145] Step : [1/564] Loss: 0.0574
+2026-03-17 07:02:52 [INFO] Epoch: [145] Step : [100/564] Loss: 0.1627
+2026-03-17 07:03:47 [INFO] Epoch: [145] Step : [200/564] Loss: 0.2642
+2026-03-17 07:04:43 [INFO] Epoch: [145] Step : [300/564] Loss: 0.1102
+2026-03-17 07:05:39 [INFO] Epoch: [145] Step : [400/564] Loss: 0.1878
+2026-03-17 07:06:35 [INFO] Epoch: [145] Step : [500/564] Loss: 1.4476
+2026-03-17 07:07:11 [INFO] Epoch: [145] Step : [564/564] Loss: 1.8455
+2026-03-17 07:09:05 [INFO] Epoch 145/300 | Train Loss: 0.1354 | Test Loss: 1.5245 | Acc: 0.9297 | Top-5: 0.9817 | F1(M): 0.6868 | Prec(M): 0.6796 | Rec(M): 0.7318 | Prec(W): 0.9513
+2026-03-17 07:09:24 [INFO] Epoch: [146] Step : [1/564] Loss: 0.0520
+2026-03-17 07:10:20 [INFO] Epoch: [146] Step : [100/564] Loss: 0.1603
+2026-03-17 07:11:15 [INFO] Epoch: [146] Step : [200/564] Loss: 0.1854
+2026-03-17 07:12:11 [INFO] Epoch: [146] Step : [300/564] Loss: 0.1213
+2026-03-17 07:13:07 [INFO] Epoch: [146] Step : [400/564] Loss: 0.1124
+2026-03-17 07:14:04 [INFO] Epoch: [146] Step : [500/564] Loss: 0.1636
+2026-03-17 07:14:39 [INFO] Epoch: [146] Step : [564/564] Loss: 0.1416
+2026-03-17 07:16:34 [INFO] Epoch 146/300 | Train Loss: 0.1395 | Test Loss: 1.5328 | Acc: 0.9332 | Top-5: 0.9818 | F1(M): 0.6923 | Prec(M): 0.6849 | Rec(M): 0.7366 | Prec(W): 0.9527
+2026-03-17 07:16:51 [INFO] Epoch: [147] Step : [1/564] Loss: 0.2181
+2026-03-17 07:17:46 [INFO] Epoch: [147] Step : [100/564] Loss: 0.0788
+2026-03-17 07:18:42 [INFO] Epoch: [147] Step : [200/564] Loss: 0.4910
+2026-03-17 07:19:38 [INFO] Epoch: [147] Step : [300/564] Loss: 0.2651
+2026-03-17 07:20:34 [INFO] Epoch: [147] Step : [400/564] Loss: 0.2631
+2026-03-17 07:21:30 [INFO] Epoch: [147] Step : [500/564] Loss: 0.0231
+2026-03-17 07:22:06 [INFO] Epoch: [147] Step : [564/564] Loss: 0.0266
+2026-03-17 07:24:01 [INFO] Epoch 147/300 | Train Loss: 0.1443 | Test Loss: 1.5374 | Acc: 0.9310 | Top-5: 0.9815 | F1(M): 0.6904 | Prec(M): 0.6838 | Rec(M): 0.7347 | Prec(W): 0.9523
+2026-03-17 07:24:18 [INFO] Epoch: [148] Step : [1/564] Loss: 0.0394
+2026-03-17 07:25:14 [INFO] Epoch: [148] Step : [100/564] Loss: 0.0974
+2026-03-17 07:26:09 [INFO] Epoch: [148] Step : [200/564] Loss: 0.3694
+2026-03-17 07:27:04 [INFO] Epoch: [148] Step : [300/564] Loss: 0.0981
+2026-03-17 07:28:00 [INFO] Epoch: [148] Step : [400/564] Loss: 0.0484
+2026-03-17 07:28:56 [INFO] Epoch: [148] Step : [500/564] Loss: 0.1565
+2026-03-17 07:29:31 [INFO] Epoch: [148] Step : [564/564] Loss: 0.6181
+2026-03-17 07:31:22 [INFO] Epoch 148/300 | Train Loss: 0.1370 | Test Loss: 1.4913 | Acc: 0.9282 | Top-5: 0.9804 | F1(M): 0.6878 | Prec(M): 0.6804 | Rec(M): 0.7381 | Prec(W): 0.9534
+2026-03-17 07:31:39 [INFO] Epoch: [149] Step : [1/564] Loss: 0.1973
+2026-03-17 07:32:35 [INFO] Epoch: [149] Step : [100/564] Loss: 0.1240
+2026-03-17 07:33:30 [INFO] Epoch: [149] Step : [200/564] Loss: 0.0574
+2026-03-17 07:34:27 [INFO] Epoch: [149] Step : [300/564] Loss: 0.4315
+2026-03-17 07:35:23 [INFO] Epoch: [149] Step : [400/564] Loss: 0.0730
+2026-03-17 07:36:18 [INFO] Epoch: [149] Step : [500/564] Loss: 0.3430
+2026-03-17 07:36:54 [INFO] Epoch: [149] Step : [564/564] Loss: 0.0617
+2026-03-17 07:38:46 [INFO] Epoch 149/300 | Train Loss: 0.1460 | Test Loss: 1.5170 | Acc: 0.9275 | Top-5: 0.9820 | F1(M): 0.6879 | Prec(M): 0.6795 | Rec(M): 0.7364 | Prec(W): 0.9529
+2026-03-17 07:39:02 [INFO] Epoch: [150] Step : [1/564] Loss: 0.1041
+2026-03-17 07:39:57 [INFO] Epoch: [150] Step : [100/564] Loss: 0.8002
+2026-03-17 07:40:53 [INFO] Epoch: [150] Step : [200/564] Loss: 0.1513
+2026-03-17 07:41:49 [INFO] Epoch: [150] Step : [300/564] Loss: 0.2841
+2026-03-17 07:42:44 [INFO] Epoch: [150] Step : [400/564] Loss: 0.8242
+2026-03-17 07:43:40 [INFO] Epoch: [150] Step : [500/564] Loss: 0.0979
+2026-03-17 07:44:16 [INFO] Epoch: [150] Step : [564/564] Loss: 2.0485
+2026-03-17 07:46:07 [INFO] Epoch 150/300 | Train Loss: 0.1404 | Test Loss: 1.5280 | Acc: 0.9311 | Top-5: 0.9818 | F1(M): 0.6919 | Prec(M): 0.6868 | Rec(M): 0.7340 | Prec(W): 0.9512
+2026-03-17 08:04:47 [INFO] Epoch: [151] Step : [1/564] Loss: 0.0838
+2026-03-17 08:05:47 [INFO] Epoch: [151] Step : [100/564] Loss: 0.7544
+2026-03-17 08:06:45 [INFO] Epoch: [151] Step : [200/564] Loss: 0.4289
+2026-03-17 08:07:42 [INFO] Epoch: [151] Step : [300/564] Loss: 0.4987
+2026-03-17 08:08:38 [INFO] Epoch: [151] Step : [400/564] Loss: 0.0854
+2026-03-17 08:09:33 [INFO] Epoch: [151] Step : [500/564] Loss: 1.4756
+2026-03-17 08:10:09 [INFO] Epoch: [151] Step : [564/564] Loss: 0.2612
+2026-03-17 08:14:41 [INFO] Epoch 151/300 | Train Loss: 0.1348 | Test Loss: 1.5002 | Acc: 0.9313 | Top-5: 0.9812 | F1(M): 0.6926 | Prec(M): 0.6834 | Rec(M): 0.7396 | Prec(W): 0.9531
+2026-03-17 08:14:59 [INFO] Epoch: [152] Step : [1/564] Loss: 0.1011
+2026-03-17 08:15:54 [INFO] Epoch: [152] Step : [100/564] Loss: 0.3226
+2026-03-17 08:16:50 [INFO] Epoch: [152] Step : [200/564] Loss: 0.2388
+2026-03-17 08:17:46 [INFO] Epoch: [152] Step : [300/564] Loss: 0.0539
+2026-03-17 08:18:42 [INFO] Epoch: [152] Step : [400/564] Loss: 1.8609
+2026-03-17 08:19:38 [INFO] Epoch: [152] Step : [500/564] Loss: 0.0804
+2026-03-17 08:20:13 [INFO] Epoch: [152] Step : [564/564] Loss: 0.0822
+2026-03-17 08:22:10 [INFO] Epoch 152/300 | Train Loss: 0.1361 | Test Loss: 1.5223 | Acc: 0.9326 | Top-5: 0.9825 | F1(M): 0.6919 | Prec(M): 0.6867 | Rec(M): 0.7354 | Prec(W): 0.9530
+2026-03-17 08:22:29 [INFO] Epoch: [153] Step : [1/564] Loss: 0.1957
+2026-03-17 08:23:26 [INFO] Epoch: [153] Step : [100/564] Loss: 0.5920
+2026-03-17 08:24:22 [INFO] Epoch: [153] Step : [200/564] Loss: 0.0511
+2026-03-17 08:25:18 [INFO] Epoch: [153] Step : [300/564] Loss: 0.0509
+2026-03-17 08:26:13 [INFO] Epoch: [153] Step : [400/564] Loss: 0.0865
+2026-03-17 08:27:09 [INFO] Epoch: [153] Step : [500/564] Loss: 0.5061
+2026-03-17 08:27:45 [INFO] Epoch: [153] Step : [564/564] Loss: 1.2292
+2026-03-17 08:30:02 [INFO] Epoch 153/300 | Train Loss: 0.1340 | Test Loss: 1.5274 | Acc: 0.9296 | Top-5: 0.9826 | F1(M): 0.6945 | Prec(M): 0.6895 | Rec(M): 0.7379 | Prec(W): 0.9533
+2026-03-17 08:30:26 [INFO] Epoch: [154] Step : [1/564] Loss: 0.4686
+2026-03-17 08:31:22 [INFO] Epoch: [154] Step : [100/564] Loss: 0.2683
+2026-03-17 08:32:19 [INFO] Epoch: [154] Step : [200/564] Loss: 0.6968
+2026-03-17 08:33:16 [INFO] Epoch: [154] Step : [300/564] Loss: 0.0958
+2026-03-17 08:34:13 [INFO] Epoch: [154] Step : [400/564] Loss: 0.3023
+2026-03-17 08:35:10 [INFO] Epoch: [154] Step : [500/564] Loss: 0.1933
+2026-03-17 08:35:47 [INFO] Epoch: [154] Step : [564/564] Loss: 0.3874
+2026-03-17 08:37:53 [INFO] Epoch 154/300 | Train Loss: 0.1364 | Test Loss: 1.5126 | Acc: 0.9312 | Top-5: 0.9818 | F1(M): 0.6932 | Prec(M): 0.6882 | Rec(M): 0.7360 | Prec(W): 0.9523
+2026-03-17 08:38:15 [INFO] Epoch: [155] Step : [1/564] Loss: 0.3713
+2026-03-17 08:39:10 [INFO] Epoch: [155] Step : [100/564] Loss: 0.5014
+2026-03-17 08:40:07 [INFO] Epoch: [155] Step : [200/564] Loss: 0.0856
+2026-03-17 08:41:03 [INFO] Epoch: [155] Step : [300/564] Loss: 0.5296
+2026-03-17 08:41:59 [INFO] Epoch: [155] Step : [400/564] Loss: 0.3438
+2026-03-17 08:42:55 [INFO] Epoch: [155] Step : [500/564] Loss: 0.0462
+2026-03-17 08:43:31 [INFO] Epoch: [155] Step : [564/564] Loss: 0.0225
+2026-03-17 08:45:35 [INFO] Epoch 155/300 | Train Loss: 0.1326 | Test Loss: 1.5029 | Acc: 0.9283 | Top-5: 0.9809 | F1(M): 0.6887 | Prec(M): 0.6815 | Rec(M): 0.7364 | Prec(W): 0.9516
+2026-03-17 08:45:57 [INFO] Epoch: [156] Step : [1/564] Loss: 0.2018
+2026-03-17 08:46:54 [INFO] Epoch: [156] Step : [100/564] Loss: 0.0484
+2026-03-17 08:47:50 [INFO] Epoch: [156] Step : [200/564] Loss: 0.9493
+2026-03-17 08:48:47 [INFO] Epoch: [156] Step : [300/564] Loss: 0.0877
+2026-03-17 08:49:44 [INFO] Epoch: [156] Step : [400/564] Loss: 0.4333
+2026-03-17 08:50:41 [INFO] Epoch: [156] Step : [500/564] Loss: 0.1074
+2026-03-17 08:51:16 [INFO] Epoch: [156] Step : [564/564] Loss: 0.2183
+2026-03-17 08:53:22 [INFO] Epoch 156/300 | Train Loss: 0.1367 | Test Loss: 1.5286 | Acc: 0.9335 | Top-5: 0.9820 | F1(M): 0.6915 | Prec(M): 0.6832 | Rec(M): 0.7362 | Prec(W): 0.9538
+2026-03-17 08:53:44 [INFO] Epoch: [157] Step : [1/564] Loss: 0.1421
+2026-03-17 08:54:40 [INFO] Epoch: [157] Step : [100/564] Loss: 0.9315
+2026-03-17 08:55:37 [INFO] Epoch: [157] Step : [200/564] Loss: 0.5995
+2026-03-17 08:56:32 [INFO] Epoch: [157] Step : [300/564] Loss: 0.1543
+2026-03-17 08:57:29 [INFO] Epoch: [157] Step : [400/564] Loss: 0.2080
+2026-03-17 08:58:26 [INFO] Epoch: [157] Step : [500/564] Loss: 0.1077
+2026-03-17 08:59:01 [INFO] Epoch: [157] Step : [564/564] Loss: 0.1990
+2026-03-17 09:01:07 [INFO] Epoch 157/300 | Train Loss: 0.1396 | Test Loss: 1.5403 | Acc: 0.9325 | Top-5: 0.9812 | F1(M): 0.6904 | Prec(M): 0.6851 | Rec(M): 0.7316 | Prec(W): 0.9515
+2026-03-17 09:01:30 [INFO] Epoch: [158] Step : [1/564] Loss: 0.2653
+2026-03-17 09:02:25 [INFO] Epoch: [158] Step : [100/564] Loss: 0.1754
+2026-03-17 09:03:22 [INFO] Epoch: [158] Step : [200/564] Loss: 0.1624
+2026-03-17 09:04:18 [INFO] Epoch: [158] Step : [300/564] Loss: 0.0401
+2026-03-17 09:05:15 [INFO] Epoch: [158] Step : [400/564] Loss: 0.3565
+2026-03-17 09:06:12 [INFO] Epoch: [158] Step : [500/564] Loss: 0.2215
+2026-03-17 09:06:47 [INFO] Epoch: [158] Step : [564/564] Loss: 0.1410
+2026-03-17 09:08:53 [INFO] Epoch 158/300 | Train Loss: 0.1449 | Test Loss: 1.5486 | Acc: 0.9332 | Top-5: 0.9822 | F1(M): 0.6924 | Prec(M): 0.6851 | Rec(M): 0.7352 | Prec(W): 0.9529
+2026-03-17 09:09:15 [INFO] Epoch: [159] Step : [1/564] Loss: 0.0593
+2026-03-17 09:10:12 [INFO] Epoch: [159] Step : [100/564] Loss: 0.2105
+2026-03-17 09:11:07 [INFO] Epoch: [159] Step : [200/564] Loss: 0.0547
+2026-03-17 09:12:05 [INFO] Epoch: [159] Step : [300/564] Loss: 0.2642
+2026-03-17 09:13:01 [INFO] Epoch: [159] Step : [400/564] Loss: 0.1768
+2026-03-17 09:13:57 [INFO] Epoch: [159] Step : [500/564] Loss: 0.1875
+2026-03-17 09:14:33 [INFO] Epoch: [159] Step : [564/564] Loss: 0.9571
+2026-03-17 09:16:36 [INFO] Epoch 159/300 | Train Loss: 0.1482 | Test Loss: 1.5235 | Acc: 0.9299 | Top-5: 0.9807 | F1(M): 0.6944 | Prec(M): 0.6873 | Rec(M): 0.7398 | Prec(W): 0.9531
+2026-03-17 09:16:58 [INFO] Epoch: [160] Step : [1/564] Loss: 0.2433
+2026-03-17 09:17:54 [INFO] Epoch: [160] Step : [100/564] Loss: 0.0348
+2026-03-17 09:18:50 [INFO] Epoch: [160] Step : [200/564] Loss: 0.0873
+2026-03-17 09:19:46 [INFO] Epoch: [160] Step : [300/564] Loss: 0.0700
+2026-03-17 09:20:41 [INFO] Epoch: [160] Step : [400/564] Loss: 0.1065
+2026-03-17 09:21:37 [INFO] Epoch: [160] Step : [500/564] Loss: 0.0535
+2026-03-17 09:22:13 [INFO] Epoch: [160] Step : [564/564] Loss: 0.1876
+2026-03-17 09:24:16 [INFO] Epoch 160/300 | Train Loss: 0.1058 | Test Loss: 1.4990 | Acc: 0.9384 | Top-5: 0.9833 | F1(M): 0.7055 | Prec(M): 0.6980 | Rec(M): 0.7452 | Prec(W): 0.9557
+2026-03-17 09:24:16 [INFO] --> Best model saved with F1: 0.7055 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260317_0804.pth
+2026-03-17 09:24:33 [INFO] Epoch: [161] Step : [1/564] Loss: 0.7195
+2026-03-17 09:25:28 [INFO] Epoch: [161] Step : [100/564] Loss: 0.0483
+2026-03-17 09:26:25 [INFO] Epoch: [161] Step : [200/564] Loss: 0.3258
+2026-03-17 09:27:20 [INFO] Epoch: [161] Step : [300/564] Loss: 0.2050
+2026-03-17 09:28:16 [INFO] Epoch: [161] Step : [400/564] Loss: 0.0379
+2026-03-17 09:29:12 [INFO] Epoch: [161] Step : [500/564] Loss: 0.0732
+2026-03-17 09:29:48 [INFO] Epoch: [161] Step : [564/564] Loss: 1.5984
+2026-03-17 09:31:41 [INFO] Epoch 161/300 | Train Loss: 0.0947 | Test Loss: 1.4861 | Acc: 0.9412 | Top-5: 0.9840 | F1(M): 0.7051 | Prec(M): 0.6986 | Rec(M): 0.7433 | Prec(W): 0.9557
+2026-03-17 09:31:57 [INFO] Epoch: [162] Step : [1/564] Loss: 0.1306
+2026-03-17 09:32:54 [INFO] Epoch: [162] Step : [100/564] Loss: 0.0429
+2026-03-17 09:33:51 [INFO] Epoch: [162] Step : [200/564] Loss: 0.0523
+2026-03-17 09:34:47 [INFO] Epoch: [162] Step : [300/564] Loss: 0.0374
+2026-03-17 09:35:44 [INFO] Epoch: [162] Step : [400/564] Loss: 0.2022
+2026-03-17 09:36:42 [INFO] Epoch: [162] Step : [500/564] Loss: 0.0770
+2026-03-17 09:37:17 [INFO] Epoch: [162] Step : [564/564] Loss: 0.0253
+2026-03-17 09:39:13 [INFO] Epoch 162/300 | Train Loss: 0.0976 | Test Loss: 1.5061 | Acc: 0.9414 | Top-5: 0.9847 | F1(M): 0.7065 | Prec(M): 0.7009 | Rec(M): 0.7425 | Prec(W): 0.9559
+2026-03-17 09:39:14 [INFO] --> Best model saved with F1: 0.7065 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260317_0804.pth
+2026-03-17 09:39:30 [INFO] Epoch: [163] Step : [1/564] Loss: 0.1030
+2026-03-17 09:40:25 [INFO] Epoch: [163] Step : [100/564] Loss: 0.0822
+2026-03-17 09:41:23 [INFO] Epoch: [163] Step : [200/564] Loss: 0.3228
+2026-03-17 09:42:20 [INFO] Epoch: [163] Step : [300/564] Loss: 0.1244
+2026-03-17 09:43:18 [INFO] Epoch: [163] Step : [400/564] Loss: 0.0833
+2026-03-17 09:44:15 [INFO] Epoch: [163] Step : [500/564] Loss: 0.2965
+2026-03-17 09:44:51 [INFO] Epoch: [163] Step : [564/564] Loss: 0.3658
+2026-03-17 09:46:53 [INFO] Epoch 163/300 | Train Loss: 0.0870 | Test Loss: 1.4757 | Acc: 0.9408 | Top-5: 0.9841 | F1(M): 0.7052 | Prec(M): 0.6983 | Rec(M): 0.7440 | Prec(W): 0.9554
+2026-03-17 09:47:09 [INFO] Epoch: [164] Step : [1/564] Loss: 0.0319
+2026-03-17 09:48:05 [INFO] Epoch: [164] Step : [100/564] Loss: 0.0612
+2026-03-17 09:49:03 [INFO] Epoch: [164] Step : [200/564] Loss: 0.0579
+2026-03-17 09:50:01 [INFO] Epoch: [164] Step : [300/564] Loss: 0.3507
+2026-03-17 09:50:59 [INFO] Epoch: [164] Step : [400/564] Loss: 0.1188
+2026-03-17 09:51:55 [INFO] Epoch: [164] Step : [500/564] Loss: 0.1206
+2026-03-17 09:52:31 [INFO] Epoch: [164] Step : [564/564] Loss: 0.1525
+2026-03-17 09:54:25 [INFO] Epoch 164/300 | Train Loss: 0.0916 | Test Loss: 1.4765 | Acc: 0.9420 | Top-5: 0.9834 | F1(M): 0.7073 | Prec(M): 0.7009 | Rec(M): 0.7447 | Prec(W): 0.9564
+2026-03-17 09:54:25 [INFO] --> Best model saved with F1: 0.7073 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260317_0804.pth
+2026-03-17 09:54:41 [INFO] Epoch: [165] Step : [1/564] Loss: 0.0532
+2026-03-17 09:55:38 [INFO] Epoch: [165] Step : [100/564] Loss: 0.0810
+2026-03-17 09:56:36 [INFO] Epoch: [165] Step : [200/564] Loss: 0.0145
+2026-03-17 09:57:34 [INFO] Epoch: [165] Step : [300/564] Loss: 0.0828
+2026-03-17 09:58:31 [INFO] Epoch: [165] Step : [400/564] Loss: 0.1124
+2026-03-17 09:59:29 [INFO] Epoch: [165] Step : [500/564] Loss: 0.0898
+2026-03-17 10:00:05 [INFO] Epoch: [165] Step : [564/564] Loss: 0.0471
+2026-03-17 10:02:40 [INFO] Epoch 165/300 | Train Loss: 0.0869 | Test Loss: 1.4953 | Acc: 0.9407 | Top-5: 0.9842 | F1(M): 0.7050 | Prec(M): 0.7003 | Rec(M): 0.7435 | Prec(W): 0.9569
+2026-03-17 10:02:56 [INFO] Epoch: [166] Step : [1/564] Loss: 0.0773
+2026-03-17 10:03:54 [INFO] Epoch: [166] Step : [100/564] Loss: 0.3902
+2026-03-17 10:04:50 [INFO] Epoch: [166] Step : [200/564] Loss: 0.0286
+2026-03-17 10:05:47 [INFO] Epoch: [166] Step : [300/564] Loss: 0.0605
+2026-03-17 10:06:45 [INFO] Epoch: [166] Step : [400/564] Loss: 0.0459
+2026-03-17 10:07:42 [INFO] Epoch: [166] Step : [500/564] Loss: 0.1076
+2026-03-17 10:08:17 [INFO] Epoch: [166] Step : [564/564] Loss: 0.0387
+2026-03-17 10:10:38 [INFO] Epoch 166/300 | Train Loss: 0.0874 | Test Loss: 1.4822 | Acc: 0.9408 | Top-5: 0.9841 | F1(M): 0.7053 | Prec(M): 0.6983 | Rec(M): 0.7434 | Prec(W): 0.9554
+2026-03-17 10:11:01 [INFO] Epoch: [167] Step : [1/564] Loss: 0.1228
+2026-03-17 10:11:57 [INFO] Epoch: [167] Step : [100/564] Loss: 0.0320
+2026-03-17 10:12:55 [INFO] Epoch: [167] Step : [200/564] Loss: 0.0324
+2026-03-17 10:13:52 [INFO] Epoch: [167] Step : [300/564] Loss: 0.0407
+2026-03-17 10:14:50 [INFO] Epoch: [167] Step : [400/564] Loss: 0.1691
+2026-03-17 10:15:47 [INFO] Epoch: [167] Step : [500/564] Loss: 0.0721
+2026-03-17 10:16:24 [INFO] Epoch: [167] Step : [564/564] Loss: 0.3464
+2026-03-17 10:19:20 [INFO] Epoch 167/300 | Train Loss: 0.0928 | Test Loss: 1.4844 | Acc: 0.9392 | Top-5: 0.9846 | F1(M): 0.7080 | Prec(M): 0.7015 | Rec(M): 0.7444 | Prec(W): 0.9561
+2026-03-17 10:19:21 [INFO] --> Best model saved with F1: 0.7080 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260317_0804.pth
+2026-03-17 10:19:48 [INFO] Epoch: [168] Step : [1/564] Loss: 0.0361
+2026-03-17 10:20:45 [INFO] Epoch: [168] Step : [100/564] Loss: 0.0379
+2026-03-17 10:21:42 [INFO] Epoch: [168] Step : [200/564] Loss: 0.0821
+2026-03-17 10:22:39 [INFO] Epoch: [168] Step : [300/564] Loss: 0.1433
+2026-03-17 10:23:35 [INFO] Epoch: [168] Step : [400/564] Loss: 0.6609
+2026-03-17 10:24:32 [INFO] Epoch: [168] Step : [500/564] Loss: 0.1772
+2026-03-17 10:25:08 [INFO] Epoch: [168] Step : [564/564] Loss: 0.1146
+2026-03-17 10:28:04 [INFO] Epoch 168/300 | Train Loss: 0.0855 | Test Loss: 1.4698 | Acc: 0.9411 | Top-5: 0.9845 | F1(M): 0.7087 | Prec(M): 0.7025 | Rec(M): 0.7460 | Prec(W): 0.9561
+2026-03-17 10:28:04 [INFO] --> Best model saved with F1: 0.7087 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260317_0804.pth
+2026-03-17 10:28:26 [INFO] Epoch: [169] Step : [1/564] Loss: 0.3206
+2026-03-17 10:29:23 [INFO] Epoch: [169] Step : [100/564] Loss: 0.1496
+2026-03-17 10:30:20 [INFO] Epoch: [169] Step : [200/564] Loss: 0.6017
+2026-03-17 10:31:17 [INFO] Epoch: [169] Step : [300/564] Loss: 0.0782
+2026-03-17 10:32:14 [INFO] Epoch: [169] Step : [400/564] Loss: 0.0746
+2026-03-17 10:33:11 [INFO] Epoch: [169] Step : [500/564] Loss: 0.0619
+2026-03-17 10:33:48 [INFO] Epoch: [169] Step : [564/564] Loss: 0.0730
+2026-03-17 10:35:50 [INFO] Epoch 169/300 | Train Loss: 0.0945 | Test Loss: 1.4748 | Acc: 0.9421 | Top-5: 0.9842 | F1(M): 0.7112 | Prec(M): 0.7042 | Rec(M): 0.7488 | Prec(W): 0.9572
+2026-03-17 10:35:50 [INFO] --> Best model saved with F1: 0.7112 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260317_0804.pth
+2026-03-17 10:36:20 [INFO] Epoch: [170] Step : [1/564] Loss: 0.0242
+2026-03-17 10:37:16 [INFO] Epoch: [170] Step : [100/564] Loss: 0.1018
+2026-03-17 10:38:13 [INFO] Epoch: [170] Step : [200/564] Loss: 0.2034
+2026-03-17 10:39:11 [INFO] Epoch: [170] Step : [300/564] Loss: 0.3155
+2026-03-17 10:40:08 [INFO] Epoch: [170] Step : [400/564] Loss: 0.0607
+2026-03-17 10:41:05 [INFO] Epoch: [170] Step : [500/564] Loss: 0.0334
+2026-03-17 10:41:42 [INFO] Epoch: [170] Step : [564/564] Loss: 0.0236
+2026-03-17 10:44:02 [INFO] Epoch 170/300 | Train Loss: 0.0904 | Test Loss: 1.4869 | Acc: 0.9405 | Top-5: 0.9839 | F1(M): 0.7090 | Prec(M): 0.7040 | Rec(M): 0.7442 | Prec(W): 0.9570
+2026-03-17 10:44:43 [INFO] Epoch: [171] Step : [1/564] Loss: 0.0317
+2026-03-17 10:45:39 [INFO] Epoch: [171] Step : [100/564] Loss: 0.0718
+2026-03-17 10:46:36 [INFO] Epoch: [171] Step : [200/564] Loss: 0.3283
+2026-03-17 10:47:32 [INFO] Epoch: [171] Step : [300/564] Loss: 0.1623
+2026-03-17 10:48:29 [INFO] Epoch: [171] Step : [400/564] Loss: 0.2645
+2026-03-17 10:49:27 [INFO] Epoch: [171] Step : [500/564] Loss: 0.0207
+2026-03-17 10:50:03 [INFO] Epoch: [171] Step : [564/564] Loss: 0.0478
+2026-03-17 10:52:11 [INFO] Epoch 171/300 | Train Loss: 0.0862 | Test Loss: 1.4814 | Acc: 0.9432 | Top-5: 0.9847 | F1(M): 0.7082 | Prec(M): 0.7012 | Rec(M): 0.7450 | Prec(W): 0.9572
+2026-03-17 10:52:47 [INFO] Epoch: [172] Step : [1/564] Loss: 0.5525
+2026-03-17 10:53:44 [INFO] Epoch: [172] Step : [100/564] Loss: 0.2067
+2026-03-17 10:54:42 [INFO] Epoch: [172] Step : [200/564] Loss: 0.0782
+2026-03-17 10:55:39 [INFO] Epoch: [172] Step : [300/564] Loss: 0.4876
+2026-03-17 10:56:36 [INFO] Epoch: [172] Step : [400/564] Loss: 0.1085
+2026-03-17 10:57:34 [INFO] Epoch: [172] Step : [500/564] Loss: 0.1299
+2026-03-17 10:58:10 [INFO] Epoch: [172] Step : [564/564] Loss: 1.4668
+2026-03-17 11:00:55 [INFO] Epoch 172/300 | Train Loss: 0.0885 | Test Loss: 1.5146 | Acc: 0.9445 | Top-5: 0.9844 | F1(M): 0.7111 | Prec(M): 0.7054 | Rec(M): 0.7455 | Prec(W): 0.9577
+2026-03-17 11:01:21 [INFO] Epoch: [173] Step : [1/564] Loss: 0.2808
+2026-03-17 11:02:18 [INFO] Epoch: [173] Step : [100/564] Loss: 0.1061
+2026-03-17 11:03:15 [INFO] Epoch: [173] Step : [200/564] Loss: 0.0803
+2026-03-17 11:04:12 [INFO] Epoch: [173] Step : [300/564] Loss: 0.0848
+2026-03-17 11:05:10 [INFO] Epoch: [173] Step : [400/564] Loss: 0.0510
+2026-03-17 11:06:07 [INFO] Epoch: [173] Step : [500/564] Loss: 0.0900
+2026-03-17 11:06:42 [INFO] Epoch: [173] Step : [564/564] Loss: 0.8801
+2026-03-17 11:09:23 [INFO] Epoch 173/300 | Train Loss: 0.0858 | Test Loss: 1.4924 | Acc: 0.9427 | Top-5: 0.9846 | F1(M): 0.7040 | Prec(M): 0.6956 | Rec(M): 0.7400 | Prec(W): 0.9560
+2026-03-17 11:09:46 [INFO] Epoch: [174] Step : [1/564] Loss: 0.0965
+2026-03-17 11:10:42 [INFO] Epoch: [174] Step : [100/564] Loss: 0.4049
+2026-03-17 11:11:40 [INFO] Epoch: [174] Step : [200/564] Loss: 0.0150
+2026-03-17 11:12:37 [INFO] Epoch: [174] Step : [300/564] Loss: 0.0614
+2026-03-17 11:13:34 [INFO] Epoch: [174] Step : [400/564] Loss: 0.0257
+2026-03-17 11:14:33 [INFO] Epoch: [174] Step : [500/564] Loss: 0.9456
+2026-03-17 11:15:09 [INFO] Epoch: [174] Step : [564/564] Loss: 0.2237
+2026-03-17 11:18:45 [INFO] Epoch 174/300 | Train Loss: 0.0973 | Test Loss: 1.4806 | Acc: 0.9440 | Top-5: 0.9843 | F1(M): 0.7095 | Prec(M): 0.7050 | Rec(M): 0.7453 | Prec(W): 0.9586
+2026-03-17 11:19:02 [INFO] Epoch: [175] Step : [1/564] Loss: 0.0294
+2026-03-17 11:19:59 [INFO] Epoch: [175] Step : [100/564] Loss: 0.0347
+2026-03-17 11:20:57 [INFO] Epoch: [175] Step : [200/564] Loss: 0.1169
+2026-03-17 11:21:53 [INFO] Epoch: [175] Step : [300/564] Loss: 0.1061
+2026-03-17 11:22:50 [INFO] Epoch: [175] Step : [400/564] Loss: 0.1573
+2026-03-17 11:23:47 [INFO] Epoch: [175] Step : [500/564] Loss: 0.0516
+2026-03-17 11:24:23 [INFO] Epoch: [175] Step : [564/564] Loss: 0.0258
+2026-03-17 11:27:38 [INFO] Epoch 175/300 | Train Loss: 0.0867 | Test Loss: 1.4963 | Acc: 0.9432 | Top-5: 0.9846 | F1(M): 0.7090 | Prec(M): 0.7032 | Rec(M): 0.7453 | Prec(W): 0.9572
+2026-03-17 11:28:01 [INFO] Epoch: [176] Step : [1/564] Loss: 0.2203
+2026-03-17 11:28:58 [INFO] Epoch: [176] Step : [100/564] Loss: 0.1692
+2026-03-17 11:29:55 [INFO] Epoch: [176] Step : [200/564] Loss: 0.2580
+2026-03-17 11:30:52 [INFO] Epoch: [176] Step : [300/564] Loss: 0.3516
+2026-03-17 11:31:49 [INFO] Epoch: [176] Step : [400/564] Loss: 0.0237
+2026-03-17 11:32:47 [INFO] Epoch: [176] Step : [500/564] Loss: 0.7611
+2026-03-17 11:33:23 [INFO] Epoch: [176] Step : [564/564] Loss: 0.0984
+2026-03-17 11:36:18 [INFO] Epoch 176/300 | Train Loss: 0.0873 | Test Loss: 1.4681 | Acc: 0.9403 | Top-5: 0.9849 | F1(M): 0.7102 | Prec(M): 0.7045 | Rec(M): 0.7463 | Prec(W): 0.9574
+2026-03-17 11:36:34 [INFO] Epoch: [177] Step : [1/564] Loss: 0.0413
+2026-03-17 11:37:31 [INFO] Epoch: [177] Step : [100/564] Loss: 0.4341
+2026-03-17 11:38:29 [INFO] Epoch: [177] Step : [200/564] Loss: 0.2581
+2026-03-17 11:39:26 [INFO] Epoch: [177] Step : [300/564] Loss: 0.1311
+2026-03-17 11:40:25 [INFO] Epoch: [177] Step : [400/564] Loss: 0.0409
+2026-03-17 11:41:22 [INFO] Epoch: [177] Step : [500/564] Loss: 0.1378
+2026-03-17 11:41:58 [INFO] Epoch: [177] Step : [564/564] Loss: 0.2073
+2026-03-17 11:44:20 [INFO] Epoch 177/300 | Train Loss: 0.0806 | Test Loss: 1.4893 | Acc: 0.9405 | Top-5: 0.9849 | F1(M): 0.7086 | Prec(M): 0.7040 | Rec(M): 0.7436 | Prec(W): 0.9575
+2026-03-17 11:44:50 [INFO] Epoch: [178] Step : [1/564] Loss: 0.0352
+2026-03-17 11:45:47 [INFO] Epoch: [178] Step : [100/564] Loss: 0.0807
+2026-03-17 11:46:44 [INFO] Epoch: [178] Step : [200/564] Loss: 0.0701
+2026-03-17 11:47:40 [INFO] Epoch: [178] Step : [300/564] Loss: 0.0194
+2026-03-17 11:48:37 [INFO] Epoch: [178] Step : [400/564] Loss: 0.1059
+2026-03-17 11:49:35 [INFO] Epoch: [178] Step : [500/564] Loss: 0.1227
+2026-03-17 11:50:12 [INFO] Epoch: [178] Step : [564/564] Loss: 0.5095
+2026-03-17 11:53:24 [INFO] Epoch 178/300 | Train Loss: 0.0869 | Test Loss: 1.4985 | Acc: 0.9440 | Top-5: 0.9851 | F1(M): 0.7111 | Prec(M): 0.7032 | Rec(M): 0.7482 | Prec(W): 0.9583
+2026-03-17 11:53:51 [INFO] Epoch: [179] Step : [1/564] Loss: 0.1012
+2026-03-17 11:54:47 [INFO] Epoch: [179] Step : [100/564] Loss: 0.0669
+2026-03-17 11:55:45 [INFO] Epoch: [179] Step : [200/564] Loss: 0.0269
+2026-03-17 11:56:42 [INFO] Epoch: [179] Step : [300/564] Loss: 0.0731
+2026-03-17 11:57:41 [INFO] Epoch: [179] Step : [400/564] Loss: 0.0929
+2026-03-17 11:58:39 [INFO] Epoch: [179] Step : [500/564] Loss: 0.0842
+2026-03-17 11:59:15 [INFO] Epoch: [179] Step : [564/564] Loss: 1.4458
+2026-03-17 12:01:45 [INFO] Epoch 179/300 | Train Loss: 0.0847 | Test Loss: 1.4746 | Acc: 0.9446 | Top-5: 0.9847 | F1(M): 0.7081 | Prec(M): 0.7040 | Rec(M): 0.7422 | Prec(W): 0.9575
+2026-03-17 12:02:21 [INFO] Epoch: [180] Step : [1/564] Loss: 0.3628
+2026-03-17 12:03:18 [INFO] Epoch: [180] Step : [100/564] Loss: 0.0519
+2026-03-17 12:04:15 [INFO] Epoch: [180] Step : [200/564] Loss: 0.0919
+2026-03-17 12:05:14 [INFO] Epoch: [180] Step : [300/564] Loss: 0.1027
+2026-03-17 12:06:12 [INFO] Epoch: [180] Step : [400/564] Loss: 1.0861
+2026-03-17 12:07:10 [INFO] Epoch: [180] Step : [500/564] Loss: 0.1936
+2026-03-17 12:07:46 [INFO] Epoch: [180] Step : [564/564] Loss: 0.1663
+2026-03-17 12:10:25 [INFO] Epoch 180/300 | Train Loss: 0.0854 | Test Loss: 1.4868 | Acc: 0.9458 | Top-5: 0.9849 | F1(M): 0.7108 | Prec(M): 0.7034 | Rec(M): 0.7468 | Prec(W): 0.9576
+2026-03-17 12:10:42 [INFO] Epoch: [181] Step : [1/564] Loss: 0.1122
+2026-03-17 12:11:39 [INFO] Epoch: [181] Step : [100/564] Loss: 0.0704
+2026-03-17 12:12:36 [INFO] Epoch: [181] Step : [200/564] Loss: 0.0261
+2026-03-17 12:13:33 [INFO] Epoch: [181] Step : [300/564] Loss: 0.0336
+2026-03-17 12:14:30 [INFO] Epoch: [181] Step : [400/564] Loss: 0.0368
+2026-03-17 12:15:28 [INFO] Epoch: [181] Step : [500/564] Loss: 0.0731
+2026-03-17 12:16:06 [INFO] Epoch: [181] Step : [564/564] Loss: 0.1151
+2026-03-17 12:18:21 [INFO] Epoch 181/300 | Train Loss: 0.0842 | Test Loss: 1.4733 | Acc: 0.9465 | Top-5: 0.9851 | F1(M): 0.7113 | Prec(M): 0.7059 | Rec(M): 0.7462 | Prec(W): 0.9584
+2026-03-17 12:18:21 [INFO] --> Best model saved with F1: 0.7113 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260317_0804.pth
+2026-03-17 12:18:38 [INFO] Epoch: [182] Step : [1/564] Loss: 0.0181
+2026-03-17 12:19:34 [INFO] Epoch: [182] Step : [100/564] Loss: 1.0255
+2026-03-17 12:20:30 [INFO] Epoch: [182] Step : [200/564] Loss: 0.0328
+2026-03-17 12:21:27 [INFO] Epoch: [182] Step : [300/564] Loss: 0.1528
+2026-03-17 12:22:23 [INFO] Epoch: [182] Step : [400/564] Loss: 0.1202
+2026-03-17 12:23:20 [INFO] Epoch: [182] Step : [500/564] Loss: 0.0480
+2026-03-17 12:23:57 [INFO] Epoch: [182] Step : [564/564] Loss: 0.0219
+2026-03-17 12:26:15 [INFO] Epoch 182/300 | Train Loss: 0.0810 | Test Loss: 1.4692 | Acc: 0.9422 | Top-5: 0.9846 | F1(M): 0.7075 | Prec(M): 0.7025 | Rec(M): 0.7443 | Prec(W): 0.9583
+2026-03-17 12:26:41 [INFO] Epoch: [183] Step : [1/564] Loss: 0.0650
+2026-03-17 12:27:37 [INFO] Epoch: [183] Step : [100/564] Loss: 0.1476
+2026-03-17 12:28:34 [INFO] Epoch: [183] Step : [200/564] Loss: 2.5220
+2026-03-17 12:29:30 [INFO] Epoch: [183] Step : [300/564] Loss: 0.0370
+2026-03-17 12:30:27 [INFO] Epoch: [183] Step : [400/564] Loss: 0.0410
+2026-03-17 12:31:23 [INFO] Epoch: [183] Step : [500/564] Loss: 1.5196
+2026-03-17 12:31:59 [INFO] Epoch: [183] Step : [564/564] Loss: 0.0387
+2026-03-17 12:34:38 [INFO] Epoch 183/300 | Train Loss: 0.0888 | Test Loss: 1.5119 | Acc: 0.9457 | Top-5: 0.9855 | F1(M): 0.7100 | Prec(M): 0.7067 | Rec(M): 0.7415 | Prec(W): 0.9581
+2026-03-17 12:35:00 [INFO] Epoch: [184] Step : [1/564] Loss: 0.3068
+2026-03-17 12:35:56 [INFO] Epoch: [184] Step : [100/564] Loss: 0.1927
+2026-03-17 12:36:51 [INFO] Epoch: [184] Step : [200/564] Loss: 0.0456
+2026-03-17 12:37:47 [INFO] Epoch: [184] Step : [300/564] Loss: 0.0648
+2026-03-17 12:38:43 [INFO] Epoch: [184] Step : [400/564] Loss: 0.0507
+2026-03-17 12:39:39 [INFO] Epoch: [184] Step : [500/564] Loss: 0.0572
+2026-03-17 12:40:14 [INFO] Epoch: [184] Step : [564/564] Loss: 0.0930
+2026-03-17 12:42:31 [INFO] Epoch 184/300 | Train Loss: 0.0850 | Test Loss: 1.5013 | Acc: 0.9452 | Top-5: 0.9846 | F1(M): 0.7098 | Prec(M): 0.7047 | Rec(M): 0.7448 | Prec(W): 0.9586
+2026-03-17 12:42:54 [INFO] Epoch: [185] Step : [1/564] Loss: 0.0440
+2026-03-17 12:43:51 [INFO] Epoch: [185] Step : [100/564] Loss: 0.0674
+2026-03-17 12:44:47 [INFO] Epoch: [185] Step : [200/564] Loss: 0.0861
+2026-03-17 12:45:44 [INFO] Epoch: [185] Step : [300/564] Loss: 1.5616
+2026-03-17 12:46:41 [INFO] Epoch: [185] Step : [400/564] Loss: 0.4839
+2026-03-17 12:47:38 [INFO] Epoch: [185] Step : [500/564] Loss: 1.9666
+2026-03-17 12:48:13 [INFO] Epoch: [185] Step : [564/564] Loss: 0.1566
+2026-03-17 12:50:19 [INFO] Epoch 185/300 | Train Loss: 0.0839 | Test Loss: 1.4971 | Acc: 0.9449 | Top-5: 0.9848 | F1(M): 0.7103 | Prec(M): 0.7044 | Rec(M): 0.7463 | Prec(W): 0.9590
+2026-03-17 12:50:42 [INFO] Epoch: [186] Step : [1/564] Loss: 0.0405
+2026-03-17 12:51:37 [INFO] Epoch: [186] Step : [100/564] Loss: 0.1036
+2026-03-17 12:52:35 [INFO] Epoch: [186] Step : [200/564] Loss: 0.1296
+2026-03-17 12:53:32 [INFO] Epoch: [186] Step : [300/564] Loss: 0.0665
+2026-03-17 12:54:28 [INFO] Epoch: [186] Step : [400/564] Loss: 0.0632
+2026-03-17 12:55:25 [INFO] Epoch: [186] Step : [500/564] Loss: 0.0547
+2026-03-17 12:56:00 [INFO] Epoch: [186] Step : [564/564] Loss: 0.2018
+2026-03-17 12:57:53 [INFO] Epoch 186/300 | Train Loss: 0.0801 | Test Loss: 1.4644 | Acc: 0.9442 | Top-5: 0.9855 | F1(M): 0.7081 | Prec(M): 0.7015 | Rec(M): 0.7430 | Prec(W): 0.9581
+2026-03-17 12:58:09 [INFO] Epoch: [187] Step : [1/564] Loss: 0.0369
+2026-03-17 12:59:04 [INFO] Epoch: [187] Step : [100/564] Loss: 0.3721
+2026-03-17 13:00:00 [INFO] Epoch: [187] Step : [200/564] Loss: 0.0407
+2026-03-17 13:00:56 [INFO] Epoch: [187] Step : [300/564] Loss: 0.0257
+2026-03-17 13:01:53 [INFO] Epoch: [187] Step : [400/564] Loss: 0.0561
+2026-03-17 13:02:50 [INFO] Epoch: [187] Step : [500/564] Loss: 0.0146
+2026-03-17 13:03:26 [INFO] Epoch: [187] Step : [564/564] Loss: 0.0292
+2026-03-17 13:05:17 [INFO] Epoch 187/300 | Train Loss: 0.0829 | Test Loss: 1.5002 | Acc: 0.9442 | Top-5: 0.9851 | F1(M): 0.7077 | Prec(M): 0.7038 | Rec(M): 0.7447 | Prec(W): 0.9584
+2026-03-17 13:05:33 [INFO] Epoch: [188] Step : [1/564] Loss: 0.0953
+2026-03-17 13:06:28 [INFO] Epoch: [188] Step : [100/564] Loss: 0.0315
+2026-03-17 13:07:25 [INFO] Epoch: [188] Step : [200/564] Loss: 0.3889
+2026-03-17 13:08:21 [INFO] Epoch: [188] Step : [300/564] Loss: 0.0151
+2026-03-17 13:09:17 [INFO] Epoch: [188] Step : [400/564] Loss: 0.0575
+2026-03-17 13:10:13 [INFO] Epoch: [188] Step : [500/564] Loss: 0.1501
+2026-03-17 13:10:49 [INFO] Epoch: [188] Step : [564/564] Loss: 0.0679
+2026-03-17 13:12:40 [INFO] Epoch 188/300 | Train Loss: 0.0922 | Test Loss: 1.4717 | Acc: 0.9458 | Top-5: 0.9849 | F1(M): 0.7086 | Prec(M): 0.7010 | Rec(M): 0.7461 | Prec(W): 0.9592
+2026-03-17 13:12:59 [INFO] Epoch: [189] Step : [1/564] Loss: 0.1656
+2026-03-17 13:13:55 [INFO] Epoch: [189] Step : [100/564] Loss: 0.0780
+2026-03-17 13:14:51 [INFO] Epoch: [189] Step : [200/564] Loss: 0.1206
+2026-03-17 13:15:47 [INFO] Epoch: [189] Step : [300/564] Loss: 0.0746
+2026-03-17 13:16:43 [INFO] Epoch: [189] Step : [400/564] Loss: 0.2246
+2026-03-17 13:17:39 [INFO] Epoch: [189] Step : [500/564] Loss: 0.0702
+2026-03-17 13:18:15 [INFO] Epoch: [189] Step : [564/564] Loss: 0.1055
+2026-03-17 13:20:07 [INFO] Epoch 189/300 | Train Loss: 0.0861 | Test Loss: 1.4851 | Acc: 0.9448 | Top-5: 0.9858 | F1(M): 0.7095 | Prec(M): 0.7020 | Rec(M): 0.7448 | Prec(W): 0.9578
+2026-03-17 13:20:26 [INFO] Epoch: [190] Step : [1/564] Loss: 0.0277
+2026-03-17 13:21:22 [INFO] Epoch: [190] Step : [100/564] Loss: 0.0320
+2026-03-17 13:22:17 [INFO] Epoch: [190] Step : [200/564] Loss: 0.1876
+2026-03-17 13:23:13 [INFO] Epoch: [190] Step : [300/564] Loss: 0.0612
+2026-03-17 13:24:09 [INFO] Epoch: [190] Step : [400/564] Loss: 0.0437
+2026-03-17 13:25:06 [INFO] Epoch: [190] Step : [500/564] Loss: 0.7443
+2026-03-17 13:25:41 [INFO] Epoch: [190] Step : [564/564] Loss: 1.9739
+2026-03-17 13:27:34 [INFO] Epoch 190/300 | Train Loss: 0.0827 | Test Loss: 1.4634 | Acc: 0.9443 | Top-5: 0.9853 | F1(M): 0.7156 | Prec(M): 0.7095 | Rec(M): 0.7489 | Prec(W): 0.9585
+2026-03-17 13:27:34 [INFO] --> Best model saved with F1: 0.7156 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260317_0804.pth
+2026-03-17 13:27:52 [INFO] Epoch: [191] Step : [1/564] Loss: 0.1850
+2026-03-17 13:28:49 [INFO] Epoch: [191] Step : [100/564] Loss: 0.0523
+2026-03-17 13:29:45 [INFO] Epoch: [191] Step : [200/564] Loss: 0.0656
+2026-03-17 13:30:40 [INFO] Epoch: [191] Step : [300/564] Loss: 0.0528
+2026-03-17 13:31:37 [INFO] Epoch: [191] Step : [400/564] Loss: 0.1164
+2026-03-17 13:32:33 [INFO] Epoch: [191] Step : [500/564] Loss: 0.0523
+2026-03-17 13:33:09 [INFO] Epoch: [191] Step : [564/564] Loss: 0.0209
+2026-03-17 13:35:01 [INFO] Epoch 191/300 | Train Loss: 0.0856 | Test Loss: 1.4591 | Acc: 0.9435 | Top-5: 0.9853 | F1(M): 0.7114 | Prec(M): 0.7064 | Rec(M): 0.7481 | Prec(W): 0.9584
+2026-03-17 13:35:21 [INFO] Epoch: [192] Step : [1/564] Loss: 0.7071
+2026-03-17 13:36:15 [INFO] Epoch: [192] Step : [100/564] Loss: 0.3978
+2026-03-17 13:37:13 [INFO] Epoch: [192] Step : [200/564] Loss: 0.2082
+2026-03-17 13:38:11 [INFO] Epoch: [192] Step : [300/564] Loss: 0.1864
+2026-03-17 13:39:09 [INFO] Epoch: [192] Step : [400/564] Loss: 0.1201
+2026-03-17 13:40:05 [INFO] Epoch: [192] Step : [500/564] Loss: 0.0242
+2026-03-17 13:40:41 [INFO] Epoch: [192] Step : [564/564] Loss: 0.0610
+2026-03-17 13:46:40 [INFO] Epoch 192/300 | Train Loss: 0.0798 | Test Loss: 1.5065 | Acc: 0.9445 | Top-5: 0.9851 | F1(M): 0.7118 | Prec(M): 0.7061 | Rec(M): 0.7460 | Prec(W): 0.9588
+2026-03-17 13:47:25 [INFO] Epoch: [193] Step : [1/564] Loss: 0.1697
+2026-03-17 13:48:21 [INFO] Epoch: [193] Step : [100/564] Loss: 0.0430
+2026-03-17 13:49:18 [INFO] Epoch: [193] Step : [200/564] Loss: 0.0559
+2026-03-17 13:50:15 [INFO] Epoch: [193] Step : [300/564] Loss: 0.2107
+2026-03-17 13:51:12 [INFO] Epoch: [193] Step : [400/564] Loss: 0.1342
+2026-03-17 13:52:09 [INFO] Epoch: [193] Step : [500/564] Loss: 0.0740
+2026-03-17 13:52:45 [INFO] Epoch: [193] Step : [564/564] Loss: 0.2012
+2026-03-17 13:55:45 [INFO] Epoch 193/300 | Train Loss: 0.0864 | Test Loss: 1.4756 | Acc: 0.9442 | Top-5: 0.9854 | F1(M): 0.7119 | Prec(M): 0.7062 | Rec(M): 0.7461 | Prec(W): 0.9574
+2026-03-17 13:56:01 [INFO] Epoch: [194] Step : [1/564] Loss: 0.0984
+2026-03-17 13:56:57 [INFO] Epoch: [194] Step : [100/564] Loss: 0.1300
+2026-03-17 13:57:55 [INFO] Epoch: [194] Step : [200/564] Loss: 0.2077
+2026-03-17 13:58:53 [INFO] Epoch: [194] Step : [300/564] Loss: 0.0735
+2026-03-17 13:59:50 [INFO] Epoch: [194] Step : [400/564] Loss: 0.1064
+2026-03-17 14:00:48 [INFO] Epoch: [194] Step : [500/564] Loss: 0.0579
+2026-03-17 14:01:23 [INFO] Epoch: [194] Step : [564/564] Loss: 0.6118
+2026-03-17 14:04:07 [INFO] Epoch 194/300 | Train Loss: 0.0857 | Test Loss: 1.4584 | Acc: 0.9480 | Top-5: 0.9858 | F1(M): 0.7146 | Prec(M): 0.7133 | Rec(M): 0.7447 | Prec(W): 0.9594
+2026-03-17 14:04:33 [INFO] Epoch: [195] Step : [1/564] Loss: 0.0345
+2026-03-17 14:05:31 [INFO] Epoch: [195] Step : [100/564] Loss: 0.1943
+2026-03-17 14:06:28 [INFO] Epoch: [195] Step : [200/564] Loss: 3.7318
+2026-03-17 14:07:25 [INFO] Epoch: [195] Step : [300/564] Loss: 0.0450
+2026-03-17 14:08:23 [INFO] Epoch: [195] Step : [400/564] Loss: 0.0559
+2026-03-17 14:09:21 [INFO] Epoch: [195] Step : [500/564] Loss: 0.0824
+2026-03-17 14:09:56 [INFO] Epoch: [195] Step : [564/564] Loss: 0.1053
+2026-03-17 14:12:40 [INFO] Epoch 195/300 | Train Loss: 0.0866 | Test Loss: 1.5030 | Acc: 0.9442 | Top-5: 0.9855 | F1(M): 0.7128 | Prec(M): 0.7068 | Rec(M): 0.7478 | Prec(W): 0.9587
+2026-03-17 14:12:56 [INFO] Epoch: [196] Step : [1/564] Loss: 0.0711
+2026-03-17 14:13:53 [INFO] Epoch: [196] Step : [100/564] Loss: 0.0811
+2026-03-17 14:14:50 [INFO] Epoch: [196] Step : [200/564] Loss: 0.5189
+2026-03-17 14:15:47 [INFO] Epoch: [196] Step : [300/564] Loss: 1.0525
+2026-03-17 14:16:44 [INFO] Epoch: [196] Step : [400/564] Loss: 0.0608
+2026-03-17 14:17:42 [INFO] Epoch: [196] Step : [500/564] Loss: 0.1859
+2026-03-17 14:18:18 [INFO] Epoch: [196] Step : [564/564] Loss: 0.0137
+2026-03-17 14:20:42 [INFO] Epoch 196/300 | Train Loss: 0.0873 | Test Loss: 1.4547 | Acc: 0.9458 | Top-5: 0.9854 | F1(M): 0.7125 | Prec(M): 0.7079 | Rec(M): 0.7440 | Prec(W): 0.9584
+2026-03-17 14:20:58 [INFO] Epoch: [197] Step : [1/564] Loss: 0.1350
+2026-03-17 14:21:55 [INFO] Epoch: [197] Step : [100/564] Loss: 0.0673
+2026-03-17 14:22:53 [INFO] Epoch: [197] Step : [200/564] Loss: 0.0390
+2026-03-17 14:23:51 [INFO] Epoch: [197] Step : [300/564] Loss: 0.0539
+2026-03-17 14:24:48 [INFO] Epoch: [197] Step : [400/564] Loss: 0.1102
+2026-03-17 14:25:46 [INFO] Epoch: [197] Step : [500/564] Loss: 0.0562
+2026-03-17 14:26:21 [INFO] Epoch: [197] Step : [564/564] Loss: 0.2193
+2026-03-17 14:28:23 [INFO] Epoch 197/300 | Train Loss: 0.0854 | Test Loss: 1.4512 | Acc: 0.9472 | Top-5: 0.9853 | F1(M): 0.7166 | Prec(M): 0.7137 | Rec(M): 0.7480 | Prec(W): 0.9592
+2026-03-17 14:28:23 [INFO] --> Best model saved with F1: 0.7166 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260317_0804.pth
+2026-03-17 14:28:39 [INFO] Epoch: [198] Step : [1/564] Loss: 0.0993
+2026-03-17 14:29:36 [INFO] Epoch: [198] Step : [100/564] Loss: 0.1511
+2026-03-17 14:30:33 [INFO] Epoch: [198] Step : [200/564] Loss: 0.0943
+2026-03-17 14:31:31 [INFO] Epoch: [198] Step : [300/564] Loss: 0.0718
+2026-03-17 14:32:28 [INFO] Epoch: [198] Step : [400/564] Loss: 0.1230
+2026-03-17 14:33:25 [INFO] Epoch: [198] Step : [500/564] Loss: 0.0906
+2026-03-17 14:34:00 [INFO] Epoch: [198] Step : [564/564] Loss: 0.0341
+2026-03-17 14:36:07 [INFO] Epoch 198/300 | Train Loss: 0.0815 | Test Loss: 1.4922 | Acc: 0.9446 | Top-5: 0.9851 | F1(M): 0.7104 | Prec(M): 0.7055 | Rec(M): 0.7430 | Prec(W): 0.9582
+2026-03-17 14:36:25 [INFO] Epoch: [199] Step : [1/564] Loss: 0.1121
+2026-03-17 14:37:22 [INFO] Epoch: [199] Step : [100/564] Loss: 0.4654
+2026-03-17 14:38:19 [INFO] Epoch: [199] Step : [200/564] Loss: 0.1068
+2026-03-17 14:39:17 [INFO] Epoch: [199] Step : [300/564] Loss: 0.1982
+2026-03-17 14:40:15 [INFO] Epoch: [199] Step : [400/564] Loss: 0.1436
+2026-03-17 14:41:12 [INFO] Epoch: [199] Step : [500/564] Loss: 0.0426
+2026-03-17 14:41:48 [INFO] Epoch: [199] Step : [564/564] Loss: 7.0998
+2026-03-17 14:43:52 [INFO] Epoch 199/300 | Train Loss: 0.0817 | Test Loss: 1.4437 | Acc: 0.9470 | Top-5: 0.9859 | F1(M): 0.7135 | Prec(M): 0.7121 | Rec(M): 0.7430 | Prec(W): 0.9597
+2026-03-17 14:44:09 [INFO] Epoch: [200] Step : [1/564] Loss: 0.0709
+2026-03-17 14:45:06 [INFO] Epoch: [200] Step : [100/564] Loss: 0.1174
+2026-03-17 14:46:04 [INFO] Epoch: [200] Step : [200/564] Loss: 0.1234
+2026-03-17 14:47:01 [INFO] Epoch: [200] Step : [300/564] Loss: 0.1662
+2026-03-17 14:47:59 [INFO] Epoch: [200] Step : [400/564] Loss: 0.0320
+2026-03-17 14:48:56 [INFO] Epoch: [200] Step : [500/564] Loss: 0.0242
+2026-03-17 14:49:33 [INFO] Epoch: [200] Step : [564/564] Loss: 0.1713
+2026-03-17 14:51:29 [INFO] Epoch 200/300 | Train Loss: 0.0844 | Test Loss: 1.4627 | Acc: 0.9440 | Top-5: 0.9853 | F1(M): 0.7092 | Prec(M): 0.7040 | Rec(M): 0.7436 | Prec(W): 0.9579
+2026-03-17 14:51:45 [INFO] Epoch: [201] Step : [1/564] Loss: 0.0441
+2026-03-17 14:52:42 [INFO] Epoch: [201] Step : [100/564] Loss: 0.0687
+2026-03-17 14:53:39 [INFO] Epoch: [201] Step : [200/564] Loss: 0.0967
+2026-03-17 14:54:36 [INFO] Epoch: [201] Step : [300/564] Loss: 0.0453
+2026-03-17 14:55:33 [INFO] Epoch: [201] Step : [400/564] Loss: 0.0366
+2026-03-17 14:56:31 [INFO] Epoch: [201] Step : [500/564] Loss: 0.0379
+2026-03-17 14:57:08 [INFO] Epoch: [201] Step : [564/564] Loss: 0.0324
+2026-03-17 14:58:59 [INFO] Epoch 201/300 | Train Loss: 0.0846 | Test Loss: 1.4799 | Acc: 0.9446 | Top-5: 0.9854 | F1(M): 0.7101 | Prec(M): 0.7035 | Rec(M): 0.7444 | Prec(W): 0.9574
+2026-03-17 14:59:18 [INFO] Epoch: [202] Step : [1/564] Loss: 0.0461
+2026-03-17 15:00:15 [INFO] Epoch: [202] Step : [100/564] Loss: 0.0730
+2026-03-17 15:01:12 [INFO] Epoch: [202] Step : [200/564] Loss: 0.1174
+2026-03-17 15:02:09 [INFO] Epoch: [202] Step : [300/564] Loss: 0.1009
+2026-03-17 15:03:06 [INFO] Epoch: [202] Step : [400/564] Loss: 0.0364
+2026-03-17 15:04:04 [INFO] Epoch: [202] Step : [500/564] Loss: 0.0290
+2026-03-17 15:04:39 [INFO] Epoch: [202] Step : [564/564] Loss: 0.9353
+2026-03-17 15:06:33 [INFO] Epoch 202/300 | Train Loss: 0.0875 | Test Loss: 1.4809 | Acc: 0.9465 | Top-5: 0.9853 | F1(M): 0.7108 | Prec(M): 0.7072 | Rec(M): 0.7419 | Prec(W): 0.9584
+2026-03-17 15:06:49 [INFO] Epoch: [203] Step : [1/564] Loss: 0.0337
+2026-03-17 15:07:46 [INFO] Epoch: [203] Step : [100/564] Loss: 0.8930
+2026-03-17 15:08:43 [INFO] Epoch: [203] Step : [200/564] Loss: 0.0462
+2026-03-17 15:09:40 [INFO] Epoch: [203] Step : [300/564] Loss: 0.1604
+2026-03-17 15:10:37 [INFO] Epoch: [203] Step : [400/564] Loss: 0.2494
+2026-03-17 15:11:34 [INFO] Epoch: [203] Step : [500/564] Loss: 0.2205
+2026-03-17 15:12:11 [INFO] Epoch: [203] Step : [564/564] Loss: 0.6913
+2026-03-17 15:14:20 [INFO] Epoch 203/300 | Train Loss: 0.0819 | Test Loss: 1.4748 | Acc: 0.9475 | Top-5: 0.9855 | F1(M): 0.7134 | Prec(M): 0.7087 | Rec(M): 0.7460 | Prec(W): 0.9594
+2026-03-17 15:14:36 [INFO] Epoch: [204] Step : [1/564] Loss: 0.1017
+2026-03-17 15:15:33 [INFO] Epoch: [204] Step : [100/564] Loss: 0.0184
+2026-03-17 15:16:30 [INFO] Epoch: [204] Step : [200/564] Loss: 0.0321
+2026-03-17 15:17:26 [INFO] Epoch: [204] Step : [300/564] Loss: 0.0753
+2026-03-17 15:18:24 [INFO] Epoch: [204] Step : [400/564] Loss: 0.0719
+2026-03-17 15:19:21 [INFO] Epoch: [204] Step : [500/564] Loss: 0.0222
+2026-03-17 15:19:56 [INFO] Epoch: [204] Step : [564/564] Loss: 0.4228
+2026-03-17 15:21:50 [INFO] Epoch 204/300 | Train Loss: 0.0830 | Test Loss: 1.4849 | Acc: 0.9468 | Top-5: 0.9850 | F1(M): 0.7132 | Prec(M): 0.7086 | Rec(M): 0.7461 | Prec(W): 0.9587
+2026-03-17 15:22:26 [INFO] Epoch: [205] Step : [1/564] Loss: 0.0315
+2026-03-17 15:23:23 [INFO] Epoch: [205] Step : [100/564] Loss: 0.0905
+2026-03-17 15:24:21 [INFO] Epoch: [205] Step : [200/564] Loss: 0.2091
+2026-03-17 15:25:19 [INFO] Epoch: [205] Step : [300/564] Loss: 0.0283
+2026-03-17 15:26:16 [INFO] Epoch: [205] Step : [400/564] Loss: 0.3565
+2026-03-17 15:27:13 [INFO] Epoch: [205] Step : [500/564] Loss: 0.2032
+2026-03-17 15:27:49 [INFO] Epoch: [205] Step : [564/564] Loss: 0.1318
+2026-03-17 15:29:40 [INFO] Epoch 205/300 | Train Loss: 0.0837 | Test Loss: 1.4949 | Acc: 0.9438 | Top-5: 0.9851 | F1(M): 0.7086 | Prec(M): 0.7042 | Rec(M): 0.7420 | Prec(W): 0.9579
+2026-03-17 15:29:57 [INFO] Epoch: [206] Step : [1/564] Loss: 0.0363
+2026-03-17 15:30:53 [INFO] Epoch: [206] Step : [100/564] Loss: 0.0573
+2026-03-17 15:31:50 [INFO] Epoch: [206] Step : [200/564] Loss: 0.0959
+2026-03-17 15:32:47 [INFO] Epoch: [206] Step : [300/564] Loss: 0.3325
+2026-03-17 15:33:43 [INFO] Epoch: [206] Step : [400/564] Loss: 0.1921
+2026-03-17 15:34:40 [INFO] Epoch: [206] Step : [500/564] Loss: 0.8274
+2026-03-17 15:35:17 [INFO] Epoch: [206] Step : [564/564] Loss: 0.0231
+2026-03-17 15:37:09 [INFO] Epoch 206/300 | Train Loss: 0.0914 | Test Loss: 1.5068 | Acc: 0.9426 | Top-5: 0.9842 | F1(M): 0.7070 | Prec(M): 0.6991 | Rec(M): 0.7453 | Prec(W): 0.9573
+2026-03-17 15:37:25 [INFO] Epoch: [207] Step : [1/564] Loss: 0.0517
+2026-03-17 15:38:22 [INFO] Epoch: [207] Step : [100/564] Loss: 0.3938
+2026-03-17 15:39:19 [INFO] Epoch: [207] Step : [200/564] Loss: 0.0653
+2026-03-17 15:40:17 [INFO] Epoch: [207] Step : [300/564] Loss: 0.0252
+2026-03-17 15:41:14 [INFO] Epoch: [207] Step : [400/564] Loss: 0.0667
+2026-03-17 15:42:13 [INFO] Epoch: [207] Step : [500/564] Loss: 0.2424
+2026-03-17 15:42:48 [INFO] Epoch: [207] Step : [564/564] Loss: 0.0455
+2026-03-17 15:44:41 [INFO] Epoch 207/300 | Train Loss: 0.0835 | Test Loss: 1.4533 | Acc: 0.9478 | Top-5: 0.9851 | F1(M): 0.7138 | Prec(M): 0.7079 | Rec(M): 0.7486 | Prec(W): 0.9598
+2026-03-17 15:45:07 [INFO] Epoch: [208] Step : [1/564] Loss: 0.0674
+2026-03-17 15:46:03 [INFO] Epoch: [208] Step : [100/564] Loss: 0.0148
+2026-03-17 15:47:00 [INFO] Epoch: [208] Step : [200/564] Loss: 0.0898
+2026-03-17 15:47:58 [INFO] Epoch: [208] Step : [300/564] Loss: 0.1097
+2026-03-17 15:48:55 [INFO] Epoch: [208] Step : [400/564] Loss: 0.1035
+2026-03-17 15:49:51 [INFO] Epoch: [208] Step : [500/564] Loss: 0.2352
+2026-03-17 15:50:27 [INFO] Epoch: [208] Step : [564/564] Loss: 0.0190
+2026-03-17 15:52:21 [INFO] Epoch 208/300 | Train Loss: 0.0897 | Test Loss: 1.5118 | Acc: 0.9469 | Top-5: 0.9855 | F1(M): 0.7114 | Prec(M): 0.7077 | Rec(M): 0.7445 | Prec(W): 0.9592
+2026-03-17 15:52:46 [INFO] Epoch: [209] Step : [1/564] Loss: 0.1186
+2026-03-17 15:53:42 [INFO] Epoch: [209] Step : [100/564] Loss: 0.0412
+2026-03-17 15:54:39 [INFO] Epoch: [209] Step : [200/564] Loss: 0.2758
+2026-03-17 15:55:36 [INFO] Epoch: [209] Step : [300/564] Loss: 0.0308
+2026-03-17 15:56:32 [INFO] Epoch: [209] Step : [400/564] Loss: 0.0933
+2026-03-17 15:57:29 [INFO] Epoch: [209] Step : [500/564] Loss: 0.0277
+2026-03-17 15:58:05 [INFO] Epoch: [209] Step : [564/564] Loss: 0.1590
+2026-03-17 15:59:57 [INFO] Epoch 209/300 | Train Loss: 0.0828 | Test Loss: 1.4382 | Acc: 0.9490 | Top-5: 0.9859 | F1(M): 0.7127 | Prec(M): 0.7091 | Rec(M): 0.7447 | Prec(W): 0.9586
+2026-03-17 16:00:13 [INFO] Epoch: [210] Step : [1/564] Loss: 0.0884
+2026-03-17 16:01:11 [INFO] Epoch: [210] Step : [100/564] Loss: 0.1880
+2026-03-17 16:02:08 [INFO] Epoch: [210] Step : [200/564] Loss: 0.0444
+2026-03-17 16:03:05 [INFO] Epoch: [210] Step : [300/564] Loss: 0.0269
+2026-03-17 16:04:02 [INFO] Epoch: [210] Step : [400/564] Loss: 0.1286
+2026-03-17 16:04:57 [INFO] Epoch: [210] Step : [500/564] Loss: 0.0811
+2026-03-17 16:05:34 [INFO] Epoch: [210] Step : [564/564] Loss: 0.2839
+2026-03-17 16:08:47 [INFO] Epoch 210/300 | Train Loss: 0.0856 | Test Loss: 1.4673 | Acc: 0.9464 | Top-5: 0.9852 | F1(M): 0.7105 | Prec(M): 0.7050 | Rec(M): 0.7430 | Prec(W): 0.9579
+2026-03-17 16:09:03 [INFO] Epoch: [211] Step : [1/564] Loss: 0.0673
+2026-03-17 16:10:00 [INFO] Epoch: [211] Step : [100/564] Loss: 0.1835
+2026-03-17 16:10:58 [INFO] Epoch: [211] Step : [200/564] Loss: 0.0461
+2026-03-17 16:11:54 [INFO] Epoch: [211] Step : [300/564] Loss: 1.6208
+2026-03-17 16:12:51 [INFO] Epoch: [211] Step : [400/564] Loss: 0.3578
+2026-03-17 16:13:48 [INFO] Epoch: [211] Step : [500/564] Loss: 0.2606
+2026-03-17 16:14:24 [INFO] Epoch: [211] Step : [564/564] Loss: 0.0309
+2026-03-17 16:16:16 [INFO] Epoch 211/300 | Train Loss: 0.0857 | Test Loss: 1.4866 | Acc: 0.9468 | Top-5: 0.9856 | F1(M): 0.7095 | Prec(M): 0.7042 | Rec(M): 0.7431 | Prec(W): 0.9586
+2026-03-17 16:16:32 [INFO] Epoch: [212] Step : [1/564] Loss: 0.1402
+2026-03-17 16:17:29 [INFO] Epoch: [212] Step : [100/564] Loss: 0.0873
+2026-03-17 16:18:26 [INFO] Epoch: [212] Step : [200/564] Loss: 0.1350
+2026-03-17 16:19:24 [INFO] Epoch: [212] Step : [300/564] Loss: 0.1590
+2026-03-17 16:20:22 [INFO] Epoch: [212] Step : [400/564] Loss: 0.1225
+2026-03-17 16:21:19 [INFO] Epoch: [212] Step : [500/564] Loss: 0.0719
+2026-03-17 16:21:54 [INFO] Epoch: [212] Step : [564/564] Loss: 0.0549
+2026-03-17 16:23:48 [INFO] Epoch 212/300 | Train Loss: 0.0836 | Test Loss: 1.4684 | Acc: 0.9471 | Top-5: 0.9856 | F1(M): 0.7123 | Prec(M): 0.7087 | Rec(M): 0.7452 | Prec(W): 0.9596
+2026-03-17 16:24:04 [INFO] Epoch: [213] Step : [1/564] Loss: 2.1279
+2026-03-17 16:25:01 [INFO] Epoch: [213] Step : [100/564] Loss: 0.6175
+2026-03-17 16:25:58 [INFO] Epoch: [213] Step : [200/564] Loss: 0.0507
+2026-03-17 16:26:56 [INFO] Epoch: [213] Step : [300/564] Loss: 0.0588
+2026-03-17 16:27:54 [INFO] Epoch: [213] Step : [400/564] Loss: 0.0355
+2026-03-17 16:28:51 [INFO] Epoch: [213] Step : [500/564] Loss: 0.0841
+2026-03-17 16:29:27 [INFO] Epoch: [213] Step : [564/564] Loss: 0.0963
+2026-03-17 16:31:35 [INFO] Epoch 213/300 | Train Loss: 0.0809 | Test Loss: 1.4760 | Acc: 0.9487 | Top-5: 0.9860 | F1(M): 0.7168 | Prec(M): 0.7127 | Rec(M): 0.7467 | Prec(W): 0.9588
+2026-03-17 16:31:36 [INFO] --> Best model saved with F1: 0.7168 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260317_0804.pth
+2026-03-17 16:31:52 [INFO] Epoch: [214] Step : [1/564] Loss: 0.0790
+2026-03-17 16:32:48 [INFO] Epoch: [214] Step : [100/564] Loss: 0.0527
+2026-03-17 16:33:45 [INFO] Epoch: [214] Step : [200/564] Loss: 0.0363
+2026-03-17 16:34:42 [INFO] Epoch: [214] Step : [300/564] Loss: 0.0876
+2026-03-17 16:35:39 [INFO] Epoch: [214] Step : [400/564] Loss: 0.1969
+2026-03-17 16:36:36 [INFO] Epoch: [214] Step : [500/564] Loss: 0.4471
+2026-03-17 16:37:13 [INFO] Epoch: [214] Step : [564/564] Loss: 0.0806
+2026-03-17 16:39:06 [INFO] Epoch 214/300 | Train Loss: 0.0887 | Test Loss: 1.4665 | Acc: 0.9468 | Top-5: 0.9857 | F1(M): 0.7138 | Prec(M): 0.7073 | Rec(M): 0.7482 | Prec(W): 0.9594
+2026-03-17 16:39:22 [INFO] Epoch: [215] Step : [1/564] Loss: 0.1714
+2026-03-17 16:40:18 [INFO] Epoch: [215] Step : [100/564] Loss: 0.0238
+2026-03-17 16:41:16 [INFO] Epoch: [215] Step : [200/564] Loss: 0.0825
+2026-03-17 16:42:12 [INFO] Epoch: [215] Step : [300/564] Loss: 0.4180
+2026-03-17 16:43:11 [INFO] Epoch: [215] Step : [400/564] Loss: 0.0283
+2026-03-17 16:44:09 [INFO] Epoch: [215] Step : [500/564] Loss: 0.0804
+2026-03-17 16:44:45 [INFO] Epoch: [215] Step : [564/564] Loss: 0.3401
+2026-03-17 16:46:39 [INFO] Epoch 215/300 | Train Loss: 0.0790 | Test Loss: 1.5297 | Acc: 0.9474 | Top-5: 0.9855 | F1(M): 0.7110 | Prec(M): 0.7046 | Rec(M): 0.7454 | Prec(W): 0.9587
+2026-03-17 16:46:56 [INFO] Epoch: [216] Step : [1/564] Loss: 0.1326
+2026-03-17 16:47:53 [INFO] Epoch: [216] Step : [100/564] Loss: 0.0246
+2026-03-17 16:48:50 [INFO] Epoch: [216] Step : [200/564] Loss: 0.0485
+2026-03-17 16:49:47 [INFO] Epoch: [216] Step : [300/564] Loss: 0.0406
+2026-03-17 16:50:44 [INFO] Epoch: [216] Step : [400/564] Loss: 0.1548
+2026-03-17 16:51:41 [INFO] Epoch: [216] Step : [500/564] Loss: 0.0784
+2026-03-17 16:52:17 [INFO] Epoch: [216] Step : [564/564] Loss: 0.0615
+2026-03-17 16:54:27 [INFO] Epoch 216/300 | Train Loss: 0.0805 | Test Loss: 1.4845 | Acc: 0.9470 | Top-5: 0.9854 | F1(M): 0.7121 | Prec(M): 0.7079 | Rec(M): 0.7462 | Prec(W): 0.9596
+2026-03-17 16:54:44 [INFO] Epoch: [217] Step : [1/564] Loss: 0.0386
+2026-03-17 16:55:41 [INFO] Epoch: [217] Step : [100/564] Loss: 0.1063
+2026-03-17 16:56:38 [INFO] Epoch: [217] Step : [200/564] Loss: 0.5479
+2026-03-17 16:57:36 [INFO] Epoch: [217] Step : [300/564] Loss: 0.0264
+2026-03-17 16:58:32 [INFO] Epoch: [217] Step : [400/564] Loss: 0.1389
+2026-03-17 16:59:30 [INFO] Epoch: [217] Step : [500/564] Loss: 0.2134
+2026-03-17 17:00:07 [INFO] Epoch: [217] Step : [564/564] Loss: 0.2296
+2026-03-17 17:02:12 [INFO] Epoch 217/300 | Train Loss: 0.0897 | Test Loss: 1.4772 | Acc: 0.9472 | Top-5: 0.9854 | F1(M): 0.7129 | Prec(M): 0.7069 | Rec(M): 0.7463 | Prec(W): 0.9591
+2026-03-17 17:02:28 [INFO] Epoch: [218] Step : [1/564] Loss: 0.0229
+2026-03-17 17:03:23 [INFO] Epoch: [218] Step : [100/564] Loss: 0.4603
+2026-03-17 17:04:21 [INFO] Epoch: [218] Step : [200/564] Loss: 0.0638
+2026-03-17 17:05:17 [INFO] Epoch: [218] Step : [300/564] Loss: 0.0581
+2026-03-17 17:06:14 [INFO] Epoch: [218] Step : [400/564] Loss: 0.0455
+2026-03-17 17:07:11 [INFO] Epoch: [218] Step : [500/564] Loss: 0.0678
+2026-03-17 17:07:48 [INFO] Epoch: [218] Step : [564/564] Loss: 0.3668
+2026-03-17 17:09:56 [INFO] Epoch 218/300 | Train Loss: 0.0851 | Test Loss: 1.4729 | Acc: 0.9483 | Top-5: 0.9861 | F1(M): 0.7143 | Prec(M): 0.7095 | Rec(M): 0.7461 | Prec(W): 0.9596
+2026-03-17 17:10:12 [INFO] Epoch: [219] Step : [1/564] Loss: 0.0175
+2026-03-17 17:11:09 [INFO] Epoch: [219] Step : [100/564] Loss: 0.0400
+2026-03-17 17:12:06 [INFO] Epoch: [219] Step : [200/564] Loss: 0.1172
+2026-03-17 17:13:03 [INFO] Epoch: [219] Step : [300/564] Loss: 0.0409
+2026-03-17 17:14:00 [INFO] Epoch: [219] Step : [400/564] Loss: 0.0354
+2026-03-17 17:14:57 [INFO] Epoch: [219] Step : [500/564] Loss: 0.0614
+2026-03-17 17:15:34 [INFO] Epoch: [219] Step : [564/564] Loss: 0.2318
+2026-03-17 17:17:30 [INFO] Epoch 219/300 | Train Loss: 0.0743 | Test Loss: 1.4555 | Acc: 0.9485 | Top-5: 0.9857 | F1(M): 0.7137 | Prec(M): 0.7105 | Rec(M): 0.7449 | Prec(W): 0.9591
+2026-03-17 17:17:47 [INFO] Epoch: [220] Step : [1/564] Loss: 0.0379
+2026-03-17 17:18:44 [INFO] Epoch: [220] Step : [100/564] Loss: 0.0588
+2026-03-17 17:19:40 [INFO] Epoch: [220] Step : [200/564] Loss: 0.0460
+2026-03-17 17:20:37 [INFO] Epoch: [220] Step : [300/564] Loss: 0.0710
+2026-03-17 17:21:34 [INFO] Epoch: [220] Step : [400/564] Loss: 0.4077
+2026-03-17 17:22:31 [INFO] Epoch: [220] Step : [500/564] Loss: 0.0777
+2026-03-17 17:23:07 [INFO] Epoch: [220] Step : [564/564] Loss: 0.1708
+2026-03-17 17:24:59 [INFO] Epoch 220/300 | Train Loss: 0.0812 | Test Loss: 1.4703 | Acc: 0.9456 | Top-5: 0.9852 | F1(M): 0.7086 | Prec(M): 0.7034 | Rec(M): 0.7429 | Prec(W): 0.9588
+2026-03-17 17:25:15 [INFO] Epoch: [221] Step : [1/564] Loss: 0.0177
+2026-03-17 17:26:12 [INFO] Epoch: [221] Step : [100/564] Loss: 0.0958
+2026-03-17 17:27:09 [INFO] Epoch: [221] Step : [200/564] Loss: 0.0532
+2026-03-17 17:28:06 [INFO] Epoch: [221] Step : [300/564] Loss: 0.0417
+2026-03-17 17:29:03 [INFO] Epoch: [221] Step : [400/564] Loss: 0.0461
+2026-03-17 17:30:02 [INFO] Epoch: [221] Step : [500/564] Loss: 0.1194
+2026-03-17 17:30:37 [INFO] Epoch: [221] Step : [564/564] Loss: 0.0465
+2026-03-17 17:32:28 [INFO] Epoch 221/300 | Train Loss: 0.0660 | Test Loss: 1.4674 | Acc: 0.9498 | Top-5: 0.9865 | F1(M): 0.7201 | Prec(M): 0.7160 | Rec(M): 0.7501 | Prec(W): 0.9608
+2026-03-17 17:32:28 [INFO] --> Best model saved with F1: 0.7201 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260317_0804.pth
+2026-03-17 17:32:46 [INFO] Epoch: [222] Step : [1/564] Loss: 0.0460
+2026-03-17 17:33:44 [INFO] Epoch: [222] Step : [100/564] Loss: 0.1122
+2026-03-17 17:34:42 [INFO] Epoch: [222] Step : [200/564] Loss: 0.0703
+2026-03-17 17:35:39 [INFO] Epoch: [222] Step : [300/564] Loss: 0.0442
+2026-03-17 17:36:36 [INFO] Epoch: [222] Step : [400/564] Loss: 0.0549
+2026-03-17 17:37:33 [INFO] Epoch: [222] Step : [500/564] Loss: 0.2821
+2026-03-17 17:38:10 [INFO] Epoch: [222] Step : [564/564] Loss: 0.0135
+2026-03-17 17:40:02 [INFO] Epoch 222/300 | Train Loss: 0.0661 | Test Loss: 1.4568 | Acc: 0.9493 | Top-5: 0.9869 | F1(M): 0.7191 | Prec(M): 0.7157 | Rec(M): 0.7472 | Prec(W): 0.9604
+2026-03-17 17:40:18 [INFO] Epoch: [223] Step : [1/564] Loss: 0.0566
+2026-03-17 17:41:16 [INFO] Epoch: [223] Step : [100/564] Loss: 0.0314
+2026-03-17 17:42:14 [INFO] Epoch: [223] Step : [200/564] Loss: 0.0632
+2026-03-17 17:43:11 [INFO] Epoch: [223] Step : [300/564] Loss: 0.0413
+2026-03-17 17:44:08 [INFO] Epoch: [223] Step : [400/564] Loss: 0.0535
+2026-03-17 17:45:05 [INFO] Epoch: [223] Step : [500/564] Loss: 0.0505
+2026-03-17 17:45:40 [INFO] Epoch: [223] Step : [564/564] Loss: 0.0286
+2026-03-17 17:47:33 [INFO] Epoch 223/300 | Train Loss: 0.0617 | Test Loss: 1.4748 | Acc: 0.9511 | Top-5: 0.9866 | F1(M): 0.7186 | Prec(M): 0.7155 | Rec(M): 0.7470 | Prec(W): 0.9608
+2026-03-17 17:47:50 [INFO] Epoch: [224] Step : [1/564] Loss: 0.0379
+2026-03-17 17:48:45 [INFO] Epoch: [224] Step : [100/564] Loss: 4.5157
+2026-03-17 17:49:43 [INFO] Epoch: [224] Step : [200/564] Loss: 0.0396
+2026-03-17 17:50:40 [INFO] Epoch: [224] Step : [300/564] Loss: 0.1257
+2026-03-17 17:51:37 [INFO] Epoch: [224] Step : [400/564] Loss: 0.0407
+2026-03-17 17:52:34 [INFO] Epoch: [224] Step : [500/564] Loss: 0.1191
+2026-03-17 17:53:09 [INFO] Epoch: [224] Step : [564/564] Loss: 0.1965
+2026-03-17 17:55:04 [INFO] Epoch 224/300 | Train Loss: 0.0633 | Test Loss: 1.4565 | Acc: 0.9543 | Top-5: 0.9867 | F1(M): 0.7203 | Prec(M): 0.7178 | Rec(M): 0.7463 | Prec(W): 0.9617
+2026-03-17 17:55:04 [INFO] --> Best model saved with F1: 0.7203 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260317_0804.pth
+2026-03-17 17:55:20 [INFO] Epoch: [225] Step : [1/564] Loss: 0.1226
+2026-03-17 17:56:17 [INFO] Epoch: [225] Step : [100/564] Loss: 0.0544
+2026-03-17 17:57:14 [INFO] Epoch: [225] Step : [200/564] Loss: 0.1204
+2026-03-17 17:58:11 [INFO] Epoch: [225] Step : [300/564] Loss: 0.0393
+2026-03-17 17:59:07 [INFO] Epoch: [225] Step : [400/564] Loss: 0.1285
+2026-03-17 18:00:03 [INFO] Epoch: [225] Step : [500/564] Loss: 0.0720
+2026-03-17 18:00:40 [INFO] Epoch: [225] Step : [564/564] Loss: 0.3709
+2026-03-17 18:03:03 [INFO] Epoch 225/300 | Train Loss: 0.0636 | Test Loss: 1.4548 | Acc: 0.9531 | Top-5: 0.9869 | F1(M): 0.7220 | Prec(M): 0.7189 | Rec(M): 0.7482 | Prec(W): 0.9612
+2026-03-17 18:03:03 [INFO] --> Best model saved with F1: 0.7220 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260317_0804.pth
+2026-03-17 18:03:20 [INFO] Epoch: [226] Step : [1/564] Loss: 0.0605
+2026-03-17 18:04:17 [INFO] Epoch: [226] Step : [100/564] Loss: 0.1161
+2026-03-17 18:05:14 [INFO] Epoch: [226] Step : [200/564] Loss: 0.1987
+2026-03-17 18:06:10 [INFO] Epoch: [226] Step : [300/564] Loss: 0.0398
+2026-03-17 18:07:07 [INFO] Epoch: [226] Step : [400/564] Loss: 0.0168
+2026-03-17 18:08:04 [INFO] Epoch: [226] Step : [500/564] Loss: 0.3555
+2026-03-17 18:08:39 [INFO] Epoch: [226] Step : [564/564] Loss: 0.0460
+2026-03-17 18:10:34 [INFO] Epoch 226/300 | Train Loss: 0.0616 | Test Loss: 1.4857 | Acc: 0.9514 | Top-5: 0.9862 | F1(M): 0.7214 | Prec(M): 0.7187 | Rec(M): 0.7487 | Prec(W): 0.9605
+2026-03-17 18:10:51 [INFO] Epoch: [227] Step : [1/564] Loss: 0.0824
+2026-03-17 18:11:48 [INFO] Epoch: [227] Step : [100/564] Loss: 0.1089
+2026-03-17 18:12:44 [INFO] Epoch: [227] Step : [200/564] Loss: 0.1408
+2026-03-17 18:13:41 [INFO] Epoch: [227] Step : [300/564] Loss: 0.0975
+2026-03-17 18:14:39 [INFO] Epoch: [227] Step : [400/564] Loss: 0.0477
+2026-03-17 18:15:36 [INFO] Epoch: [227] Step : [500/564] Loss: 0.0463
+2026-03-17 18:16:13 [INFO] Epoch: [227] Step : [564/564] Loss: 0.0690
+2026-03-17 18:18:26 [INFO] Epoch 227/300 | Train Loss: 0.0613 | Test Loss: 1.4738 | Acc: 0.9527 | Top-5: 0.9865 | F1(M): 0.7236 | Prec(M): 0.7204 | Rec(M): 0.7507 | Prec(W): 0.9608
+2026-03-17 18:18:26 [INFO] --> Best model saved with F1: 0.7236 to /data/lihb/enzyme_functional_annotation/optimal_radius/best_model/train_20260317_0804.pth
+2026-03-17 18:18:43 [INFO] Epoch: [228] Step : [1/564] Loss: 0.0312
+2026-03-17 18:19:40 [INFO] Epoch: [228] Step : [100/564] Loss: 0.0195
+2026-03-17 18:20:36 [INFO] Epoch: [228] Step : [200/564] Loss: 0.0306
+2026-03-17 18:21:34 [INFO] Epoch: [228] Step : [300/564] Loss: 0.1224
+2026-03-17 18:22:30 [INFO] Epoch: [228] Step : [400/564] Loss: 0.0425
+2026-03-17 18:23:27 [INFO] Epoch: [228] Step : [500/564] Loss: 0.0889
+2026-03-17 18:24:02 [INFO] Epoch: [228] Step : [564/564] Loss: 3.2916
+2026-03-17 18:25:57 [INFO] Epoch 228/300 | Train Loss: 0.0575 | Test Loss: 1.4739 | Acc: 0.9520 | Top-5: 0.9862 | F1(M): 0.7214 | Prec(M): 0.7181 | Rec(M): 0.7492 | Prec(W): 0.9613
+2026-03-17 18:26:14 [INFO] Epoch: [229] Step : [1/564] Loss: 0.0711
+2026-03-17 18:27:10 [INFO] Epoch: [229] Step : [100/564] Loss: 0.1093
+2026-03-17 18:28:05 [INFO] Epoch: [229] Step : [200/564] Loss: 0.1050
+2026-03-17 18:29:02 [INFO] Epoch: [229] Step : [300/564] Loss: 0.0527
+2026-03-17 18:29:57 [INFO] Epoch: [229] Step : [400/564] Loss: 0.1002
+2026-03-17 18:30:53 [INFO] Epoch: [229] Step : [500/564] Loss: 0.1631
+2026-03-17 18:31:30 [INFO] Epoch: [229] Step : [564/564] Loss: 0.0480
+2026-03-17 18:33:35 [INFO] Early stopping triggered at epoch 229 (min_epochs=100).
+2026-03-17 18:33:35 [INFO] Training completed.
+2026-03-17 18:33:42 [INFO] ========== Training Configuration ==========
+2026-03-17 18:33:42 [INFO]   learning_rate: 0.001
+2026-03-17 18:33:42 [INFO]   batch_size: 64
+2026-03-17 18:33:42 [INFO]   epochs: 300
+2026-03-17 18:33:42 [INFO]   min_epochs: 100
+2026-03-17 18:33:42 [INFO]   test_size: 0.3
+2026-03-17 18:33:42 [INFO]   focal_loss_alpha: auto
+2026-03-17 18:33:42 [INFO]   focal_loss_gamma: 2.0
+2026-03-17 18:33:42 [INFO]   random_state: 42
+2026-03-17 18:33:42 [INFO]   input_dim: 1536
+2026-03-17 18:33:42 [INFO]   hidden_dim: 1024
+2026-03-17 18:33:42 [INFO]   num_layers: 4
+2026-03-17 18:33:42 [INFO]   heads: 8
+2026-03-17 18:33:42 [INFO]   dropout: 0.5
+2026-03-17 18:33:42 [INFO]   weight_decay: 0.0005
+2026-03-17 18:33:42 [INFO]   lr_patience: 10
+2026-03-17 18:33:42 [INFO]   early_stopping_patience: 20
+2026-03-17 18:33:42 [INFO] ============================================
+2026-03-17 18:33:42 [INFO] Using device: cuda:0 (Distributed: True)
+2026-03-17 18:33:42 [INFO] Loading data...
+2026-03-17 18:33:49 [INFO] Total samples after filtering: 103015
+2026-03-17 18:33:49 [INFO] Total classes: 1765
+2026-03-17 18:33:49 [INFO] Class Weights Range: [0.0128, 58.3654]
+2026-03-17 18:33:49 [WARNING] Stratified split failed (likely due to classes with < 2 samples). Falling back to random split.
+2026-03-17 18:33:49 [INFO] Using graph_dir: /data/lihb/enzyme_functional_annotation/optimal_radius/graph
+2026-03-17 18:33:49 [INFO] Initializing dataset with 72110 entries from graph_dir=/data/lihb/enzyme_functional_annotation/optimal_radius/graph ...
+2026-03-17 18:33:52 [INFO] Found samples with pdb_id: 2794
+2026-03-17 18:33:52 [INFO] Found samples without pdb_id: 69316
+2026-03-17 18:33:52 [INFO] Dataset initialized with 72110 valid samples.
+2026-03-17 18:33:52 [INFO] Initializing dataset with 30905 entries from graph_dir=/data/lihb/enzyme_functional_annotation/optimal_radius/graph ...
+2026-03-17 18:33:53 [INFO] Found samples with pdb_id: 1302
+2026-03-17 18:33:53 [INFO] Found samples without pdb_id: 29603
+2026-03-17 18:33:53 [INFO] Dataset initialized with 30905 valid samples.
+2026-03-17 18:33:53 [INFO] Data loaded. Train steps per epoch (optimizer updates): 564 | Expected: 564 | Train samples: 72110 | Batch/GPU: 64 | World Size: 2 | Global Batch: 128
+2026-03-17 18:33:53 [INFO] Data loaded. Test steps per epoch: 242 | Expected: 242 | Test samples: 30905
+2026-03-17 18:33:54 [INFO] Using Automatic Class Weights for Focal Loss. Range: [0.0128, 58.3654]
+2026-03-17 18:33:54 [INFO] => loading checkpoint '/data/lihb/enzyme_functional_annotation/optimal_radius/checkpoint_latest.pth'
+2026-03-17 18:33:54 [INFO] => loaded checkpoint '/data/lihb/enzyme_functional_annotation/optimal_radius/checkpoint_latest.pth' (epoch 228)
+2026-03-17 18:33:54 [INFO] Start training...
+2026-03-17 18:34:10 [INFO] Epoch: [229] Step : [1/564] Loss: 0.0665
+2026-03-17 18:35:05 [INFO] Epoch: [229] Step : [100/564] Loss: 0.0722
+2026-03-17 18:36:00 [INFO] Epoch: [229] Step : [200/564] Loss: 0.0556
+2026-03-17 18:36:56 [INFO] Epoch: [229] Step : [300/564] Loss: 0.0394
+2026-03-17 18:37:52 [INFO] Epoch: [229] Step : [400/564] Loss: 0.0889
+2026-03-17 18:38:48 [INFO] Epoch: [229] Step : [500/564] Loss: 0.2630
+2026-03-17 18:39:25 [INFO] Epoch: [229] Step : [564/564] Loss: 0.0789
+2026-03-17 18:41:27 [INFO] Early stopping triggered at epoch 229 (min_epochs=100).
+2026-03-17 18:41:27 [INFO] Training completed.
+2026-03-17 18:41:27 [INFO] [TRAIN] executed successfully.

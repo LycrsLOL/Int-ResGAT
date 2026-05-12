@@ -1,0 +1,36 @@
+mode: initialize
+log_dir: ./logs
+num_workers: 4
+save_dir: ./output
+device: cuda:0
+verbose: true
+print_freq: 100
+database_path: ./data/database.csv
+
+initialize:
+  model_path: "./models/esm3_sm_open_v1.pth"
+  max_edge_distance: 10.0
+
+train:
+  learning_rate: 0.001
+  batch_size: 64
+  epochs: 300
+  min_epochs: 100
+  test_size: 0.3
+  focal_loss_alpha: auto
+  focal_loss_gamma: 2.0
+  max_pos_weight: 1000.0
+  random_state: 42
+  split_strategy: homology
+  homology_group_column: homology_cluster
+  homology_cluster_file:
+  prediction_threshold: 0.5
+  ensure_min_prediction: true
+  input_dim: 1536 
+  hidden_dim: 1024
+  num_layers: 4
+  heads: 8
+  dropout: 0.5
+  weight_decay: 0.0005
+  lr_patience: 10
+  early_stopping_patience: 20
