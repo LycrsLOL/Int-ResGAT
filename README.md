@@ -247,22 +247,6 @@ Default hyperparameters from the manuscript configuration:
 | Early-stopping patience | 20 |
 | Random seed | 42 |
 
-## Citation
-
-If you use this code or dataset in your research, please cite the manuscript and the software repository.
-
-```bibtex
-@misc{intresgat_software2026,
-  author       = {Hu, Qiwei and Hu, Zhangchi and Yu, Huan and Zhang, Dong and Zhang, Haolin},
-  title        = {{Int-ResGAT}: {Integrated Residue-Level Graph Attention Network} for {Multi-Label Enzyme Function Prediction}},
-  year         = {2026},
-  howpublished = {\url{https://github.com/LycrsLOL/Int-ResGAT}},
-  note         = {Accessed 11 May 2026}
-}
-```
-
-After journal acceptance, replace or supplement this entry with the final article citation.
-
 ## License
 
 This project is released under the Apache License 2.0. See [LICENSE](LICENSE) for details.
